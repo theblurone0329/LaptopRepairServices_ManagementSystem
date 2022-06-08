@@ -72,7 +72,7 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnBookingEnquiries_Click(object sender, EventArgs e)
         {
-            ReceptionistBookingEnquiries validateBooking = new ReceptionistBookingEnquiries();
+            BookingEnquiries validateBooking = new BookingEnquiries();
             showForm(validateBooking);
         }
 

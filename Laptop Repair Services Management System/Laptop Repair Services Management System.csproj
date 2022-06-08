@@ -53,6 +53,18 @@
     <Compile Include="AdminMainMenu.Designer.cs">
       <DependentUpon>AdminMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="BillingandPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillingandPayment.Designer.cs">
+      <DependentUpon>BillingandPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingEnquiries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingEnquiries.Designer.cs">
+      <DependentUpon>BookingEnquiries.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +76,18 @@
     </Compile>
     <Compile Include="ChangeServiceCustomer1.Designer.cs">
       <DependentUpon>ChangeServiceCustomer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeServiceReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeServiceReceptionist.Designer.cs">
+      <DependentUpon>ChangeServiceReceptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeServicesCustomer2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeServicesCustomer2.Designer.cs">
+      <DependentUpon>ChangeServicesCustomer2.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerMainMenu.cs">
       <SubType>Form</SubType>
@@ -103,6 +127,30 @@
     <Compile Include="ReceptionistMainMenu.Designer.cs">
       <DependentUpon>ReceptionistMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisterAccAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterAccAdmin.Designer.cs">
+      <DependentUpon>RegisterAccAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterAccReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterAccReceptionist.Designer.cs">
+      <DependentUpon>RegisterAccReceptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceOverview.Designer.cs">
+      <DependentUpon>ServiceOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceOverviewTech.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceOverviewTech.Designer.cs">
+      <DependentUpon>ServiceOverviewTech.cs</DependentUpon>
+    </Compile>
     <Compile Include="StoreAccDetails.cs" />
     <Compile Include="TechnicianMainMenu.cs">
       <SubType>Form</SubType>
@@ -122,11 +170,44 @@
     <Compile Include="ViewDetails.Designer.cs">
       <DependentUpon>ViewDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewIncome.Designer.cs">
+      <DependentUpon>ViewIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewServicesReportAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewServicesReportAdmin.Designer.cs">
+      <DependentUpon>ViewServicesReportAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewServiceTechnician.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewServiceTechnician.Designer.cs">
+      <DependentUpon>ViewServiceTechnician.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminMainMenu.resx">
       <DependentUpon>AdminMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BillingandPayment.resx">
+      <DependentUpon>BillingandPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingEnquiries.resx">
+      <DependentUpon>BookingEnquiries.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookingPage.resx">
       <DependentUpon>BookingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeServiceCustomer1.resx">
+      <DependentUpon>ChangeServiceCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeServiceReceptionist.resx">
+      <DependentUpon>ChangeServiceReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeServicesCustomer2.resx">
+      <DependentUpon>ChangeServicesCustomer2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerMainMenu.resx">
       <DependentUpon>CustomerMainMenu.cs</DependentUpon>
@@ -156,6 +237,18 @@
     <EmbeddedResource Include="ReceptionistMainMenu.resx">
       <DependentUpon>ReceptionistMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegisterAccAdmin.resx">
+      <DependentUpon>RegisterAccAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterAccReceptionist.resx">
+      <DependentUpon>RegisterAccReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceOverview.resx">
+      <DependentUpon>ServiceOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceOverviewTech.resx">
+      <DependentUpon>ServiceOverviewTech.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TechnicianMainMenu.resx">
       <DependentUpon>TechnicianMainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +257,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewDetails.resx">
       <DependentUpon>ViewDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewIncome.resx">
+      <DependentUpon>ViewIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewServicesReportAdmin.resx">
+      <DependentUpon>ViewServicesReportAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewServiceTechnician.resx">
+      <DependentUpon>ViewServiceTechnician.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -228,6 +330,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\two-arrows.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

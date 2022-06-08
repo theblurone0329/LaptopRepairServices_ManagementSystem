@@ -35,7 +35,7 @@ namespace Laptop_Repair_Services_Management_System
             if (notiName == "New Service Request" || notiName == "New Service Booked")
             {
                 btnView.Show();
-                ReceptionistBookingEnquiries view = new ReceptionistBookingEnquiries();
+                BookingEnquiries view = new BookingEnquiries();
                 showForm(view);
             }
         }

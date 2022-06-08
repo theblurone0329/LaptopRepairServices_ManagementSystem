@@ -8,6 +8,7 @@ namespace Laptop_Repair_Services_Management_System
 {
     static class Program
     {
+        public static string n = "";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +17,7 @@ namespace Laptop_Repair_Services_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginPage());
+            Application.Run(new LoginPage(n));
         }
     }
 }

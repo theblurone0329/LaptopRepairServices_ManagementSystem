@@ -83,7 +83,7 @@ namespace Laptop_Repair_Services_Management_System
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ForgotPassword forgotPw = new ForgotPassword(name);
+            ForgotPassword forgotPw = new ForgotPassword();
             forgotPw.Closed += (s, args) => this.Close();
             forgotPw.Show();
         }

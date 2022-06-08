@@ -60,13 +60,13 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnViewServiceReport_Click(object sender, EventArgs e)
         {
-            ViewServiceReportAdmin viewRprt = new ViewServiceReportAdmin();
+            ViewServicesReportAdmin viewRprt = new ViewServicesReportAdmin();
             showForm(viewRprt);
         }
 
         private void btnViewIncome_Click(object sender, EventArgs e)
         {
-            ViewFinanceAdmin viewFin = new ViewFinanceAdmin();
+            ViewIncome viewFin = new ViewIncome();
             showForm(viewFin);
         }
 

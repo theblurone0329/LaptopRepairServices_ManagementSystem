@@ -93,6 +93,16 @@ namespace Laptop_Repair_Services_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LaptopiaFinallogo1 {
             get {
                 object obj = ResourceManager.GetObject("LaptopiaFinallogo1", resourceCulture);
@@ -176,6 +186,16 @@ namespace Laptop_Repair_Services_Management_System.Properties {
         internal static System.Drawing.Bitmap toBook1 {
             get {
                 object obj = ResourceManager.GetObject("toBook1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap two_arrows {
+            get {
+                object obj = ResourceManager.GetObject("two-arrows", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
