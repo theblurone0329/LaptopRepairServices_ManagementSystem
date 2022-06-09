@@ -30,3 +30,5 @@ C:\Users\Adrian Fu\Desktop\C#\Assignment\Laptop Repair Services Management Syste
 C:\Users\Adrian Fu\Desktop\C#\Assignment\Laptop Repair Services Management System\LaptopRepairServices_ManagementSystem\Laptop Repair Services Management System\bin\Debug\Laptop Repair Services Management System.pdb
 C:\Users\Adrian Fu\Desktop\C#\Assignment\Laptop Repair Services Management System\LaptopRepairServices_ManagementSystem\Laptop Repair Services Management System\obj\Debug\Laptop Repair Services Management System.exe
 C:\Users\Adrian Fu\Desktop\C#\Assignment\Laptop Repair Services Management System\LaptopRepairServices_ManagementSystem\Laptop Repair Services Management System\obj\Debug\Laptop Repair Services Management System.pdb
+C:\Users\Adrian Fu\Desktop\C#\Assignment\Laptop Repair Services Management System\LaptopRepairServices_ManagementSystem\Laptop Repair Services Management System\bin\Debug\DB.mdf
+C:\Users\Adrian Fu\Desktop\C#\Assignment\Laptop Repair Services Management System\LaptopRepairServices_ManagementSystem\Laptop Repair Services Management System\bin\Debug\DB_log.ldf

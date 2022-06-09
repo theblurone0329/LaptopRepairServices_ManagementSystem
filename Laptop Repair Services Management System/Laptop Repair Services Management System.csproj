@@ -353,12 +353,12 @@
     <None Include="Resources\two-arrows.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ManagementSystemDB.mdf">
+    <Content Include="DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ManagementSystemDB_log.ldf">
+    <Content Include="DB_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ManagementSystemDB.mdf</DependentUpon>
+      <DependentUpon>DB.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
