@@ -30,6 +30,7 @@ namespace Laptop_Repair_Services_Management_System
         private void InitializeComponent()
         {
             this.pnlAttach3 = new System.Windows.Forms.Panel();
+            this.btnAccept = new System.Windows.Forms.Button();
             this.checkedLstAcceptCustomerRequest = new System.Windows.Forms.CheckedListBox();
             this.lblTitleAcceptCustomer = new System.Windows.Forms.Label();
             this.lblTitleBookingEnquiries = new System.Windows.Forms.Label();
@@ -38,7 +39,7 @@ namespace Laptop_Repair_Services_Management_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.lstConfirmedServices = new System.Windows.Forms.ListBox();
             this.lblTitleConfirmedServices = new System.Windows.Forms.Label();
-            this.btnAccept = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlAttach3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +47,7 @@ namespace Laptop_Repair_Services_Management_System
             // pnlAttach3
             // 
             this.pnlAttach3.AutoScroll = true;
+            this.pnlAttach3.Controls.Add(this.label1);
             this.pnlAttach3.Controls.Add(this.btnAccept);
             this.pnlAttach3.Controls.Add(this.checkedLstAcceptCustomerRequest);
             this.pnlAttach3.Controls.Add(this.lblTitleAcceptCustomer);
@@ -58,6 +60,19 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttach3.Name = "pnlAttach3";
             this.pnlAttach3.Size = new System.Drawing.Size(631, 432);
             this.pnlAttach3.TabIndex = 1;
+            // 
+            // btnAccept
+            // 
+            this.btnAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(255)))), ((int)(((byte)(56)))));
+            this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccept.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.Location = new System.Drawing.Point(216, 397);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(105, 23);
+            this.btnAccept.TabIndex = 25;
+            this.btnAccept.Text = "ACCEPT SERVICE";
+            this.btnAccept.UseVisualStyleBackColor = false;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // checkedLstAcceptCustomerRequest
             // 
@@ -97,18 +112,20 @@ namespace Laptop_Repair_Services_Management_System
             this.btnGoFindCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(255)))), ((int)(((byte)(56)))));
             this.btnGoFindCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoFindCustomer.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoFindCustomer.Location = new System.Drawing.Point(284, 77);
+            this.btnGoFindCustomer.Location = new System.Drawing.Point(216, 78);
             this.btnGoFindCustomer.Name = "btnGoFindCustomer";
-            this.btnGoFindCustomer.Size = new System.Drawing.Size(37, 23);
+            this.btnGoFindCustomer.Size = new System.Drawing.Size(64, 23);
             this.btnGoFindCustomer.TabIndex = 21;
-            this.btnGoFindCustomer.Text = "OK";
+            this.btnGoFindCustomer.Text = "SEARCH";
             this.btnGoFindCustomer.UseVisualStyleBackColor = false;
+            this.btnGoFindCustomer.Click += new System.EventHandler(this.btnGoFindCustomer_Click);
             // 
             // txtFindCustomer
             // 
-            this.txtFindCustomer.Location = new System.Drawing.Point(31, 77);
+            this.txtFindCustomer.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFindCustomer.Location = new System.Drawing.Point(98, 74);
             this.txtFindCustomer.Name = "txtFindCustomer";
-            this.txtFindCustomer.Size = new System.Drawing.Size(247, 20);
+            this.txtFindCustomer.Size = new System.Drawing.Size(106, 25);
             this.txtFindCustomer.TabIndex = 20;
             // 
             // panel1
@@ -144,17 +161,15 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleConfirmedServices.TabIndex = 0;
             this.lblTitleConfirmedServices.Text = "CONFIRMED SERVICES";
             // 
-            // btnAccept
+            // label1
             // 
-            this.btnAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(255)))), ((int)(((byte)(56)))));
-            this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccept.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccept.Location = new System.Drawing.Point(216, 397);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(105, 23);
-            this.btnAccept.TabIndex = 25;
-            this.btnAccept.Text = "ACCEPT SERVICE";
-            this.btnAccept.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 19);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "UserID: ";
             // 
             // BookingEnquiries
             // 
@@ -184,5 +199,6 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.ListBox lstConfirmedServices;
         private System.Windows.Forms.Label lblTitleConfirmedServices;
         private System.Windows.Forms.Button btnAccept;
+        private System.Windows.Forms.Label label1;
     }
 }
