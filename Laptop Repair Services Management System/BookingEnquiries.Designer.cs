@@ -38,6 +38,7 @@ namespace Laptop_Repair_Services_Management_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.lstConfirmedServices = new System.Windows.Forms.ListBox();
             this.lblTitleConfirmedServices = new System.Windows.Forms.Label();
+            this.btnAccept = new System.Windows.Forms.Button();
             this.pnlAttach3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,6 +46,7 @@ namespace Laptop_Repair_Services_Management_System
             // pnlAttach3
             // 
             this.pnlAttach3.AutoScroll = true;
+            this.pnlAttach3.Controls.Add(this.btnAccept);
             this.pnlAttach3.Controls.Add(this.checkedLstAcceptCustomerRequest);
             this.pnlAttach3.Controls.Add(this.lblTitleAcceptCustomer);
             this.pnlAttach3.Controls.Add(this.lblTitleBookingEnquiries);
@@ -71,7 +73,7 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleAcceptCustomer.AutoSize = true;
             this.lblTitleAcceptCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.lblTitleAcceptCustomer.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleAcceptCustomer.Location = new System.Drawing.Point(28, 113);
+            this.lblTitleAcceptCustomer.Location = new System.Drawing.Point(28, 116);
             this.lblTitleAcceptCustomer.Name = "lblTitleAcceptCustomer";
             this.lblTitleAcceptCustomer.Size = new System.Drawing.Size(216, 18);
             this.lblTitleAcceptCustomer.TabIndex = 22;
@@ -142,6 +144,18 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleConfirmedServices.TabIndex = 0;
             this.lblTitleConfirmedServices.Text = "CONFIRMED SERVICES";
             // 
+            // btnAccept
+            // 
+            this.btnAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(255)))), ((int)(((byte)(56)))));
+            this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccept.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccept.Location = new System.Drawing.Point(216, 397);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(105, 23);
+            this.btnAccept.TabIndex = 25;
+            this.btnAccept.Text = "ACCEPT SERVICE";
+            this.btnAccept.UseVisualStyleBackColor = false;
+            // 
             // BookingEnquiries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,5 +183,6 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox lstConfirmedServices;
         private System.Windows.Forms.Label lblTitleConfirmedServices;
+        private System.Windows.Forms.Button btnAccept;
     }
 }

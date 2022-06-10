@@ -32,11 +32,9 @@ namespace Laptop_Repair_Services_Management_System
             this.radUrgentFeeInternet = new System.Windows.Forms.RadioButton();
             this.radNormalFeeInternet = new System.Windows.Forms.RadioButton();
             this.lblTitleInternetConnectivity = new System.Windows.Forms.Label();
-            this.picServiceIcon8 = new System.Windows.Forms.PictureBox();
             this.radUrgentFeeKeyboardRplcmnt = new System.Windows.Forms.RadioButton();
             this.radNormalFeeKeyboardRplcmnt = new System.Windows.Forms.RadioButton();
             this.lblTitleKeyboardRplcmnt = new System.Windows.Forms.Label();
-            this.picServiceIcon4 = new System.Windows.Forms.PictureBox();
             this.radUrgentFeeDataBackup = new System.Windows.Forms.RadioButton();
             this.radUrgentFeeOSFormatInstall = new System.Windows.Forms.RadioButton();
             this.radNormalFeeDataBackup = new System.Windows.Forms.RadioButton();
@@ -44,27 +42,31 @@ namespace Laptop_Repair_Services_Management_System
             this.radUrgentFeeBattRplcmnt = new System.Windows.Forms.RadioButton();
             this.lblTitleDataBackupRecover = new System.Windows.Forms.Label();
             this.radNormalFeeOSFormatInstall = new System.Windows.Forms.RadioButton();
-            this.picServiceIcon7 = new System.Windows.Forms.PictureBox();
             this.radUrgentFeeTroubleshootComp = new System.Windows.Forms.RadioButton();
             this.lblTitleOSFormatInstall = new System.Windows.Forms.Label();
             this.radNormalFeeLaptopScreen = new System.Windows.Forms.RadioButton();
             this.radNormalFeeBattRplcmnt = new System.Windows.Forms.RadioButton();
-            this.picServiceIcon6 = new System.Windows.Forms.PictureBox();
             this.radUrgentFeeRemoveVirus = new System.Windows.Forms.RadioButton();
             this.lblTitleLaptopScreenRplcmnt = new System.Windows.Forms.Label();
             this.lblTitleBatteryRplcmnt = new System.Windows.Forms.Label();
             this.radNormalFeeTroubleshootComp = new System.Windows.Forms.RadioButton();
-            this.picServiceIcon3 = new System.Windows.Forms.PictureBox();
-            this.picServiceIcon5 = new System.Windows.Forms.PictureBox();
             this.radNormalFeeRemoveVirus = new System.Windows.Forms.RadioButton();
             this.lblTitleTroubleshootComputer = new System.Windows.Forms.Label();
             this.lblTitleRemoveVirus = new System.Windows.Forms.Label();
-            this.picServiceIcon2 = new System.Windows.Forms.PictureBox();
-            this.picServiceIcon1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBook = new System.Windows.Forms.Button();
             this.grpRemoveVirus = new System.Windows.Forms.GroupBox();
             this.pnlAttach4 = new System.Windows.Forms.Panel();
+            this.picServiceIcon8 = new System.Windows.Forms.PictureBox();
+            this.picServiceIcon4 = new System.Windows.Forms.PictureBox();
+            this.picServiceIcon7 = new System.Windows.Forms.PictureBox();
+            this.picServiceIcon6 = new System.Windows.Forms.PictureBox();
+            this.picServiceIcon3 = new System.Windows.Forms.PictureBox();
+            this.picServiceIcon5 = new System.Windows.Forms.PictureBox();
+            this.picServiceIcon2 = new System.Windows.Forms.PictureBox();
+            this.picServiceIcon1 = new System.Windows.Forms.PictureBox();
+            this.grpRemoveVirus.SuspendLayout();
+            this.pnlAttach4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon7)).BeginInit();
@@ -73,8 +75,6 @@ namespace Laptop_Repair_Services_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon1)).BeginInit();
-            this.grpRemoveVirus.SuspendLayout();
-            this.pnlAttach4.SuspendLayout();
             this.SuspendLayout();
             // 
             // radUrgentFeeInternet
@@ -111,15 +111,6 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleInternetConnectivity.TabIndex = 9;
             this.lblTitleInternetConnectivity.Text = "Internet Connectivity Issues";
             // 
-            // picServiceIcon8
-            // 
-            this.picServiceIcon8.Location = new System.Drawing.Point(684, 174);
-            this.picServiceIcon8.Name = "picServiceIcon8";
-            this.picServiceIcon8.Size = new System.Drawing.Size(37, 29);
-            this.picServiceIcon8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picServiceIcon8.TabIndex = 8;
-            this.picServiceIcon8.TabStop = false;
-            // 
             // radUrgentFeeKeyboardRplcmnt
             // 
             this.radUrgentFeeKeyboardRplcmnt.AutoSize = true;
@@ -154,15 +145,6 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleKeyboardRplcmnt.TabIndex = 5;
             this.lblTitleKeyboardRplcmnt.Text = "Laptop Keyboard \r\nReplacement";
             this.lblTitleKeyboardRplcmnt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // picServiceIcon4
-            // 
-            this.picServiceIcon4.Location = new System.Drawing.Point(687, 19);
-            this.picServiceIcon4.Name = "picServiceIcon4";
-            this.picServiceIcon4.Size = new System.Drawing.Size(37, 29);
-            this.picServiceIcon4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picServiceIcon4.TabIndex = 4;
-            this.picServiceIcon4.TabStop = false;
             // 
             // radUrgentFeeDataBackup
             // 
@@ -246,15 +228,6 @@ namespace Laptop_Repair_Services_Management_System
             this.radNormalFeeOSFormatInstall.Text = "Normal Fee: RM 100.00";
             this.radNormalFeeOSFormatInstall.UseVisualStyleBackColor = true;
             // 
-            // picServiceIcon7
-            // 
-            this.picServiceIcon7.Location = new System.Drawing.Point(472, 174);
-            this.picServiceIcon7.Name = "picServiceIcon7";
-            this.picServiceIcon7.Size = new System.Drawing.Size(37, 29);
-            this.picServiceIcon7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picServiceIcon7.TabIndex = 0;
-            this.picServiceIcon7.TabStop = false;
-            // 
             // radUrgentFeeTroubleshootComp
             // 
             this.radUrgentFeeTroubleshootComp.AutoSize = true;
@@ -301,15 +274,6 @@ namespace Laptop_Repair_Services_Management_System
             this.radNormalFeeBattRplcmnt.TabStop = true;
             this.radNormalFeeBattRplcmnt.Text = "Normal Fee: RM 180.00";
             this.radNormalFeeBattRplcmnt.UseVisualStyleBackColor = true;
-            // 
-            // picServiceIcon6
-            // 
-            this.picServiceIcon6.Location = new System.Drawing.Point(264, 174);
-            this.picServiceIcon6.Name = "picServiceIcon6";
-            this.picServiceIcon6.Size = new System.Drawing.Size(37, 29);
-            this.picServiceIcon6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picServiceIcon6.TabIndex = 0;
-            this.picServiceIcon6.TabStop = false;
             // 
             // radUrgentFeeRemoveVirus
             // 
@@ -358,24 +322,6 @@ namespace Laptop_Repair_Services_Management_System
             this.radNormalFeeTroubleshootComp.Text = "Normal Fee: RM 60.00";
             this.radNormalFeeTroubleshootComp.UseVisualStyleBackColor = true;
             // 
-            // picServiceIcon3
-            // 
-            this.picServiceIcon3.Location = new System.Drawing.Point(472, 19);
-            this.picServiceIcon3.Name = "picServiceIcon3";
-            this.picServiceIcon3.Size = new System.Drawing.Size(37, 29);
-            this.picServiceIcon3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picServiceIcon3.TabIndex = 0;
-            this.picServiceIcon3.TabStop = false;
-            // 
-            // picServiceIcon5
-            // 
-            this.picServiceIcon5.Location = new System.Drawing.Point(72, 174);
-            this.picServiceIcon5.Name = "picServiceIcon5";
-            this.picServiceIcon5.Size = new System.Drawing.Size(37, 29);
-            this.picServiceIcon5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picServiceIcon5.TabIndex = 0;
-            this.picServiceIcon5.TabStop = false;
-            // 
             // radNormalFeeRemoveVirus
             // 
             this.radNormalFeeRemoveVirus.AutoSize = true;
@@ -411,24 +357,6 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleRemoveVirus.Text = "Remove Virus,\r\nMalware or Spyware";
             this.lblTitleRemoveVirus.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // picServiceIcon2
-            // 
-            this.picServiceIcon2.Location = new System.Drawing.Point(264, 19);
-            this.picServiceIcon2.Name = "picServiceIcon2";
-            this.picServiceIcon2.Size = new System.Drawing.Size(37, 29);
-            this.picServiceIcon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picServiceIcon2.TabIndex = 0;
-            this.picServiceIcon2.TabStop = false;
-            // 
-            // picServiceIcon1
-            // 
-            this.picServiceIcon1.Location = new System.Drawing.Point(72, 19);
-            this.picServiceIcon1.Name = "picServiceIcon1";
-            this.picServiceIcon1.Size = new System.Drawing.Size(37, 29);
-            this.picServiceIcon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picServiceIcon1.TabIndex = 0;
-            this.picServiceIcon1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -436,7 +364,7 @@ namespace Laptop_Repair_Services_Management_System
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 14);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(214, 34);
             this.label1.TabIndex = 37;
@@ -448,7 +376,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnBook.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBook.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBook.Location = new System.Drawing.Point(334, 12);
+            this.btnBook.Location = new System.Drawing.Point(334, 7);
             this.btnBook.Name = "btnBook";
             this.btnBook.Size = new System.Drawing.Size(241, 36);
             this.btnBook.TabIndex = 36;
@@ -491,7 +419,7 @@ namespace Laptop_Repair_Services_Management_System
             this.grpRemoveVirus.Controls.Add(this.lblTitleRemoveVirus);
             this.grpRemoveVirus.Controls.Add(this.picServiceIcon2);
             this.grpRemoveVirus.Controls.Add(this.picServiceIcon1);
-            this.grpRemoveVirus.Location = new System.Drawing.Point(15, 66);
+            this.grpRemoveVirus.Location = new System.Drawing.Point(15, 61);
             this.grpRemoveVirus.Name = "grpRemoveVirus";
             this.grpRemoveVirus.Size = new System.Drawing.Size(798, 335);
             this.grpRemoveVirus.TabIndex = 28;
@@ -510,6 +438,86 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttach4.Size = new System.Drawing.Size(631, 432);
             this.pnlAttach4.TabIndex = 1;
             // 
+            // picServiceIcon8
+            // 
+            this.picServiceIcon8.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.network_signal;
+            this.picServiceIcon8.Location = new System.Drawing.Point(684, 174);
+            this.picServiceIcon8.Name = "picServiceIcon8";
+            this.picServiceIcon8.Size = new System.Drawing.Size(37, 29);
+            this.picServiceIcon8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picServiceIcon8.TabIndex = 8;
+            this.picServiceIcon8.TabStop = false;
+            // 
+            // picServiceIcon4
+            // 
+            this.picServiceIcon4.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.keyboard;
+            this.picServiceIcon4.Location = new System.Drawing.Point(687, 19);
+            this.picServiceIcon4.Name = "picServiceIcon4";
+            this.picServiceIcon4.Size = new System.Drawing.Size(37, 29);
+            this.picServiceIcon4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picServiceIcon4.TabIndex = 4;
+            this.picServiceIcon4.TabStop = false;
+            // 
+            // picServiceIcon7
+            // 
+            this.picServiceIcon7.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.backup;
+            this.picServiceIcon7.Location = new System.Drawing.Point(472, 174);
+            this.picServiceIcon7.Name = "picServiceIcon7";
+            this.picServiceIcon7.Size = new System.Drawing.Size(37, 29);
+            this.picServiceIcon7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picServiceIcon7.TabIndex = 0;
+            this.picServiceIcon7.TabStop = false;
+            // 
+            // picServiceIcon6
+            // 
+            this.picServiceIcon6.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.operating_system;
+            this.picServiceIcon6.Location = new System.Drawing.Point(264, 174);
+            this.picServiceIcon6.Name = "picServiceIcon6";
+            this.picServiceIcon6.Size = new System.Drawing.Size(37, 29);
+            this.picServiceIcon6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picServiceIcon6.TabIndex = 0;
+            this.picServiceIcon6.TabStop = false;
+            // 
+            // picServiceIcon3
+            // 
+            this.picServiceIcon3.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.laptopscreenbroke;
+            this.picServiceIcon3.Location = new System.Drawing.Point(472, 19);
+            this.picServiceIcon3.Name = "picServiceIcon3";
+            this.picServiceIcon3.Size = new System.Drawing.Size(37, 29);
+            this.picServiceIcon3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picServiceIcon3.TabIndex = 0;
+            this.picServiceIcon3.TabStop = false;
+            // 
+            // picServiceIcon5
+            // 
+            this.picServiceIcon5.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.batteryrplcmnt;
+            this.picServiceIcon5.Location = new System.Drawing.Point(72, 174);
+            this.picServiceIcon5.Name = "picServiceIcon5";
+            this.picServiceIcon5.Size = new System.Drawing.Size(37, 29);
+            this.picServiceIcon5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picServiceIcon5.TabIndex = 0;
+            this.picServiceIcon5.TabStop = false;
+            // 
+            // picServiceIcon2
+            // 
+            this.picServiceIcon2.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.traoubleshoot;
+            this.picServiceIcon2.Location = new System.Drawing.Point(264, 19);
+            this.picServiceIcon2.Name = "picServiceIcon2";
+            this.picServiceIcon2.Size = new System.Drawing.Size(37, 29);
+            this.picServiceIcon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picServiceIcon2.TabIndex = 0;
+            this.picServiceIcon2.TabStop = false;
+            // 
+            // picServiceIcon1
+            // 
+            this.picServiceIcon1.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.Removemalware;
+            this.picServiceIcon1.Location = new System.Drawing.Point(72, 19);
+            this.picServiceIcon1.Name = "picServiceIcon1";
+            this.picServiceIcon1.Size = new System.Drawing.Size(37, 29);
+            this.picServiceIcon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picServiceIcon1.TabIndex = 0;
+            this.picServiceIcon1.TabStop = false;
+            // 
             // BookingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,6 +526,10 @@ namespace Laptop_Repair_Services_Management_System
             this.Controls.Add(this.pnlAttach4);
             this.Name = "BookingPage";
             this.Text = "BookingPage";
+            this.grpRemoveVirus.ResumeLayout(false);
+            this.grpRemoveVirus.PerformLayout();
+            this.pnlAttach4.ResumeLayout(false);
+            this.pnlAttach4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon7)).EndInit();
@@ -526,10 +538,6 @@ namespace Laptop_Repair_Services_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picServiceIcon1)).EndInit();
-            this.grpRemoveVirus.ResumeLayout(false);
-            this.grpRemoveVirus.PerformLayout();
-            this.pnlAttach4.ResumeLayout(false);
-            this.pnlAttach4.PerformLayout();
             this.ResumeLayout(false);
 
         }

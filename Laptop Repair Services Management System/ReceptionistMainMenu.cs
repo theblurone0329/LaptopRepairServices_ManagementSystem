@@ -60,7 +60,7 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnChangeServiceCust_Click(object sender, EventArgs e)
         {
-            BookingPage view = new BookingPage(n);
+            BookingPageReceptionist view = new BookingPageReceptionist(n);
             showForm(view);
         }
 
