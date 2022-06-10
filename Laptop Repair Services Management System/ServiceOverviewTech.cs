@@ -12,9 +12,11 @@ namespace Laptop_Repair_Services_Management_System
 {
     public partial class ServiceOverviewTech : Form
     {
-        public ServiceOverviewTech()
+        public ServiceOverviewTech(string servNameArgs)
         {
             InitializeComponent();
+            lblTitleServName.Text = servNameArgs;
+            progressBar1.Value = 0;
         }
 
         private Form activeForm = null;
@@ -38,6 +40,37 @@ namespace Laptop_Repair_Services_Management_System
         {
             ViewServiceTechnician view = new ViewServiceTechnician();
             showForm(view);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int count = checkedListBox1.CheckedItems.Count;
+
+            if (count == 5)
+            {
+                progressBar1.Value = 100;
+                lblStatus.Text = "100%";
+            } else if (count == 4) 
+            {
+                progressBar1.Value = 80;
+                lblStatus.Text = "80%";
+            } else if (count == 3)
+            {
+                progressBar1.Value = 60;
+                lblStatus.Text = "60%";
+            } else if (count == 2)
+            {
+                progressBar1.Value = 40;
+                lblStatus.Text = "40%";
+            } else if (count == 1)
+            {
+                progressBar1.Value = 20;
+                lblStatus.Text = "20%";
+            } else if (count == 0)
+            {
+                progressBar1.Value = 0;
+                lblStatus.Text = "0%";
+            }
         }
     }
 }

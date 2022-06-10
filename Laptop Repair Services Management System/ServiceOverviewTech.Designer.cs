@@ -39,6 +39,7 @@ namespace Laptop_Repair_Services_Management_System
             this.servProg = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblTitleServName = new System.Windows.Forms.Label();
+            this.btnSubmitChanges = new System.Windows.Forms.Button();
             this.pnlAttachForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +47,7 @@ namespace Laptop_Repair_Services_Management_System
             // pnlAttachForm
             // 
             this.pnlAttachForm.BackColor = System.Drawing.Color.White;
+            this.pnlAttachForm.Controls.Add(this.btnSubmitChanges);
             this.pnlAttachForm.Controls.Add(this.btnBack);
             this.pnlAttachForm.Controls.Add(this.btnComplete);
             this.pnlAttachForm.Controls.Add(this.checkedListBox1);
@@ -158,6 +160,19 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleServName.TabIndex = 17;
             this.lblTitleServName.Text = "SERVICE NAME";
             // 
+            // btnSubmitChanges
+            // 
+            this.btnSubmitChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(255)))), ((int)(((byte)(56)))));
+            this.btnSubmitChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmitChanges.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmitChanges.Location = new System.Drawing.Point(518, 134);
+            this.btnSubmitChanges.Name = "btnSubmitChanges";
+            this.btnSubmitChanges.Size = new System.Drawing.Size(72, 32);
+            this.btnSubmitChanges.TabIndex = 25;
+            this.btnSubmitChanges.Text = "Submit";
+            this.btnSubmitChanges.UseVisualStyleBackColor = false;
+            this.btnSubmitChanges.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ServiceOverviewTech
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,5 +201,6 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.Label servProg;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblTitleServName;
+        private System.Windows.Forms.Button btnSubmitChanges;
     }
 }
