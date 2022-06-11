@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,7 @@ namespace Laptop_Repair_Services_Management_System
 {
     public partial class ServiceOverviewTech : Form
     {
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
         public ServiceOverviewTech(string servNameArgs)
         {
             InitializeComponent();
@@ -71,6 +74,15 @@ namespace Laptop_Repair_Services_Management_System
                 progressBar1.Value = 0;
                 lblStatus.Text = "0%";
             }
+        }
+
+        private void btnComplete_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Service Complete' Where servName = '{lblTitleServName.Text} And userID = '';", con);
+            cmd.ExecuteScalar();
+            MessageBox.Show("Service Update Submitted...");
+            con.Close();
         }
     }
 }
