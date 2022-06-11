@@ -36,7 +36,7 @@ namespace Laptop_Repair_Services_Management_System
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtComment = new System.Windows.Forms.TextBox();
             this.servProg = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblTitleServName = new System.Windows.Forms.Label();
@@ -128,7 +128,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtComment);
             this.groupBox1.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(53, 197);
             this.groupBox1.Name = "groupBox1";
@@ -137,13 +137,13 @@ namespace Laptop_Repair_Services_Management_System
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report from Technician: ";
             // 
-            // textBox1
+            // txtComment
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 36);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(470, 142);
-            this.textBox1.TabIndex = 0;
+            this.txtComment.Location = new System.Drawing.Point(24, 36);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Size = new System.Drawing.Size(470, 142);
+            this.txtComment.TabIndex = 0;
             // 
             // servProg
             // 
@@ -198,7 +198,7 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtComment;
         private System.Windows.Forms.Label servProg;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblTitleServName;

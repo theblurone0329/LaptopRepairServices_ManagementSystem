@@ -15,10 +15,12 @@ namespace Laptop_Repair_Services_Management_System
     public partial class ServiceOverviewTech : Form
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
-        public ServiceOverviewTech(string servNameArgs)
+        string userIDHere;
+        public ServiceOverviewTech(string servNameArgs, string userID)
         {
             InitializeComponent();
             lblTitleServName.Text = servNameArgs;
+            userIDHere = userID;
             progressBar1.Value = 0;
         }
 
@@ -63,7 +65,7 @@ namespace Laptop_Repair_Services_Management_System
                 lblStatus.Text = "60%";
             } else if (count == 2)
             {
-                progressBar1.Value = 40;
+                progressBar1.Value = 40;z
                 lblStatus.Text = "40%";
             } else if (count == 1)
             {
@@ -79,8 +81,10 @@ namespace Laptop_Repair_Services_Management_System
         private void btnComplete_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Service Complete' Where servName = '{lblTitleServName.Text} And userID = '';", con);
+            SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Service Complete' Where servName = '{lblTitleServName.Text} And userID = '{userIDHere}';", con);
             cmd.ExecuteScalar();
+            SqlCommand cmd1 = new SqlCommand($"Update BookedServices Set comment = '{txtComment.Text}' Where servName = '{lblTitleServName.Text} And userID = '{userIDHere}';", con);
+            cmd1.ExecuteScalar();
             MessageBox.Show("Service Update Submitted...");
             con.Close();
         }

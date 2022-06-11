@@ -108,6 +108,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnFindCustomer.TabIndex = 31;
             this.btnFindCustomer.Text = "OK";
             this.btnFindCustomer.UseVisualStyleBackColor = false;
+            this.btnFindCustomer.Click += new System.EventHandler(this.btnFindCustomer_Click);
             // 
             // lblTitleTotalPay
             // 

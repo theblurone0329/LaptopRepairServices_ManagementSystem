@@ -19,6 +19,10 @@ namespace Laptop_Repair_Services_Management_System
         string servNameArgs2;
         string servNameArgs3;
         string servNameArgs4;
+        string userID1;
+        string userID2;
+        string userID3;
+        string userID4;
         public ViewServiceTechnician()
         {
             InitializeComponent();
@@ -35,54 +39,74 @@ namespace Laptop_Repair_Services_Management_System
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName Where servStatus = 'Service Approved';", con);
                 string servName1 = cmd1.ExecuteScalar().ToString();
+                SqlCommand cmd5 = new SqlCommand($"Select Top(1) userID Where servStatus = 'Service Approved' and servName = '{servName1}';", con);
+                string userID1 = cmd5.ExecuteScalar().ToString();
                 gbServ1.Text = servName1;
                 string servNameArgs1 = servName1;
 
                 SqlCommand cmd2 = new SqlCommand($"Select Top(2) Max(servName) Where servStatus = 'Service Approved';", con);
                 string servName2 = cmd2.ExecuteScalar().ToString();
+                SqlCommand cmd6 = new SqlCommand($"Select Top(2) Max(userID) Where servStatus = 'Service Approved' and servName = '{servName2}';", con);
+                string userID2 = cmd6.ExecuteScalar().ToString();
                 gbServ2.Text = servName2;
                 string servNameArgs2 = servName2;
 
                 SqlCommand cmd3 = new SqlCommand($"Select Top(3) Min(servName) Where servStatus = 'Service Approved' and servName Not in (Select Top(2) servName From BookedServices);", con);
                 string servName3 = cmd3.ExecuteScalar().ToString();
+                SqlCommand cmd7 = new SqlCommand($"Select Top(3) Min(userID) Where servStatus = 'Service Approved' and servName Not in (Select Top(2) servName From BookedServices) and servName = '{servName3}';", con);
+                string userID3 = cmd7.ExecuteScalar().ToString();
                 gbServ3.Text = servName1;
                 string servNameArgs3 = servName3;
 
                 SqlCommand cmd4 = new SqlCommand($"Select Top(4) Min(servName) Where servStatus = 'Service Approved' and servName Not in (Select Top(3) servName From BookedServices);", con);
                 string servName4 = cmd4.ExecuteScalar().ToString();
+                SqlCommand cmd8 = new SqlCommand($"Select Top(4) Min(userID) Where servStatus = 'Service Approved' and servName Not in (Select Top(3) servName From BookedServices) and servName = '{servName4}';", con);
+                string userID4 = cmd8.ExecuteScalar().ToString();
                 gbServ4.Text = servName4;
                 string servNameArgs4 = servName4;
             } else if (count == 3)
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName Where servStatus = 'Service Approved';", con);
                 string servName1 = cmd1.ExecuteScalar().ToString();
+                SqlCommand cmd5 = new SqlCommand($"Select Top(1) userID Where servStatus = 'Service Approved' and servName = '{servName1}';", con);
+                string userID1 = cmd5.ExecuteScalar().ToString();
                 gbServ1.Text = servName1;
                 string servNameArgs1 = servName1;
 
                 SqlCommand cmd2 = new SqlCommand($"Select Top(2) Max(servName) Where servStatus = 'Service Approved';", con);
                 string servName2 = cmd2.ExecuteScalar().ToString();
+                SqlCommand cmd6 = new SqlCommand($"Select Top(2) Max(userID) Where servStatus = 'Service Approved' and servName = '{servName2}';", con);
+                string userID2 = cmd6.ExecuteScalar().ToString();
                 gbServ2.Text = servName2;
                 string servNameArgs2 = servName2;
 
                 SqlCommand cmd3 = new SqlCommand($"Select Top(3) Min(servName) Where servStatus = 'Service Approved' and servName Not in (Select Top(2) servName From BookedServices);", con);
                 string servName3 = cmd3.ExecuteScalar().ToString();
+                SqlCommand cmd7 = new SqlCommand($"Select Top(3) Min(userID) Where servStatus = 'Service Approved' and servName Not in (Select Top(2) servName From BookedServices) and servName = '{servName3}';", con);
+                string userID3 = cmd7.ExecuteScalar().ToString();
                 gbServ3.Text = servName1;
                 string servNameArgs3 = servName3;
             } else if (count == 2) 
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName Where servStatus = 'Service Approved';", con);
                 string servName1 = cmd1.ExecuteScalar().ToString();
+                SqlCommand cmd5 = new SqlCommand($"Select Top(1) userID Where servStatus = 'Service Approved' and servName = '{servName1}';", con);
+                string userID1 = cmd5.ExecuteScalar().ToString();
                 gbServ1.Text = servName1;
                 string servNameArgs1 = servName1;
 
                 SqlCommand cmd2 = new SqlCommand($"Select Top(2) Max(servName) Where servStatus = 'Service Approved';", con);
                 string servName2 = cmd2.ExecuteScalar().ToString();
+                SqlCommand cmd6 = new SqlCommand($"Select Top(2) Max(userID) Where servStatus = 'Service Approved' and servName = '{servName2}';", con);
+                string userID2 = cmd6.ExecuteScalar().ToString();
                 gbServ2.Text = servName2;
                 string servNameArgs2 = servName2;
             } else if (count == 1)
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName Where servStatus = 'Service Approved';", con);
                 string servName1 = cmd1.ExecuteScalar().ToString();
+                SqlCommand cmd5 = new SqlCommand($"Select Top(1) userID Where servStatus = 'Service Approved' and servName = '{servName1}';", con);
+                string userID1 = cmd5.ExecuteScalar().ToString();
                 gbServ1.Text = servName1;
                 string servNameArgs1 = servName1;
             } else if (count == 0)
@@ -111,25 +135,25 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnView5_Click(object sender, EventArgs e)
         {
-            ServiceOverviewTech view = new ServiceOverviewTech(servNameArgs1);
+            ServiceOverviewTech view = new ServiceOverviewTech(servNameArgs1, userID1);
             showForm(view);
         }
 
         private void btnView6_Click(object sender, EventArgs e)
         {
-            ServiceOverviewTech view = new ServiceOverviewTech(servNameArgs2);
+            ServiceOverviewTech view = new ServiceOverviewTech(servNameArgs2, userID2);
             showForm(view);
         }
 
         private void btnView7_Click(object sender, EventArgs e)
         {
-            ServiceOverviewTech view = new ServiceOverviewTech(servNameArgs3);
+            ServiceOverviewTech view = new ServiceOverviewTech(servNameArgs3, userID3);
             showForm(view);
         }
 
         private void btnView8_Click(object sender, EventArgs e)
         {
-            ServiceOverviewTech view = new ServiceOverviewTech(servNameArgs4);
+            ServiceOverviewTech view = new ServiceOverviewTech(servNameArgs4, userID4);
             showForm(view);
         }
     }
