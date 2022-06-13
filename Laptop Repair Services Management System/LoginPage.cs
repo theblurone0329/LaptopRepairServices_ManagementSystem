@@ -74,8 +74,6 @@ namespace Laptop_Repair_Services_Management_System
             else
             {
                 MessageBox.Show("Username or Password is Incorrect! Please try again!");
-                txtEnterUserIDLogin.Clear();
-                txtEnterPasswordLogin.Clear();
             }
             con.Close();
         }
@@ -83,7 +81,7 @@ namespace Laptop_Repair_Services_Management_System
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ForgotPassword forgotPw = new ForgotPassword();
+            ForgotPassword forgotPw = new ForgotPassword(name);
             forgotPw.Closed += (s, args) => this.Close();
             forgotPw.Show();
         }

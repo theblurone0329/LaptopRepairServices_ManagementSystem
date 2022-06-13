@@ -65,7 +65,7 @@ namespace Laptop_Repair_Services_Management_System
                 lblStatus.Text = "60%";
             } else if (count == 2)
             {
-                progressBar1.Value = 40;z
+                progressBar1.Value = 40;
                 lblStatus.Text = "40%";
             } else if (count == 1)
             {

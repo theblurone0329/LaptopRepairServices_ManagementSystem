@@ -14,14 +14,41 @@ namespace Laptop_Repair_Services_Management_System
 {
     public partial class ForgotPassword : Form
     {
-        public static string n;
+        public static string name;
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
-        public ForgotPassword()
+        public ForgotPassword(string n)
         {
             InitializeComponent();
-            txtBoxEmail.Text = n;
+            name = n;
             picBoxTickEmail.Hide();
             picBoxNone.Hide();
+            txtBoxEmail.Enabled = false;
+            btnVerify.Enabled = false;
+            btnReset.Enabled = false;
+            txtBoxNewPassw.Enabled = false;
+            txtBoxConfirmPassw.Enabled = false;
+            con.Open();
+            SqlCommand cmd1 = new SqlCommand($"Select Count(*) From AccountDetails Where username = '{name}';", con);
+            int count = Convert.ToInt32(cmd1.ExecuteScalar().ToString());
+
+            if (count == 0)
+            {
+                txtBoxEmail.Enabled = true;
+                txtBoxEmail.Text = "";
+                btnVerify.Enabled = true;
+                picBoxNone.Show();
+            }
+            else 
+            {
+                SqlCommand cmd = new SqlCommand($"Select email From AccountDetails Where username='{name}';", con);
+                string email = cmd.ExecuteScalar().ToString();
+                txtBoxEmail.Text = email;
+                picBoxTickEmail.Show();
+                btnReset.Enabled = true;
+                txtBoxConfirmPassw.Enabled = true;
+                txtBoxNewPassw.Enabled = true;
+            }
+            con.Close();
         }
 
         private void btnVerify_Click(object sender, EventArgs e)
@@ -34,6 +61,9 @@ namespace Laptop_Repair_Services_Management_System
             {
                 picBoxTickEmail.Show();
                 picBoxTickEmail.BringToFront();
+                btnReset.Enabled = true;
+                txtBoxConfirmPassw.Enabled = true;
+                txtBoxNewPassw.Enabled = true;
             }
             else
             {
