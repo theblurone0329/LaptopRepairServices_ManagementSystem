@@ -19,36 +19,12 @@ namespace Laptop_Repair_Services_Management_System
         public ForgotPassword(string n)
         {
             InitializeComponent();
-            name = n;
             picBoxTickEmail.Hide();
             picBoxNone.Hide();
-            txtBoxEmail.Enabled = false;
-            btnVerify.Enabled = false;
             btnReset.Enabled = false;
             txtBoxNewPassw.Enabled = false;
             txtBoxConfirmPassw.Enabled = false;
-            con.Open();
-            SqlCommand cmd1 = new SqlCommand($"Select Count(*) From AccountDetails Where username = '{name}';", con);
-            int count = Convert.ToInt32(cmd1.ExecuteScalar().ToString());
-
-            if (count == 0)
-            {
-                txtBoxEmail.Enabled = true;
-                txtBoxEmail.Text = "";
-                btnVerify.Enabled = true;
-                picBoxNone.Show();
-            }
-            else 
-            {
-                SqlCommand cmd = new SqlCommand($"Select email From AccountDetails Where username='{name}';", con);
-                string email = cmd.ExecuteScalar().ToString();
-                txtBoxEmail.Text = email;
-                picBoxTickEmail.Show();
-                btnReset.Enabled = true;
-                txtBoxConfirmPassw.Enabled = true;
-                txtBoxNewPassw.Enabled = true;
-            }
-            con.Close();
+            name = n;
         }
 
         private void btnVerify_Click(object sender, EventArgs e)
@@ -102,7 +78,7 @@ namespace Laptop_Repair_Services_Management_System
                         SqlCommand cmd5 = new SqlCommand($"Select username From AccountDetails Where email='{txtBoxEmail.Text}';", con);
                         string username = cmd5.ExecuteScalar().ToString();
                         this.Hide();
-                        LoginPage login = new LoginPage(username);
+                        LoginPage login = new LoginPage(name);
                         login.Closed += (s, args) => this.Close();
                         login.Show();
                     }

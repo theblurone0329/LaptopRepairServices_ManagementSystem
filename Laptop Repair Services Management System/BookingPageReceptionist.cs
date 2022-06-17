@@ -91,7 +91,9 @@ namespace Laptop_Repair_Services_Management_System
                 servName = "Internet Connectivity Issues";
             }
 
-            DateTime today = DateTime.Today;
+            DateTime date = DateTime.Today.Date;
+            string today = date.ToString("dd/MMMM/yyyy");
+            today.Replace("/", " ");
             con.Open();
             string userID = txtUserID.Text;
             SqlCommand cmd1 = new SqlCommand($"Insert into BookedServices values('{servName}', '{userID}', 'NULL', '{today}', 'Request Received');", con);

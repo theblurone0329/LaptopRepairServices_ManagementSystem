@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -36,6 +37,9 @@ namespace Laptop_Repair_Services_Management_System
         {
             con.Open();
             string userID = txtFindCustomer.Text;
+            List<char> charToRemove = new List<char>() { 'U' };
+            userID = userID.Filter(charToRemove);
+
             SqlCommand cmd = new SqlCommand($"Select Count(servStatus) From BookedServices Where servStatus = 'Request Received' and userID = '{userID}';", con);
             int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
             if (count != 0)

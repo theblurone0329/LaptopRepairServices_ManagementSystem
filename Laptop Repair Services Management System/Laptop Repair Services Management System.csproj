@@ -122,6 +122,7 @@
     <Compile Include="DisplayNotification.Designer.cs">
       <DependentUpon>DisplayNotification.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions.cs" />
     <Compile Include="ForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>

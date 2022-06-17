@@ -91,7 +91,9 @@ namespace Laptop_Repair_Services_Management_System
                 servName = "Internet Connectivity Issues";
             }
 
-            DateTime today = DateTime.Today;
+            DateTime date = DateTime.Today.Date;
+            string today = date.ToString("dd/MMMM/yyyy");
+            today.Replace("/", " ");
             con.Open();
             SqlCommand cmd = new SqlCommand($"Select userID From AccountDetails Where username='{username}';", con);
             string userID = cmd.ExecuteScalar().ToString();

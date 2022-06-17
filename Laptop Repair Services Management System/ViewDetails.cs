@@ -30,7 +30,7 @@ namespace Laptop_Repair_Services_Management_System
             lblUsername.Text = n;
             lblEmailAddr.Text = email;
             lblAccType.Text = accType;
-            lblUserID.Text = userID;
+            lblUserID.Text = "U0"+userID;
             con.Close();
             username = n;
         }
