@@ -24,12 +24,25 @@ namespace Laptop_Repair_Services_Management_System
         private void btnAccept_Click(object sender, EventArgs e)
         {
             con.Open();
-            string servName = checkedLstAcceptCustomerRequest.CheckedItems.ToString();
-            SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Service Approved' Where servName='{servName} and userID = '{txtFindCustomer.Text}';'", con);
-            cmd.ExecuteScalar();
-            SqlCommand cmd1 = new SqlCommand($"Insert into Notifications values ('Service Booking Approved', 'Your booked service for {servName} has been approved! Technician will begin service ASAP!', '{txtFindCustomer.Text}'", con);
-            cmd1.ExecuteScalar();
-            lstConfirmedServices.Text = $"{servName}\n";
+            string userID = txtFindCustomer.Text;
+            List<char> charToRemove = new List<char>() { 'U', '0' };
+            userID = userID.Filter(charToRemove);
+
+            int count = checkedLstAcceptCustomerRequest.CheckedItems.Count;
+            int index = 0;
+
+            while (count != index)
+            {
+                string servName = checkedLstAcceptCustomerRequest.Items[index].ToString();
+                //string servName = checkedLstAcceptCustomerRequest.SelectedItem.ToString();
+                SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Service Approved' Where servName = '{servName}' AND userID = {userID};", con);
+                cmd.ExecuteScalar();
+                SqlCommand cmd1 = new SqlCommand($"Insert into Notifications values ('Service Booking Approved', 'Your booked service for {servName} has been approved! Technician will begin service ASAP!', '{userID}');", con);
+                cmd1.ExecuteScalar();
+                index++;
+                lstConfirmedServices.Items.Add($"{servName}\n");
+                checkedLstAcceptCustomerRequest.Items.Remove(index);
+            }
             con.Close();
         }
 
@@ -37,18 +50,23 @@ namespace Laptop_Repair_Services_Management_System
         {
             con.Open();
             string userID = txtFindCustomer.Text;
-            List<char> charToRemove = new List<char>() { 'U' };
+            List<char> charToRemove = new List<char>() { 'U', '0' };
             userID = userID.Filter(charToRemove);
 
-            SqlCommand cmd = new SqlCommand($"Select Count(servStatus) From BookedServices Where servStatus = 'Request Received' and userID = '{userID}';", con);
+            SqlCommand cmd = new SqlCommand($"Select Count(*) From BookedServices Where servStatus = 'Request Received' and userID = '{userID}';", con);
             int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
+            int curr = 1;
             if (count != 0)
             {
-                while (count != 0)
+                count++;
+                while (curr != count)
                 {
-                    SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Request Received';", con);
+                    SqlCommand cmd1 = new SqlCommand($"Select Top({curr}) servName From BookedServices Where servStatus = 'Request Received' Order by servName ASC;", con);
                     string servName = cmd1.ExecuteScalar().ToString();
+                    SqlCommand cmd2 = new SqlCommand($"Update BookedServices Set servStatus = 'In List' Where servName = '{servName}' AND userID = '{userID}';", con);
+                    cmd2.ExecuteScalar();
                     checkedLstAcceptCustomerRequest.Items.Add(servName);
+                    curr++;
                 }
             }
             else

@@ -30,6 +30,7 @@ namespace Laptop_Repair_Services_Management_System
         private void InitializeComponent()
         {
             this.pnlAttach3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAccept = new System.Windows.Forms.Button();
             this.checkedLstAcceptCustomerRequest = new System.Windows.Forms.CheckedListBox();
             this.lblTitleAcceptCustomer = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@ namespace Laptop_Repair_Services_Management_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.lstConfirmedServices = new System.Windows.Forms.ListBox();
             this.lblTitleConfirmedServices = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlAttach3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,16 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttach3.Name = "pnlAttach3";
             this.pnlAttach3.Size = new System.Drawing.Size(631, 432);
             this.pnlAttach3.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 19);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "User ID: ";
             // 
             // btnAccept
             // 
@@ -160,16 +170,6 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleConfirmedServices.Size = new System.Drawing.Size(128, 18);
             this.lblTitleConfirmedServices.TabIndex = 0;
             this.lblTitleConfirmedServices.Text = "CONFIRMED SERVICES";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 19);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "UserID: ";
             // 
             // BookingEnquiries
             // 
