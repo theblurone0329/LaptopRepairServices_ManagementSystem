@@ -37,7 +37,6 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleTotalPay = new System.Windows.Forms.Label();
             this.btnConfirmPayment = new System.Windows.Forms.Button();
             this.btnCancelPayment = new System.Windows.Forms.Button();
-            this.btnPaymentReceived = new System.Windows.Forms.Button();
             this.btnReceipt = new System.Windows.Forms.Button();
             this.grpBillandReceipt = new System.Windows.Forms.GroupBox();
             this.lblReceiptID = new System.Windows.Forms.Label();
@@ -67,7 +66,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             this.radCash.AutoSize = true;
             this.radCash.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radCash.Location = new System.Drawing.Point(446, 244);
+            this.radCash.Location = new System.Drawing.Point(310, 234);
             this.radCash.Name = "radCash";
             this.radCash.Size = new System.Drawing.Size(51, 22);
             this.radCash.TabIndex = 34;
@@ -79,7 +78,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             this.radOnlineBanking.AutoSize = true;
             this.radOnlineBanking.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radOnlineBanking.Location = new System.Drawing.Point(308, 244);
+            this.radOnlineBanking.Location = new System.Drawing.Point(310, 206);
             this.radOnlineBanking.Name = "radOnlineBanking";
             this.radOnlineBanking.Size = new System.Drawing.Size(111, 22);
             this.radOnlineBanking.TabIndex = 33;
@@ -126,7 +125,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnConfirmPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmPayment.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmPayment.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmPayment.Location = new System.Drawing.Point(310, 194);
+            this.btnConfirmPayment.Location = new System.Drawing.Point(391, 386);
             this.btnConfirmPayment.Name = "btnConfirmPayment";
             this.btnConfirmPayment.Size = new System.Drawing.Size(126, 34);
             this.btnConfirmPayment.TabIndex = 30;
@@ -146,18 +145,6 @@ namespace Laptop_Repair_Services_Management_System
             this.btnCancelPayment.Text = "CANCEL";
             this.btnCancelPayment.UseVisualStyleBackColor = false;
             // 
-            // btnPaymentReceived
-            // 
-            this.btnPaymentReceived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
-            this.btnPaymentReceived.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaymentReceived.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaymentReceived.Location = new System.Drawing.Point(394, 386);
-            this.btnPaymentReceived.Name = "btnPaymentReceived";
-            this.btnPaymentReceived.Size = new System.Drawing.Size(123, 34);
-            this.btnPaymentReceived.TabIndex = 28;
-            this.btnPaymentReceived.Text = "PAYMENT RECEIVED";
-            this.btnPaymentReceived.UseVisualStyleBackColor = false;
-            // 
             // btnReceipt
             // 
             this.btnReceipt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(79)))), ((int)(((byte)(243)))));
@@ -173,6 +160,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             // grpBillandReceipt
             // 
+            this.grpBillandReceipt.BackColor = System.Drawing.SystemColors.Control;
             this.grpBillandReceipt.Controls.Add(this.lblReceiptID);
             this.grpBillandReceipt.Controls.Add(this.lstCustomerBill);
             this.grpBillandReceipt.Location = new System.Drawing.Point(17, 62);
@@ -232,6 +220,7 @@ namespace Laptop_Repair_Services_Management_System
             // pnlAttach2
             // 
             this.pnlAttach2.AutoScroll = true;
+            this.pnlAttach2.BackColor = System.Drawing.Color.White;
             this.pnlAttach2.Controls.Add(this.lblTitleBookingEnquiries);
             this.pnlAttach2.Controls.Add(this.radCash);
             this.pnlAttach2.Controls.Add(this.radOnlineBanking);
@@ -240,7 +229,6 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttach2.Controls.Add(this.lblTitleTotalPay);
             this.pnlAttach2.Controls.Add(this.btnConfirmPayment);
             this.pnlAttach2.Controls.Add(this.btnCancelPayment);
-            this.pnlAttach2.Controls.Add(this.btnPaymentReceived);
             this.pnlAttach2.Controls.Add(this.btnReceipt);
             this.pnlAttach2.Controls.Add(this.grpBillandReceipt);
             this.pnlAttach2.Controls.Add(this.lblDisplayCustomerName);
@@ -278,7 +266,6 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.Label lblTitleTotalPay;
         private System.Windows.Forms.Button btnConfirmPayment;
         private System.Windows.Forms.Button btnCancelPayment;
-        private System.Windows.Forms.Button btnPaymentReceived;
         private System.Windows.Forms.Button btnReceipt;
         private System.Windows.Forms.GroupBox grpBillandReceipt;
         private System.Windows.Forms.Label lblReceiptID;
