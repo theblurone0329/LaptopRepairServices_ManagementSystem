@@ -75,5 +75,87 @@ namespace Laptop_Repair_Services_Management_System
             lblDisplayTotalAmountPay.Text = $"RM {Totalprice}";
             con.Close();
         }
+
+        private void btnCancelPayment_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string temp = txtEnterCustomerID.Text;
+            List<char> charToRemove = new List<char>() { 'U' };
+            int userID = Convert.ToInt32(temp.Filter(charToRemove));
+
+            int count = lstCustomerBill.Items.Count;
+            int index = 0;
+
+            while (count != index)
+            {
+                string servName = lstCustomerBill.Items[index].ToString();
+                SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Waiting for Payment' Where userID = '{userID}' AND servName = '{servName}' AND servStatus = 'In List';", con);
+                cmd.ExecuteScalar();
+                lstCustomerBill.Items.RemoveAt(index);
+                index++;
+            }
+            lstCustomerBill.Text = "";
+            lblDisplayCustomerName.Text = "";
+            lblDisplayTotalAmountPay.Text = "RM ";
+            txtEnterCustomerID.Text = "";
+            con.Close();
+        }
+
+        private void btnConfirmPayment_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            int count = lstCustomerBill.Items.Count;
+            int index = 0;
+            double price;
+            string temp = txtEnterCustomerID.Text;
+            List<char> charToRemove = new List<char>() { 'U' };
+            int userID = Convert.ToInt32(temp.Filter(charToRemove));
+
+            while (count != index)
+            {
+                string servName = lstCustomerBill.Items[index].ToString();
+                SqlCommand cmd1 = new SqlCommand($"Select servType From BookedServices Where servName = '{servName}' AND userID = '{userID}' ", con);
+                string servType = cmd1.ExecuteScalar().ToString();
+
+                if (servType == "Urgent")
+                {
+                    SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}'", con);
+                    price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
+                } else
+                {
+                    SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}'", con);
+                    price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
+                }
+
+                if (radCash.Checked == false && radOnlineBanking.Checked == false)
+                {
+                    MessageBox.Show("Please choose a payment method");
+                    index++;
+                }else if (radCash.Checked == true)
+                {
+                    SqlCommand cmd = new SqlCommand($"Insert into CompletedServices values ('{servName}', '{servType}', '{price}', 'Completed', '{radCash.Text}');", con);
+                    cmd.ExecuteScalar();
+                    SqlCommand cmd3 = new SqlCommand($"Delete From BookedServices Where servStatus = 'In List' AND servName = '{servName}' AND userID = '{userID}';", con);
+                    cmd3.ExecuteScalar();
+                    lstCustomerBill.Items.RemoveAt(index);
+                    txtEnterCustomerID.Text = "";
+                    radCash.Checked = false;
+                    index++;
+                } else if (radOnlineBanking.Checked == true)
+                {
+                    SqlCommand cmd = new SqlCommand($"Insert into CompletedServices values ('{servName}', '{servType}', '{price}', 'Completed', '{radOnlineBanking.Text}');", con);
+                    cmd.ExecuteScalar();
+                    SqlCommand cmd3 = new SqlCommand($"Delete From BookedServices Where servStatus = 'In List' AND servName = '{servName}' AND userID = '{userID}';", con);
+                    cmd3.ExecuteScalar();
+                    lstCustomerBill.Items.RemoveAt(index);
+                    txtEnterCustomerID.Text = "";
+                    radOnlineBanking.Checked = false;
+                    index++;
+                }
+            }
+
+
+            con.Close();
+        }
     }
 }
