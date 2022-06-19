@@ -81,7 +81,7 @@ namespace Laptop_Repair_Services_Management_System
         private void btnComplete_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Service Complete' Where servName = '{lblTitleServName.Text} And userID = '{userIDHere}';", con);
+            SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Waiting for Payment' Where servName = '{lblTitleServName.Text} And userID = '{userIDHere}';", con);
             cmd.ExecuteScalar();
             SqlCommand cmd1 = new SqlCommand($"Update BookedServices Set comment = '{txtComment.Text}' Where servName = '{lblTitleServName.Text} And userID = '{userIDHere}';", con);
             cmd1.ExecuteScalar();

@@ -24,9 +24,9 @@ namespace Laptop_Repair_Services_Management_System
         private void btnAccept_Click(object sender, EventArgs e)
         {
             con.Open();
-            string userID = txtFindCustomer.Text;
-            List<char> charToRemove = new List<char>() { 'U', '0' };
-            userID = userID.Filter(charToRemove);
+            string temp = txtFindCustomer.Text;
+            List<char> charToRemove = new List<char>() { 'U'};
+            int userID = Convert.ToInt32(temp.Filter(charToRemove));
 
             int count = checkedLstAcceptCustomerRequest.CheckedItems.Count;
             int index = 0;
@@ -49,9 +49,9 @@ namespace Laptop_Repair_Services_Management_System
         private void btnGoFindCustomer_Click(object sender, EventArgs e)
         {
             con.Open();
-            string userID = txtFindCustomer.Text;
-            List<char> charToRemove = new List<char>() { 'U', '0' };
-            userID = userID.Filter(charToRemove);
+            string temp = txtFindCustomer.Text;
+            List<char> charToRemove = new List<char>() { 'U'};
+            int userID = Convert.ToInt32(temp.Filter(charToRemove));
 
             SqlCommand cmd = new SqlCommand($"Select Count(*) From BookedServices Where servStatus = 'Request Received' and userID = '{userID}';", con);
             int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
