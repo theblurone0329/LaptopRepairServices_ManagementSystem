@@ -132,6 +132,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnConfirmPayment.TabIndex = 30;
             this.btnConfirmPayment.Text = "CONFIRM PAYMENT";
             this.btnConfirmPayment.UseVisualStyleBackColor = false;
+            this.btnConfirmPayment.Click += new System.EventHandler(this.btnConfirmPayment_Click);
             // 
             // btnCancelPayment
             // 
@@ -145,6 +146,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnCancelPayment.TabIndex = 29;
             this.btnCancelPayment.Text = "CANCEL";
             this.btnCancelPayment.UseVisualStyleBackColor = false;
+            this.btnCancelPayment.Click += new System.EventHandler(this.btnCancelPayment_Click);
             // 
             // btnReceipt
             // 
