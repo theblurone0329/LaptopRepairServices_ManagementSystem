@@ -33,7 +33,8 @@ namespace Laptop_Repair_Services_Management_System
             {
                 SqlCommand getTempUID = new SqlCommand($"Select userID From AccountDetails Where username='{n}';", con);
                 string tempUID = getTempUID.ExecuteScalar().ToString();
-                SqlCommand delNotiNameBack = new SqlCommand($"Delete From Notifications Where userID='{tempUID}' AND notiName='{notiNameBack}';", con);
+                //this line got problem, solving it soon
+                SqlCommand delNotiNameBack = new SqlCommand($"Delete From Top(1) Notifications Where userID='{tempUID}' AND notiName='{notiNameBack}';", con);
                 delNotiNameBack.ExecuteScalar();
             }
             //To display the notifications
@@ -43,6 +44,26 @@ namespace Laptop_Repair_Services_Management_System
             int count = Convert.ToInt32(cmd1.ExecuteScalar().ToString());
 
             //To check whether there are 1, 2, or 3 notifications
+            if (count > 3)
+            {
+                SqlCommand cmd2 = new SqlCommand($"Select Top(1) notiName From Notifications Where userID='{userID}';", con);
+                string notiName = cmd2.ExecuteScalar().ToString();
+                lblNotiName1.Text = notiName;
+                notiNameBring1 = notiName;
+                pnlAttachNoti1.Show();
+
+                SqlCommand cmd3 = new SqlCommand($"Select Top(2) Max(notiName) From Notifications Where userID = '{userID}';", con);
+                string notiName2 = cmd3.ExecuteScalar().ToString();
+                lblNotiName2.Text = notiName2;
+                notiNameBring2 = notiName2;
+                pnlAttachNoti2.Show();
+
+                SqlCommand cmd4 = new SqlCommand($"Select Top(3) Min(notiName) From Notifications Where userID = '{userID}' AND notiName Not in (Select Top(2) notiName From Notifications); ", con);
+                string notiName3 = cmd4.ExecuteScalar().ToString();
+                lblNotiName3.Text = notiName3;
+                notiNameBring3 = notiName3;
+                pnlAttachNoti3.Show();
+            }
             if (count == 3)
             {
                 SqlCommand cmd2 = new SqlCommand($"Select Top(1) notiName From Notifications Where userID='{userID}';", con);
@@ -90,7 +111,7 @@ namespace Laptop_Repair_Services_Management_System
                 pnlAttachNoti2.Hide();
                 pnlAttachNoti3.Hide();
             }
-            else
+            else if (count == 0)
             {
                 pnlAttachAllNoti.Hide();
                 lblNoNoti.Show();

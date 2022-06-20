@@ -105,56 +105,68 @@ namespace Laptop_Repair_Services_Management_System
         {
             con.Open();
             int count = lstCustomerBill.Items.Count;
-            int index = 0;
+            int stop = 0;
             double price;
             string temp = txtEnterCustomerID.Text;
             List<char> charToRemove = new List<char>() { 'U' };
             int userID = Convert.ToInt32(temp.Filter(charToRemove));
 
-            while (count != index)
+            while (count != stop)
             {
-                string servName = lstCustomerBill.Items[index].ToString();
+                string servName = lstCustomerBill.Items[0].ToString();
                 SqlCommand cmd1 = new SqlCommand($"Select servType From BookedServices Where servName = '{servName}' AND userID = '{userID}' ", con);
                 string servType = cmd1.ExecuteScalar().ToString();
+      
+                if (radCash.Checked == true)
+                {
+                    if (servType == "Urgent")
+                    {
+                        SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}'", con);
+                        price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
+                    }
+                    else
+                    {
+                        SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}'", con);
+                        price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
+                    }
 
-                if (servType == "Urgent")
-                {
-                    SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}'", con);
-                    price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
-                } else
-                {
-                    SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}'", con);
-                    price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
+                        SqlCommand cmd = new SqlCommand($"Insert into CompletedServices values ('{servName}', '{servType}', '{price}', 'Completed', '{radCash.Text}');", con);
+                        cmd.ExecuteScalar();
+                        SqlCommand cmd3 = new SqlCommand($"Delete From BookedServices Where servStatus = 'In List' AND servName = '{servName}' AND userID = '{userID}';", con);
+                        cmd3.ExecuteScalar();
+                        lstCustomerBill.Items.RemoveAt(0);
+                        stop++;
                 }
+                else if (radOnlineBanking.Checked == true)
+                {
+                    if (servType == "Urgent")
+                    {
+                        SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}'", con);
+                        price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
+                    }
+                    else
+                    {
+                        SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}'", con);
+                        price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
+                    }
 
-                if (radCash.Checked == false && radOnlineBanking.Checked == false)
-                {
-                    MessageBox.Show("Please choose a payment method");
-                    index++;
-                }else if (radCash.Checked == true)
-                {
-                    SqlCommand cmd = new SqlCommand($"Insert into CompletedServices values ('{servName}', '{servType}', '{price}', 'Completed', '{radCash.Text}');", con);
-                    cmd.ExecuteScalar();
-                    SqlCommand cmd3 = new SqlCommand($"Delete From BookedServices Where servStatus = 'In List' AND servName = '{servName}' AND userID = '{userID}';", con);
-                    cmd3.ExecuteScalar();
-                    lstCustomerBill.Items.RemoveAt(index);
-                    txtEnterCustomerID.Text = "";
-                    radCash.Checked = false;
-                    index++;
-                } else if (radOnlineBanking.Checked == true)
-                {
                     SqlCommand cmd = new SqlCommand($"Insert into CompletedServices values ('{servName}', '{servType}', '{price}', 'Completed', '{radOnlineBanking.Text}');", con);
                     cmd.ExecuteScalar();
                     SqlCommand cmd3 = new SqlCommand($"Delete From BookedServices Where servStatus = 'In List' AND servName = '{servName}' AND userID = '{userID}';", con);
                     cmd3.ExecuteScalar();
-                    lstCustomerBill.Items.RemoveAt(index);
-                    txtEnterCustomerID.Text = "";
-                    radOnlineBanking.Checked = false;
-                    index++;
+                    lstCustomerBill.Items.RemoveAt(0);
+                    stop++;
+                }
+                else if (radCash.Checked == false && radOnlineBanking.Checked == false)
+                {
+                    MessageBox.Show("Please choose a payment method");
+                    stop = count;
                 }
             }
-
-
+            radCash.Checked = false;
+            radOnlineBanking.Checked = false;
+            txtEnterCustomerID.Text = "";
+            MessageBox.Show("All Services Paid!");
             con.Close();
         }
     }
