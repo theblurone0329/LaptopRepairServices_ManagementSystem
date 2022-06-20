@@ -29,6 +29,7 @@ namespace Laptop_Repair_Services_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillingandPayment));
             this.lblTitleBookingEnquiries = new System.Windows.Forms.Label();
             this.radCash = new System.Windows.Forms.RadioButton();
             this.radOnlineBanking = new System.Windows.Forms.RadioButton();
@@ -157,6 +158,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnReceipt.TabIndex = 27;
             this.btnReceipt.Text = "RECEIPT";
             this.btnReceipt.UseVisualStyleBackColor = false;
+            this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
             // 
             // grpBillandReceipt
             // 
@@ -246,8 +248,9 @@ namespace Laptop_Repair_Services_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 432);
             this.Controls.Add(this.pnlAttach2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BillingandPayment";
-            this.Text = "BillingandPayment";
+            this.Text = "Billing and Payment";
             this.grpBillandReceipt.ResumeLayout(false);
             this.grpBillandReceipt.PerformLayout();
             this.pnlAttach2.ResumeLayout(false);

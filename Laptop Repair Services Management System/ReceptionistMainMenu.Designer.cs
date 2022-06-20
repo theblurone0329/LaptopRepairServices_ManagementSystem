@@ -29,6 +29,7 @@ namespace Laptop_Repair_Services_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReceptionistMainMenu));
             this.lblDisplayUsernameA = new System.Windows.Forms.Label();
             this.panelUpperNavBar = new System.Windows.Forms.Panel();
             this.lblDisplayTime = new System.Windows.Forms.Label();
@@ -41,9 +42,8 @@ namespace Laptop_Repair_Services_Management_System
             this.btnCallTechnician = new System.Windows.Forms.Button();
             this.btnRegisterNewCust = new System.Windows.Forms.Button();
             this.pnlAttachForm = new System.Windows.Forms.Panel();
-            this.panelSideBar = new System.Windows.Forms.Panel();
-            this.pnlAttach6 = new System.Windows.Forms.Panel();
             this.picLogoMain = new System.Windows.Forms.PictureBox();
+            this.panelSideBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picIconOption2 = new System.Windows.Forms.PictureBox();
             this.picIconOption3 = new System.Windows.Forms.PictureBox();
@@ -51,17 +51,18 @@ namespace Laptop_Repair_Services_Management_System
             this.btnNotificationAlert = new System.Windows.Forms.Button();
             this.picIconOption1 = new System.Windows.Forms.PictureBox();
             this.picViewMyProfile = new System.Windows.Forms.PictureBox();
+            this.pnlAttach6 = new System.Windows.Forms.Panel();
             this.panelUpperNavBar.SuspendLayout();
             this.pnlAttachForm.SuspendLayout();
-            this.panelSideBar.SuspendLayout();
-            this.pnlAttach6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoMain)).BeginInit();
+            this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconOption2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconOption3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconOption4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconOption1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picViewMyProfile)).BeginInit();
+            this.pnlAttach6.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDisplayUsernameA
@@ -223,11 +224,22 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttachForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlAttachForm.BackColor = System.Drawing.Color.White;
             this.pnlAttachForm.Controls.Add(this.picLogoMain);
             this.pnlAttachForm.Location = new System.Drawing.Point(212, 50);
             this.pnlAttachForm.Name = "pnlAttachForm";
             this.pnlAttachForm.Size = new System.Drawing.Size(647, 461);
             this.pnlAttachForm.TabIndex = 9;
+            // 
+            // picLogoMain
+            // 
+            this.picLogoMain.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.LaptopiaFinallogo1;
+            this.picLogoMain.Location = new System.Drawing.Point(241, 105);
+            this.picLogoMain.Name = "picLogoMain";
+            this.picLogoMain.Size = new System.Drawing.Size(203, 196);
+            this.picLogoMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogoMain.TabIndex = 1;
+            this.picLogoMain.TabStop = false;
             // 
             // panelSideBar
             // 
@@ -254,28 +266,6 @@ namespace Laptop_Repair_Services_Management_System
             this.panelSideBar.Name = "panelSideBar";
             this.panelSideBar.Size = new System.Drawing.Size(216, 511);
             this.panelSideBar.TabIndex = 8;
-            // 
-            // pnlAttach6
-            // 
-            this.pnlAttach6.AutoScroll = true;
-            this.pnlAttach6.Controls.Add(this.pnlAttachForm);
-            this.pnlAttach6.Controls.Add(this.panelSideBar);
-            this.pnlAttach6.Controls.Add(this.panelUpperNavBar);
-            this.pnlAttach6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlAttach6.Location = new System.Drawing.Point(0, 0);
-            this.pnlAttach6.Name = "pnlAttach6";
-            this.pnlAttach6.Size = new System.Drawing.Size(859, 511);
-            this.pnlAttach6.TabIndex = 1;
-            // 
-            // picLogoMain
-            // 
-            this.picLogoMain.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.LaptopiaFinallogo1;
-            this.picLogoMain.Location = new System.Drawing.Point(241, 105);
-            this.picLogoMain.Name = "picLogoMain";
-            this.picLogoMain.Size = new System.Drawing.Size(203, 196);
-            this.picLogoMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogoMain.TabIndex = 1;
-            this.picLogoMain.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -350,26 +340,39 @@ namespace Laptop_Repair_Services_Management_System
             this.picViewMyProfile.TabStop = false;
             this.picViewMyProfile.Click += new System.EventHandler(this.picViewMyProfile_Click);
             // 
+            // pnlAttach6
+            // 
+            this.pnlAttach6.AutoScroll = true;
+            this.pnlAttach6.Controls.Add(this.pnlAttachForm);
+            this.pnlAttach6.Controls.Add(this.panelSideBar);
+            this.pnlAttach6.Controls.Add(this.panelUpperNavBar);
+            this.pnlAttach6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAttach6.Location = new System.Drawing.Point(0, 0);
+            this.pnlAttach6.Name = "pnlAttach6";
+            this.pnlAttach6.Size = new System.Drawing.Size(859, 511);
+            this.pnlAttach6.TabIndex = 1;
+            // 
             // ReceptionistMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 511);
             this.Controls.Add(this.pnlAttach6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReceptionistMainMenu";
             this.Text = "ReceptionistMainMenu";
             this.panelUpperNavBar.ResumeLayout(false);
             this.panelUpperNavBar.PerformLayout();
             this.pnlAttachForm.ResumeLayout(false);
-            this.panelSideBar.ResumeLayout(false);
-            this.pnlAttach6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogoMain)).EndInit();
+            this.panelSideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconOption2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconOption3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconOption4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconOption1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picViewMyProfile)).EndInit();
+            this.pnlAttach6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

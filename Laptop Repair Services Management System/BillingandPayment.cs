@@ -20,6 +20,23 @@ namespace Laptop_Repair_Services_Management_System
             InitializeComponent();
         }
 
+        private Form activeForm = null;
+        private void showForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlAttach2.Controls.Add(childForm);
+            pnlAttach2.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
         private void btnFindCustomer_Click(object sender, EventArgs e)
         {
             string temp = txtEnterCustomerID.Text;
@@ -45,6 +62,12 @@ namespace Laptop_Repair_Services_Management_System
             }
             lblDisplayTotalAmountPay.Text = $"RM {price}";
             lblDisplayCustomerName.Text = username;
+        }
+
+        private void btnReceipt_Click(object sender, EventArgs e)
+        {
+            Receipt receipt = new Receipt();
+            showForm(receipt);
         }
     }
 }
