@@ -69,3 +69,4 @@ C:\Users\aunir\OneDrive\Desktop\LaptopRepairServices_ManagementSystem\Laptop Rep
 C:\Users\aunir\OneDrive\Desktop\LaptopRepairServices_ManagementSystem\Laptop Repair Services Management System\obj\Debug\Laptop Repair Services Management System.csproj.CoreCompileInputs.cache
 C:\Users\aunir\OneDrive\Desktop\LaptopRepairServices_ManagementSystem\Laptop Repair Services Management System\obj\Debug\Laptop Repair Services Management System.exe
 C:\Users\aunir\OneDrive\Desktop\LaptopRepairServices_ManagementSystem\Laptop Repair Services Management System\obj\Debug\Laptop Repair Services Management System.pdb
+C:\Users\Adrian Fu\Desktop\C#\Assignment\Laptop Repair Services Management System\LaptopRepairServices_ManagementSystem\Laptop Repair Services Management System\obj\Debug\Laptop_Repair_Services_Management_System.Receipt.resources

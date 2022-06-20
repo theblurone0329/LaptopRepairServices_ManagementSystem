@@ -128,7 +128,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnBookServicesForCust.Name = "btnBookServicesForCust";
             this.btnBookServicesForCust.Size = new System.Drawing.Size(175, 47);
             this.btnBookServicesForCust.TabIndex = 8;
-            this.btnBookServicesForCust.Text = "View Requested Services";
+            this.btnBookServicesForCust.Text = "Book Services";
             this.btnBookServicesForCust.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBookServicesForCust.UseVisualStyleBackColor = false;
             this.btnBookServicesForCust.Click += new System.EventHandler(this.btnBookServicesForCust_Click);
@@ -143,7 +143,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnChangeServiceCust.Name = "btnChangeServiceCust";
             this.btnChangeServiceCust.Size = new System.Drawing.Size(175, 47);
             this.btnChangeServiceCust.TabIndex = 16;
-            this.btnChangeServiceCust.Text = " Book Services";
+            this.btnChangeServiceCust.Text = "Service Change Requests";
             this.btnChangeServiceCust.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChangeServiceCust.UseVisualStyleBackColor = false;
             this.btnChangeServiceCust.Click += new System.EventHandler(this.btnChangeServiceCust_Click);

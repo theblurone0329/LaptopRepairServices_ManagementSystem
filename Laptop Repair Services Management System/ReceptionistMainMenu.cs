@@ -60,14 +60,14 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnChangeServiceCust_Click(object sender, EventArgs e)
         {
-            BookingPageReceptionist view = new BookingPageReceptionist(n);
-            showForm(view);
+            ChangeServiceReceptionist viewServ = new ChangeServiceReceptionist();
+            showForm(viewServ); 
         }
 
         private void btnBookServicesForCust_Click(object sender, EventArgs e)
         {
-            ChangeServiceReceptionist viewServ = new ChangeServiceReceptionist();
-            showForm(viewServ);
+            BookingPageReceptionist view = new BookingPageReceptionist(n);
+            showForm(view);
         }
 
         private void btnBookingEnquiries_Click(object sender, EventArgs e)

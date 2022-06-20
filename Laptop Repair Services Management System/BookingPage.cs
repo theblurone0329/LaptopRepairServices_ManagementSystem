@@ -114,7 +114,7 @@ namespace Laptop_Repair_Services_Management_System
             con.Open();
             SqlCommand cmd = new SqlCommand($"Select userID From AccountDetails Where username='{username}';", con);
             string userID = cmd.ExecuteScalar().ToString();
-            SqlCommand cmd1 = new SqlCommand($"Insert into BookedServices values('{servName}', '{userID}', 'NULL', '{today}', 'Request Received', '{servType}');", con);
+            SqlCommand cmd1 = new SqlCommand($"Insert into BookedServices values('{servName}', '{userID}', 'NULL', '{today}', 'Request Received', '{servType}', 0);", con);
             cmd1.ExecuteScalar();
             SqlCommand cmd2 = new SqlCommand($"Insert into Notifications values('Service Booked', 'You booked {servName}, confirmation will arrive within 3 days', '{userID}');", con);
             cmd2.ExecuteScalar();

@@ -30,17 +30,15 @@ namespace Laptop_Repair_Services_Management_System
         private void InitializeComponent()
         {
             this.pnlAttachForm = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNotiDescrip = new System.Windows.Forms.Label();
-            this.lblTitleNotiName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbNotiView = new System.Windows.Forms.PictureBox();
             this.btnView = new System.Windows.Forms.Button();
+            this.lblTitleNotiName = new System.Windows.Forms.Label();
+            this.lblNotiDescrip = new System.Windows.Forms.RichTextBox();
             this.pnlAttachForm.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNotiView)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAttachForm
@@ -56,6 +54,16 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttachForm.Name = "pnlAttachForm";
             this.pnlAttachForm.Size = new System.Drawing.Size(660, 450);
             this.pnlAttachForm.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.bell;
+            this.pictureBox1.Location = new System.Drawing.Point(311, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // btnBack
             // 
@@ -74,52 +82,12 @@ namespace Laptop_Repair_Services_Management_System
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.pbNotiView);
             this.groupBox1.Controls.Add(this.lblNotiDescrip);
             this.groupBox1.Location = new System.Drawing.Point(41, 116);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(577, 241);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            // 
-            // lblNotiDescrip
-            // 
-            this.lblNotiDescrip.AutoSize = true;
-            this.lblNotiDescrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotiDescrip.Location = new System.Drawing.Point(142, 68);
-            this.lblNotiDescrip.Name = "lblNotiDescrip";
-            this.lblNotiDescrip.Size = new System.Drawing.Size(245, 20);
-            this.lblNotiDescrip.TabIndex = 7;
-            this.lblNotiDescrip.Text = "Short Notification Description";
-            // 
-            // lblTitleNotiName
-            // 
-            this.lblTitleNotiName.AutoSize = true;
-            this.lblTitleNotiName.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleNotiName.Location = new System.Drawing.Point(200, 66);
-            this.lblTitleNotiName.Name = "lblTitleNotiName";
-            this.lblTitleNotiName.Size = new System.Drawing.Size(268, 35);
-            this.lblTitleNotiName.TabIndex = 11;
-            this.lblTitleNotiName.Text = "New Service Request";
-            this.lblTitleNotiName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.bell;
-            this.pictureBox1.Location = new System.Drawing.Point(311, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbNotiView
-            // 
-            this.pbNotiView.Location = new System.Drawing.Point(24, 19);
-            this.pbNotiView.Name = "pbNotiView";
-            this.pbNotiView.Size = new System.Drawing.Size(88, 69);
-            this.pbNotiView.TabIndex = 6;
-            this.pbNotiView.TabStop = false;
             // 
             // btnView
             // 
@@ -135,6 +103,26 @@ namespace Laptop_Repair_Services_Management_System
             this.btnView.Text = " ";
             this.btnView.UseVisualStyleBackColor = false;
             // 
+            // lblTitleNotiName
+            // 
+            this.lblTitleNotiName.AutoSize = true;
+            this.lblTitleNotiName.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleNotiName.Location = new System.Drawing.Point(237, 66);
+            this.lblTitleNotiName.Name = "lblTitleNotiName";
+            this.lblTitleNotiName.Size = new System.Drawing.Size(198, 35);
+            this.lblTitleNotiName.TabIndex = 11;
+            this.lblTitleNotiName.Text = "Service Booked";
+            this.lblTitleNotiName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblNotiDescrip
+            // 
+            this.lblNotiDescrip.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotiDescrip.Location = new System.Drawing.Point(6, 11);
+            this.lblNotiDescrip.Name = "lblNotiDescrip";
+            this.lblNotiDescrip.Size = new System.Drawing.Size(565, 224);
+            this.lblNotiDescrip.TabIndex = 9;
+            this.lblNotiDescrip.Text = "";
+            // 
             // DisplayNotification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,10 +133,8 @@ namespace Laptop_Repair_Services_Management_System
             this.Text = "DisplayNotification";
             this.pnlAttachForm.ResumeLayout(false);
             this.pnlAttachForm.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNotiView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -159,9 +145,8 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label btnBack;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pbNotiView;
-        private System.Windows.Forms.Label lblNotiDescrip;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Label lblTitleNotiName;
+        private System.Windows.Forms.RichTextBox lblNotiDescrip;
     }
 }

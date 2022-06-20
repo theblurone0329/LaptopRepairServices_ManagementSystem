@@ -153,10 +153,10 @@ namespace Laptop_Repair_Services_Management_System
             this.radBtnUrgent.Location = new System.Drawing.Point(122, 172);
             this.radBtnUrgent.Margin = new System.Windows.Forms.Padding(2);
             this.radBtnUrgent.Name = "radBtnUrgent";
-            this.radBtnUrgent.Size = new System.Drawing.Size(67, 22);
+            this.radBtnUrgent.Size = new System.Drawing.Size(70, 22);
             this.radBtnUrgent.TabIndex = 16;
             this.radBtnUrgent.TabStop = true;
-            this.radBtnUrgent.Text = "Type 2";
+            this.radBtnUrgent.Text = "Normal";
             this.radBtnUrgent.UseVisualStyleBackColor = true;
             // 
             // radBtnNormal
@@ -167,10 +167,10 @@ namespace Laptop_Repair_Services_Management_System
             this.radBtnNormal.Location = new System.Drawing.Point(122, 150);
             this.radBtnNormal.Margin = new System.Windows.Forms.Padding(2);
             this.radBtnNormal.Name = "radBtnNormal";
-            this.radBtnNormal.Size = new System.Drawing.Size(67, 22);
+            this.radBtnNormal.Size = new System.Drawing.Size(68, 22);
             this.radBtnNormal.TabIndex = 15;
             this.radBtnNormal.TabStop = true;
-            this.radBtnNormal.Text = "Type 1";
+            this.radBtnNormal.Text = "Urgent";
             this.radBtnNormal.UseVisualStyleBackColor = true;
             // 
             // label3
