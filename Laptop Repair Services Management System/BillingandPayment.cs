@@ -189,7 +189,7 @@ namespace Laptop_Repair_Services_Management_System
         private void btnReceipt_Click(object sender, EventArgs e)
         {
             List<string> servNames = new List<string>();
-            List<double> prices = new List<double>();
+            List<string> prices = new List<string>();
             string totalPrices;
             string tempName;
 
@@ -206,37 +206,67 @@ namespace Laptop_Repair_Services_Management_System
             List<char> charToRemove = new List<char>() { 'U' };
             int userID = Convert.ToInt32(temp.Filter(charToRemove));
 
-            SqlCommand cmd = new SqlCommand($"Select Count(*) From BookedServices Where servStatus = 'Waiting for Payment' and userID = '{userID}';", con);
+            SqlCommand cmd = new SqlCommand($"Select Count(*) From BookedServices Where servStatus = 'In List' and userID = '{userID}';", con);
             int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
-            int curr = 1;
             int index = 0;
+            int curr = 1;
+            int ohYeah = 1;
             string servName;
             string servType;
             double price;
 
             if (count != 0)
             {
-                count++;
-                while (curr != count)
+                while (index != count)
                 {
-                    SqlCommand cmd1 = new SqlCommand($"Select Top({curr}) servName From BookedServices Where servStatus = 'In List' Order by servName ASC;", con);
-                    servName = cmd1.ExecuteScalar().ToString();
-                    SqlCommand cmd3 = new SqlCommand($"Select servType From BookedServices Where userID = {userID} AND servStatus = 'In List' AND servName = '{servName}';", con);
-                    servType = cmd3.ExecuteScalar().ToString();
-                    if (servType == "Urgent")
+                    if (curr == 1)
                     {
-                        SqlCommand cmd4 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}';", con);
-                        price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
-                        prices.Add(price);
+                        servName = lstCustomerBill.Items[index].ToString();
+                        MessageBox.Show(servName);
 
-                    }
-                    else
+                        SqlCommand cmd3 = new SqlCommand($"Select servType From BookedServices Where userID = {userID} AND servStatus = 'In List' AND servName = '{servName}';", con);
+                        servType = cmd3.ExecuteScalar().ToString();
+
+                        if (servType == "Urgent")
+                        {
+                            SqlCommand cmd4 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}';", con);
+                            price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
+                            prices.Add(price.ToString());
+                            MessageBox.Show(price.ToString());
+                        }
+                        else
+                        {
+                            SqlCommand cmd4 = new SqlCommand($"Select normPrice From ServiceDetails Where servName = '{servName}';", con);
+                            price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
+                            prices.Add(price.ToString());
+                            MessageBox.Show(price.ToString());
+                        }
+                    } else if (curr != 1)
                     {
-                        SqlCommand cmd4 = new SqlCommand($"Select normPrice From ServiceDetails Where servName = '{servName}';", con);
-                        price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
-                        prices.Add(price);
+                        servName = lstCustomerBill.Items[index].ToString();
+                        MessageBox.Show(servName);
+
+                        SqlCommand cmd3 = new SqlCommand($"Select servType From BookedServices Where userID = {userID} AND servStatus = 'In List' AND servName = '{servName}';", con);
+                        servType = cmd3.ExecuteScalar().ToString();
+
+                        if (servType == "Urgent")
+                        {
+                            SqlCommand cmd4 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}';", con);
+                            price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
+                            prices.Add(price.ToString());
+                            MessageBox.Show(price.ToString());
+                        }
+                        else
+                        {
+                            SqlCommand cmd4 = new SqlCommand($"Select normPrice From ServiceDetails Where servName = '{servName}';", con);
+                            price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
+                            prices.Add(price.ToString());
+                            MessageBox.Show(price.ToString());
+                        }
                     }
                     index++;
+                    ohYeah++;
+                    curr++;
                 }
             }
             con.Close();

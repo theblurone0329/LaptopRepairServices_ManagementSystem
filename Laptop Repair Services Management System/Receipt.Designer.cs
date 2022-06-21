@@ -55,6 +55,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
             this.panelAttachReceipt.SuspendLayout();
             this.pnlAll.SuspendLayout();
             this.pnlTotalPrice.SuspendLayout();
@@ -69,6 +71,8 @@
             // 
             // panelAttachReceipt
             // 
+            this.panelAttachReceipt.Controls.Add(this.lblTime);
+            this.panelAttachReceipt.Controls.Add(this.lblDate);
             this.panelAttachReceipt.Controls.Add(this.pnlAll);
             this.panelAttachReceipt.Controls.Add(this.label2);
             this.panelAttachReceipt.Controls.Add(this.pictureBox1);
@@ -97,7 +101,7 @@
             // 
             this.pnlTotalPrice.Controls.Add(this.lblTotalPrice);
             this.pnlTotalPrice.Controls.Add(this.label15);
-            this.pnlTotalPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTotalPrice.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlTotalPrice.Location = new System.Drawing.Point(0, 252);
             this.pnlTotalPrice.Name = "pnlTotalPrice";
             this.pnlTotalPrice.Size = new System.Drawing.Size(350, 82);
@@ -136,20 +140,20 @@
             // lblPrice5
             // 
             this.lblPrice5.AutoSize = true;
-            this.lblPrice5.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice5.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice5.Location = new System.Drawing.Point(270, 9);
             this.lblPrice5.Name = "lblPrice5";
-            this.lblPrice5.Size = new System.Drawing.Size(41, 19);
+            this.lblPrice5.Size = new System.Drawing.Size(32, 15);
             this.lblPrice5.TabIndex = 1;
             this.lblPrice5.Text = "Price";
             // 
             // lblServ5
             // 
             this.lblServ5.AutoSize = true;
-            this.lblServ5.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServ5.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServ5.Location = new System.Drawing.Point(17, 9);
             this.lblServ5.Name = "lblServ5";
-            this.lblServ5.Size = new System.Drawing.Size(84, 19);
+            this.lblServ5.Size = new System.Drawing.Size(66, 15);
             this.lblServ5.TabIndex = 0;
             this.lblServ5.Text = "Description";
             // 
@@ -166,20 +170,20 @@
             // lblPrice4
             // 
             this.lblPrice4.AutoSize = true;
-            this.lblPrice4.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice4.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice4.Location = new System.Drawing.Point(270, 9);
             this.lblPrice4.Name = "lblPrice4";
-            this.lblPrice4.Size = new System.Drawing.Size(41, 19);
+            this.lblPrice4.Size = new System.Drawing.Size(32, 15);
             this.lblPrice4.TabIndex = 1;
             this.lblPrice4.Text = "Price";
             // 
             // lblServ4
             // 
             this.lblServ4.AutoSize = true;
-            this.lblServ4.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServ4.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServ4.Location = new System.Drawing.Point(17, 9);
             this.lblServ4.Name = "lblServ4";
-            this.lblServ4.Size = new System.Drawing.Size(84, 19);
+            this.lblServ4.Size = new System.Drawing.Size(66, 15);
             this.lblServ4.TabIndex = 0;
             this.lblServ4.Text = "Description";
             // 
@@ -196,20 +200,20 @@
             // lblPrice3
             // 
             this.lblPrice3.AutoSize = true;
-            this.lblPrice3.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice3.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice3.Location = new System.Drawing.Point(270, 9);
             this.lblPrice3.Name = "lblPrice3";
-            this.lblPrice3.Size = new System.Drawing.Size(41, 19);
+            this.lblPrice3.Size = new System.Drawing.Size(32, 15);
             this.lblPrice3.TabIndex = 1;
             this.lblPrice3.Text = "Price";
             // 
             // lblServ3
             // 
             this.lblServ3.AutoSize = true;
-            this.lblServ3.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServ3.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServ3.Location = new System.Drawing.Point(17, 9);
             this.lblServ3.Name = "lblServ3";
-            this.lblServ3.Size = new System.Drawing.Size(84, 19);
+            this.lblServ3.Size = new System.Drawing.Size(66, 15);
             this.lblServ3.TabIndex = 0;
             this.lblServ3.Text = "Description";
             // 
@@ -226,20 +230,20 @@
             // lblPrice2
             // 
             this.lblPrice2.AutoSize = true;
-            this.lblPrice2.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice2.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice2.Location = new System.Drawing.Point(270, 9);
             this.lblPrice2.Name = "lblPrice2";
-            this.lblPrice2.Size = new System.Drawing.Size(41, 19);
+            this.lblPrice2.Size = new System.Drawing.Size(32, 15);
             this.lblPrice2.TabIndex = 1;
             this.lblPrice2.Text = "Price";
             // 
             // lblServ2
             // 
             this.lblServ2.AutoSize = true;
-            this.lblServ2.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServ2.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServ2.Location = new System.Drawing.Point(17, 9);
             this.lblServ2.Name = "lblServ2";
-            this.lblServ2.Size = new System.Drawing.Size(84, 19);
+            this.lblServ2.Size = new System.Drawing.Size(66, 15);
             this.lblServ2.TabIndex = 0;
             this.lblServ2.Text = "Description";
             // 
@@ -256,20 +260,20 @@
             // lblPrice1
             // 
             this.lblPrice1.AutoSize = true;
-            this.lblPrice1.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice1.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice1.Location = new System.Drawing.Point(270, 9);
             this.lblPrice1.Name = "lblPrice1";
-            this.lblPrice1.Size = new System.Drawing.Size(41, 19);
+            this.lblPrice1.Size = new System.Drawing.Size(32, 15);
             this.lblPrice1.TabIndex = 1;
             this.lblPrice1.Text = "Price";
             // 
             // lblServ1
             // 
             this.lblServ1.AutoSize = true;
-            this.lblServ1.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServ1.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServ1.Location = new System.Drawing.Point(17, 9);
             this.lblServ1.Name = "lblServ1";
-            this.lblServ1.Size = new System.Drawing.Size(84, 19);
+            this.lblServ1.Size = new System.Drawing.Size(66, 15);
             this.lblServ1.TabIndex = 0;
             this.lblServ1.Text = "Description";
             // 
@@ -307,7 +311,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tw Cen MT", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(119, 26);
+            this.label2.Location = new System.Drawing.Point(119, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 40);
             this.label2.TabIndex = 6;
@@ -316,9 +320,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.laptopia_white_bg;
-            this.pictureBox1.Location = new System.Drawing.Point(126, 69);
+            this.pictureBox1.Location = new System.Drawing.Point(126, 43);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(126, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(113, 101);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -333,6 +337,26 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Thank you \r\nsee you again next time!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(12, 157);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(45, 17);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "Date: ";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(209, 157);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(46, 17);
+            this.lblTime.TabIndex = 8;
+            this.lblTime.Text = "Time: ";
             // 
             // Receipt
             // 
@@ -394,5 +418,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
     }
 }

@@ -12,7 +12,7 @@ namespace Laptop_Repair_Services_Management_System
 {
     public partial class Receipt : Form
     {
-        public Receipt(List<string> servNames, List<double> prices, string totalPrices)
+        public Receipt(List<string> servNames, List<string> prices, string totalPrices)
         {
             InitializeComponent();
             MessageBox.Show("Take a screenshot using the Windows + Shift + 'S' keys to activate snippet tool for screenshot...");
@@ -21,7 +21,15 @@ namespace Laptop_Repair_Services_Management_System
             pnlEntry3.Hide();
             pnlEntry4.Hide();
             pnlEntry5.Hide();
-            //pnlTotalPrice.Hide();
+            pnlTotalPrice.Hide();
+
+            DateTime date = DateTime.Today.Date;
+            string today = date.ToString("dd/MMMM/yyyy");
+            today.Replace("/", " ");
+            lblDate.Text = "Date: " + today;
+
+            string now = DateTime.Now.ToString("h:mm:ss tt");
+            lblTime.Text = "Time: " + now; 
 
             lblTotalPrice.Text = totalPrices;
 
@@ -33,11 +41,11 @@ namespace Laptop_Repair_Services_Management_System
                 lblServ4.Text = servNames[3];
                 lblServ5.Text = servNames[4];
 
-                lblPrice1.Text = prices[0].ToString();
-                lblPrice2.Text = prices[1].ToString();
-                lblPrice3.Text = prices[2].ToString();
-                lblPrice4.Text = prices[3].ToString();
-                lblPrice5.Text = prices[4].ToString();
+                lblPrice1.Text = "RM " + prices[0];
+                lblPrice2.Text = "RM " + prices[1];
+                lblPrice3.Text = "RM " + prices[2];
+                lblPrice4.Text = "RM " + prices[3];
+                lblPrice5.Text = "RM " + prices[4];
 
                 pnlEntry1.Show();
                 pnlEntry2.Show();
@@ -54,11 +62,11 @@ namespace Laptop_Repair_Services_Management_System
                 lblServ4.Text = servNames[3];
                 lblServ5.Text = servNames[4];
 
-                lblPrice1.Text = prices[0].ToString();
-                lblPrice2.Text = prices[1].ToString();
-                lblPrice3.Text = prices[2].ToString();
-                lblPrice4.Text = prices[3].ToString();
-                lblPrice5.Text = prices[4].ToString();
+                lblPrice1.Text = "RM " + prices[0];
+                lblPrice2.Text = "RM " + prices[1];
+                lblPrice3.Text = "RM " + prices[2];
+                lblPrice4.Text = "RM " + prices[3];
+                lblPrice5.Text = "RM " + prices[4];
 
                 pnlEntry1.Show();
                 pnlEntry2.Show();
@@ -74,10 +82,10 @@ namespace Laptop_Repair_Services_Management_System
                 lblServ3.Text = servNames[2];
                 lblServ4.Text = servNames[3];
 
-                lblPrice1.Text = prices[0].ToString();
-                lblPrice2.Text = prices[1].ToString();
-                lblPrice3.Text = prices[2].ToString();
-                lblPrice4.Text = prices[3].ToString();
+                lblPrice1.Text = "RM " + prices[0];
+                lblPrice2.Text = "RM " + prices[1];
+                lblPrice3.Text = "RM " + prices[2];
+                lblPrice4.Text = "RM " + prices[3];
 
                 pnlEntry1.Show();
                 pnlEntry2.Show();
@@ -91,9 +99,9 @@ namespace Laptop_Repair_Services_Management_System
                 lblServ2.Text = servNames[1];
                 lblServ3.Text = servNames[2];
 
-                lblPrice1.Text = prices[0].ToString();
-                lblPrice2.Text = prices[1].ToString();
-                lblPrice3.Text = prices[2].ToString();
+                lblPrice1.Text = "RM " + prices[0];
+                lblPrice2.Text = "RM " + prices[1];
+                lblPrice3.Text = "RM " + prices[2];
 
                 pnlEntry1.Show();
                 pnlEntry2.Show();
@@ -105,9 +113,9 @@ namespace Laptop_Repair_Services_Management_System
                 lblServ1.Text = servNames[0];
                 lblServ2.Text = servNames[1];
 
-                lblPrice1.Text = prices[0].ToString();
-                lblPrice2.Text = prices[1].ToString();
-
+                lblPrice1.Text = "RM " + prices[0];
+                lblPrice2.Text = "RM " + prices[1];
+                    
                 pnlEntry1.Show();
                 pnlEntry2.Show();
                 pnlTotalPrice.Show();
@@ -116,7 +124,7 @@ namespace Laptop_Repair_Services_Management_System
             {
                 lblServ1.Text = servNames[0];
 
-                lblPrice1.Text = prices[0].ToString();
+                lblPrice1.Text = "RM " + prices[0];
 
                 pnlEntry1.Show();
                 pnlTotalPrice.Show();
