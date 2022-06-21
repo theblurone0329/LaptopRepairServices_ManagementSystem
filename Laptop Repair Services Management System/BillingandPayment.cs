@@ -190,7 +190,7 @@ namespace Laptop_Repair_Services_Management_System
         private void btnReceipt_Click(object sender, EventArgs e)
         {
             Receipt receipt = new Receipt();
-            showForm(receipt);
+            receipt.Show();
         }
     }
 }
