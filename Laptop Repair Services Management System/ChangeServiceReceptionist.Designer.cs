@@ -32,11 +32,9 @@ namespace Laptop_Repair_Services_Management_System
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlAttachForm = new System.Windows.Forms.Panel();
-            this.lblNoServ = new System.Windows.Forms.Label();
             this.pnlServ2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblNewService2 = new System.Windows.Forms.Label();
-            this.lblDescription2 = new System.Windows.Forms.Label();
             this.lblCurrentService2 = new System.Windows.Forms.Label();
             this.btnAccept2 = new System.Windows.Forms.Button();
             this.btnDecline2 = new System.Windows.Forms.Button();
@@ -48,11 +46,11 @@ namespace Laptop_Repair_Services_Management_System
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNewService1 = new System.Windows.Forms.Label();
             this.lblCurrentService1 = new System.Windows.Forms.Label();
-            this.lblDescription1 = new System.Windows.Forms.Label();
             this.btnAccept1 = new System.Windows.Forms.Button();
             this.btnDecline1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblNoServ = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlAttachForm.SuspendLayout();
             this.pnlServ2.SuspendLayout();
@@ -102,16 +100,6 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttachForm.Size = new System.Drawing.Size(631, 432);
             this.pnlAttachForm.TabIndex = 1;
             // 
-            // lblNoServ
-            // 
-            this.lblNoServ.AutoSize = true;
-            this.lblNoServ.Font = new System.Drawing.Font("Tw Cen MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoServ.Location = new System.Drawing.Point(84, 213);
-            this.lblNoServ.Name = "lblNoServ";
-            this.lblNoServ.Size = new System.Drawing.Size(451, 34);
-            this.lblNoServ.TabIndex = 20;
-            this.lblNoServ.Text = "No Change Requests At the Moment";
-            // 
             // pnlServ2
             // 
             this.pnlServ2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
@@ -126,7 +114,6 @@ namespace Laptop_Repair_Services_Management_System
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.groupBox2.Controls.Add(this.lblNewService2);
-            this.groupBox2.Controls.Add(this.lblDescription2);
             this.groupBox2.Controls.Add(this.lblCurrentService2);
             this.groupBox2.Controls.Add(this.btnAccept2);
             this.groupBox2.Controls.Add(this.btnDecline2);
@@ -157,19 +144,6 @@ namespace Laptop_Repair_Services_Management_System
             this.lblNewService2.TabIndex = 22;
             this.lblNewService2.Text = "New service";
             // 
-            // lblDescription2
-            // 
-            this.lblDescription2.BackColor = System.Drawing.Color.White;
-            this.lblDescription2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDescription2.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription2.ForeColor = System.Drawing.Color.Black;
-            this.lblDescription2.Location = new System.Drawing.Point(332, 74);
-            this.lblDescription2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDescription2.Name = "lblDescription2";
-            this.lblDescription2.Size = new System.Drawing.Size(228, 41);
-            this.lblDescription2.TabIndex = 15;
-            this.lblDescription2.Text = "Description:";
-            // 
             // lblCurrentService2
             // 
             this.lblCurrentService2.AutoSize = true;
@@ -189,10 +163,10 @@ namespace Laptop_Repair_Services_Management_System
             this.btnAccept2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccept2.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccept2.ForeColor = System.Drawing.Color.Black;
-            this.btnAccept2.Location = new System.Drawing.Point(496, 117);
+            this.btnAccept2.Location = new System.Drawing.Point(468, 78);
             this.btnAccept2.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccept2.Name = "btnAccept2";
-            this.btnAccept2.Size = new System.Drawing.Size(68, 32);
+            this.btnAccept2.Size = new System.Drawing.Size(96, 32);
             this.btnAccept2.TabIndex = 15;
             this.btnAccept2.Text = "ACCEPT";
             this.btnAccept2.UseVisualStyleBackColor = false;
@@ -205,10 +179,10 @@ namespace Laptop_Repair_Services_Management_System
             this.btnDecline2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDecline2.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecline2.ForeColor = System.Drawing.Color.White;
-            this.btnDecline2.Location = new System.Drawing.Point(427, 117);
+            this.btnDecline2.Location = new System.Drawing.Point(338, 78);
             this.btnDecline2.Margin = new System.Windows.Forms.Padding(2);
             this.btnDecline2.Name = "btnDecline2";
-            this.btnDecline2.Size = new System.Drawing.Size(72, 32);
+            this.btnDecline2.Size = new System.Drawing.Size(95, 32);
             this.btnDecline2.TabIndex = 15;
             this.btnDecline2.Text = "DECLINE";
             this.btnDecline2.UseVisualStyleBackColor = false;
@@ -266,7 +240,6 @@ namespace Laptop_Repair_Services_Management_System
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.lblNewService1);
             this.groupBox1.Controls.Add(this.lblCurrentService1);
-            this.groupBox1.Controls.Add(this.lblDescription1);
             this.groupBox1.Controls.Add(this.btnAccept1);
             this.groupBox1.Controls.Add(this.btnDecline1);
             this.groupBox1.Controls.Add(this.progressBar1);
@@ -321,19 +294,6 @@ namespace Laptop_Repair_Services_Management_System
             this.lblCurrentService1.TabIndex = 16;
             this.lblCurrentService1.Text = "Current service";
             // 
-            // lblDescription1
-            // 
-            this.lblDescription1.BackColor = System.Drawing.Color.White;
-            this.lblDescription1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDescription1.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription1.ForeColor = System.Drawing.Color.Black;
-            this.lblDescription1.Location = new System.Drawing.Point(332, 72);
-            this.lblDescription1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDescription1.Name = "lblDescription1";
-            this.lblDescription1.Size = new System.Drawing.Size(228, 41);
-            this.lblDescription1.TabIndex = 15;
-            this.lblDescription1.Text = "Description:";
-            // 
             // btnAccept1
             // 
             this.btnAccept1.AutoSize = true;
@@ -341,10 +301,10 @@ namespace Laptop_Repair_Services_Management_System
             this.btnAccept1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccept1.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccept1.ForeColor = System.Drawing.Color.Black;
-            this.btnAccept1.Location = new System.Drawing.Point(496, 115);
+            this.btnAccept1.Location = new System.Drawing.Point(468, 72);
             this.btnAccept1.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccept1.Name = "btnAccept1";
-            this.btnAccept1.Size = new System.Drawing.Size(68, 32);
+            this.btnAccept1.Size = new System.Drawing.Size(96, 32);
             this.btnAccept1.TabIndex = 15;
             this.btnAccept1.Text = "ACCEPT";
             this.btnAccept1.UseVisualStyleBackColor = false;
@@ -357,10 +317,10 @@ namespace Laptop_Repair_Services_Management_System
             this.btnDecline1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDecline1.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecline1.ForeColor = System.Drawing.Color.White;
-            this.btnDecline1.Location = new System.Drawing.Point(427, 115);
+            this.btnDecline1.Location = new System.Drawing.Point(336, 72);
             this.btnDecline1.Margin = new System.Windows.Forms.Padding(2);
             this.btnDecline1.Name = "btnDecline1";
-            this.btnDecline1.Size = new System.Drawing.Size(72, 32);
+            this.btnDecline1.Size = new System.Drawing.Size(97, 31);
             this.btnDecline1.TabIndex = 15;
             this.btnDecline1.Text = "DECLINE";
             this.btnDecline1.UseVisualStyleBackColor = false;
@@ -387,6 +347,16 @@ namespace Laptop_Repair_Services_Management_System
             this.label6.Size = new System.Drawing.Size(70, 18);
             this.label6.TabIndex = 1;
             this.label6.Text = "Progress: ";
+            // 
+            // lblNoServ
+            // 
+            this.lblNoServ.AutoSize = true;
+            this.lblNoServ.Font = new System.Drawing.Font("Tw Cen MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoServ.Location = new System.Drawing.Point(84, 213);
+            this.lblNoServ.Name = "lblNoServ";
+            this.lblNoServ.Size = new System.Drawing.Size(451, 34);
+            this.lblNoServ.TabIndex = 20;
+            this.lblNoServ.Text = "No Change Requests At the Moment";
             // 
             // ChangeServiceReceptionist
             // 
@@ -421,7 +391,6 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.Panel pnlServ2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblNewService2;
-        private System.Windows.Forms.Label lblDescription2;
         private System.Windows.Forms.Label lblCurrentService2;
         private System.Windows.Forms.Button btnAccept2;
         private System.Windows.Forms.Button btnDecline2;
@@ -433,7 +402,6 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblNewService1;
         private System.Windows.Forms.Label lblCurrentService1;
-        private System.Windows.Forms.Label lblDescription1;
         private System.Windows.Forms.Button btnAccept1;
         private System.Windows.Forms.Button btnDecline1;
         private System.Windows.Forms.ProgressBar progressBar1;

@@ -25,7 +25,6 @@ namespace Laptop_Repair_Services_Management_System
             SqlCommand cmd1 = new SqlCommand($"Select count(*) From ChangeServices;", con);
             int count = Convert.ToInt32(cmd1.ExecuteScalar().ToString());
 
-            //To check whether there are 1, 2, or 3 notifications
             if (count > 2)
             {
                 SqlCommand cmd2 = new SqlCommand($"Select Top(1) servNameBefore From ChangeServices;", con);
