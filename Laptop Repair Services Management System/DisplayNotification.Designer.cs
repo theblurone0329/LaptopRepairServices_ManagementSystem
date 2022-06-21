@@ -33,9 +33,9 @@ namespace Laptop_Repair_Services_Management_System
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblNotiDescrip = new System.Windows.Forms.RichTextBox();
             this.btnView = new System.Windows.Forms.Button();
             this.lblTitleNotiName = new System.Windows.Forms.Label();
-            this.lblNotiDescrip = new System.Windows.Forms.RichTextBox();
             this.pnlAttachForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -89,6 +89,15 @@ namespace Laptop_Repair_Services_Management_System
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             // 
+            // lblNotiDescrip
+            // 
+            this.lblNotiDescrip.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotiDescrip.Location = new System.Drawing.Point(6, 11);
+            this.lblNotiDescrip.Name = "lblNotiDescrip";
+            this.lblNotiDescrip.Size = new System.Drawing.Size(553, 224);
+            this.lblNotiDescrip.TabIndex = 9;
+            this.lblNotiDescrip.Text = "";
+            // 
             // btnView
             // 
             this.btnView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -113,15 +122,6 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleNotiName.TabIndex = 11;
             this.lblTitleNotiName.Text = "Service Booked";
             this.lblTitleNotiName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblNotiDescrip
-            // 
-            this.lblNotiDescrip.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotiDescrip.Location = new System.Drawing.Point(6, 11);
-            this.lblNotiDescrip.Name = "lblNotiDescrip";
-            this.lblNotiDescrip.Size = new System.Drawing.Size(565, 224);
-            this.lblNotiDescrip.TabIndex = 9;
-            this.lblNotiDescrip.Text = "";
             // 
             // DisplayNotification
             // 

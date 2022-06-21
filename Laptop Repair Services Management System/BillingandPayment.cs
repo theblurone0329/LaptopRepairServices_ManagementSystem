@@ -18,6 +18,7 @@ namespace Laptop_Repair_Services_Management_System
         public BillingandPayment()
         {
             InitializeComponent();
+            btnConfirmPayment.Enabled = false;
         }
 
         private Form activeForm = null;
@@ -145,7 +146,7 @@ namespace Laptop_Repair_Services_Management_System
                     }
                     else
                     {
-                        SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}'", con);
+                        SqlCommand cmd2 = new SqlCommand($"Select normPrice From ServiceDetails Where servName = '{servName}'", con);
                         price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
                     }
 
@@ -164,7 +165,7 @@ namespace Laptop_Repair_Services_Management_System
                     }
                     else
                     {
-                        SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}'", con);
+                        SqlCommand cmd2 = new SqlCommand($"Select normPrice From ServiceDetails Where servName = '{servName}'", con);
                         price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
                     }
 
@@ -188,6 +189,7 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnReceipt_Click(object sender, EventArgs e)
         {
+            btnConfirmPayment.Enabled = true;
             List<string> servNames = new List<string>();
             List<string> prices = new List<string>();
             string totalPrices;

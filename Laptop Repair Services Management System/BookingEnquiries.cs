@@ -33,13 +33,12 @@ namespace Laptop_Repair_Services_Management_System
 
             while (count != index)
             {
-                string servName = checkedLstAcceptCustomerRequest.Items[0].ToString();
+                string servName = checkedLstAcceptCustomerRequest.Items[index].ToString();
                 SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Service Approved' Where servName = '{servName}' AND userID = {userID};", con);
                 cmd.ExecuteScalar();
                 SqlCommand cmd1 = new SqlCommand($"Insert into Notifications values ('Service Booking Approved', 'Your booked service for {servName} has been approved! Technician will begin service ASAP!', '{userID}');", con);
                 cmd1.ExecuteScalar();
                 lstConfirmedServices.Items.Add($"{servName}\n");
-                checkedLstAcceptCustomerRequest.Items.Remove(0);
                 index++;
             }
             con.Close();

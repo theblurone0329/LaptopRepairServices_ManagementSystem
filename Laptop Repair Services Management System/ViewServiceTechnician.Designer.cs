@@ -32,7 +32,6 @@ namespace Laptop_Repair_Services_Management_System
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewServiceTechnician));
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblNone = new System.Windows.Forms.Label();
             this.pnlServ4 = new System.Windows.Forms.Panel();
             this.gbServ4 = new System.Windows.Forms.GroupBox();
             this.btnView8 = new System.Windows.Forms.Button();
@@ -57,6 +56,7 @@ namespace Laptop_Repair_Services_Management_System
             this.label6 = new System.Windows.Forms.Label();
             this.progressBar5 = new System.Windows.Forms.ProgressBar();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblNone = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.pnlServ4.SuspendLayout();
             this.gbServ4.SuspendLayout();
@@ -93,16 +93,6 @@ namespace Laptop_Repair_Services_Management_System
             this.panel2.Size = new System.Drawing.Size(631, 432);
             this.panel2.TabIndex = 1;
             // 
-            // lblNone
-            // 
-            this.lblNone.AutoSize = true;
-            this.lblNone.Font = new System.Drawing.Font("Tw Cen MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNone.Location = new System.Drawing.Point(57, 191);
-            this.lblNone.Name = "lblNone";
-            this.lblNone.Size = new System.Drawing.Size(514, 34);
-            this.lblNone.TabIndex = 10;
-            this.lblNone.Text = "You do not have any services to work on!";
-            // 
             // pnlServ4
             // 
             this.pnlServ4.Controls.Add(this.gbServ4);
@@ -117,7 +107,7 @@ namespace Laptop_Repair_Services_Management_System
             this.gbServ4.Controls.Add(this.label9);
             this.gbServ4.Controls.Add(this.progressBar7);
             this.gbServ4.Controls.Add(this.label10);
-            this.gbServ4.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbServ4.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbServ4.Location = new System.Drawing.Point(3, 3);
             this.gbServ4.Name = "gbServ4";
             this.gbServ4.Size = new System.Drawing.Size(260, 110);
@@ -157,9 +147,9 @@ namespace Laptop_Repair_Services_Management_System
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 35);
+            this.label10.Location = new System.Drawing.Point(24, 49);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 22);
+            this.label10.Size = new System.Drawing.Size(75, 19);
             this.label10.TabIndex = 0;
             this.label10.Text = "Progress: ";
             // 
@@ -177,7 +167,7 @@ namespace Laptop_Repair_Services_Management_System
             this.gbServ3.Controls.Add(this.label11);
             this.gbServ3.Controls.Add(this.progressBar8);
             this.gbServ3.Controls.Add(this.label12);
-            this.gbServ3.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbServ3.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbServ3.Location = new System.Drawing.Point(3, 4);
             this.gbServ3.Name = "gbServ3";
             this.gbServ3.Size = new System.Drawing.Size(260, 110);
@@ -217,9 +207,9 @@ namespace Laptop_Repair_Services_Management_System
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(24, 35);
+            this.label12.Location = new System.Drawing.Point(24, 49);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 22);
+            this.label12.Size = new System.Drawing.Size(75, 19);
             this.label12.TabIndex = 0;
             this.label12.Text = "Progress: ";
             // 
@@ -237,7 +227,7 @@ namespace Laptop_Repair_Services_Management_System
             this.gbServ2.Controls.Add(this.label7);
             this.gbServ2.Controls.Add(this.progressBar6);
             this.gbServ2.Controls.Add(this.label8);
-            this.gbServ2.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbServ2.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbServ2.Location = new System.Drawing.Point(3, 3);
             this.gbServ2.Name = "gbServ2";
             this.gbServ2.Size = new System.Drawing.Size(260, 110);
@@ -277,9 +267,9 @@ namespace Laptop_Repair_Services_Management_System
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 35);
+            this.label8.Location = new System.Drawing.Point(24, 49);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 22);
+            this.label8.Size = new System.Drawing.Size(75, 19);
             this.label8.TabIndex = 0;
             this.label8.Text = "Progress: ";
             // 
@@ -297,7 +287,7 @@ namespace Laptop_Repair_Services_Management_System
             this.gbServ1.Controls.Add(this.label6);
             this.gbServ1.Controls.Add(this.progressBar5);
             this.gbServ1.Controls.Add(this.label5);
-            this.gbServ1.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbServ1.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbServ1.Location = new System.Drawing.Point(3, 3);
             this.gbServ1.Name = "gbServ1";
             this.gbServ1.Size = new System.Drawing.Size(260, 110);
@@ -337,11 +327,21 @@ namespace Laptop_Repair_Services_Management_System
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 35);
+            this.label5.Location = new System.Drawing.Point(24, 49);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 22);
+            this.label5.Size = new System.Drawing.Size(75, 19);
             this.label5.TabIndex = 0;
             this.label5.Text = "Progress: ";
+            // 
+            // lblNone
+            // 
+            this.lblNone.AutoSize = true;
+            this.lblNone.Font = new System.Drawing.Font("Tw Cen MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNone.Location = new System.Drawing.Point(57, 191);
+            this.lblNone.Name = "lblNone";
+            this.lblNone.Size = new System.Drawing.Size(514, 34);
+            this.lblNone.TabIndex = 10;
+            this.lblNone.Text = "You do not have any services to work on!";
             // 
             // ViewServiceTechnician
             // 
