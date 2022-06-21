@@ -17,6 +17,7 @@ namespace Laptop_Repair_Services_Management_System
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
         public ChangeServiceReceptionist()
         {
+            con.Open();
             InitializeComponent();
             pnlServ1.Hide();
             pnlServ2.Hide();

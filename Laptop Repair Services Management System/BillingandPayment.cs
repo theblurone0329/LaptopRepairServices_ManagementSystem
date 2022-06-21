@@ -85,7 +85,7 @@ namespace Laptop_Repair_Services_Management_System
             }
             else
             {
-                MessageBox.Show("No services booked from this customer...");
+                MessageBox.Show("No services waiting for payment for this customer...");
                 txtEnterCustomerID.Text = "";
             }
 
@@ -105,10 +105,10 @@ namespace Laptop_Repair_Services_Management_System
 
             while (count != index)
             {
-                string servName = lstCustomerBill.Items[index].ToString();
+                string servName = lstCustomerBill.Items[0].ToString();
                 SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Waiting for Payment' Where userID = '{userID}' AND servName = '{servName}' AND servStatus = 'In List';", con);
                 cmd.ExecuteScalar();
-                lstCustomerBill.Items.RemoveAt(index);
+                lstCustomerBill.Items.RemoveAt(0);
                 index++;
             }
             lstCustomerBill.Text = "";
@@ -123,6 +123,7 @@ namespace Laptop_Repair_Services_Management_System
             con.Open();
             int count = lstCustomerBill.Items.Count;
             int stop = 0;
+            int index = 0;
             double price;
             string temp = txtEnterCustomerID.Text;
             List<char> charToRemove = new List<char>() { 'U' };
@@ -130,8 +131,9 @@ namespace Laptop_Repair_Services_Management_System
 
             while (count != stop)
             {
-                string servName = lstCustomerBill.Items[0].ToString();
-                SqlCommand cmd1 = new SqlCommand($"Select servType From BookedServices Where servName = '{servName}' AND userID = '{userID}' ", con);
+                string servName = lstCustomerBill.Items[index].ToString();
+                index++;
+                SqlCommand cmd1 = new SqlCommand($"Select servType From BookedServices Where servName = '{servName}' AND userID = '{userID}'; ", con);
                 string servType = cmd1.ExecuteScalar().ToString();
       
                 if (radCash.Checked == true)
@@ -151,7 +153,6 @@ namespace Laptop_Repair_Services_Management_System
                         cmd.ExecuteScalar();
                         SqlCommand cmd3 = new SqlCommand($"Delete From BookedServices Where servStatus = 'In List' AND servName = '{servName}' AND userID = '{userID}';", con);
                         cmd3.ExecuteScalar();
-                        lstCustomerBill.Items.RemoveAt(0);
                         stop++;
                 }
                 else if (radOnlineBanking.Checked == true)
@@ -171,7 +172,6 @@ namespace Laptop_Repair_Services_Management_System
                     cmd.ExecuteScalar();
                     SqlCommand cmd3 = new SqlCommand($"Delete From BookedServices Where servStatus = 'In List' AND servName = '{servName}' AND userID = '{userID}';", con);
                     cmd3.ExecuteScalar();
-                    lstCustomerBill.Items.RemoveAt(0);
                     stop++;
                 }
                 else if (radCash.Checked == false && radOnlineBanking.Checked == false)
@@ -182,14 +182,65 @@ namespace Laptop_Repair_Services_Management_System
             }
             radCash.Checked = false;
             radOnlineBanking.Checked = false;
-            txtEnterCustomerID.Text = "";
             MessageBox.Show("All Services Paid!");
             con.Close();
         }
 
         private void btnReceipt_Click(object sender, EventArgs e)
         {
-            Receipt receipt = new Receipt();
+            List<string> servNames = new List<string>();
+            List<double> prices = new List<double>();
+            string totalPrices;
+            string tempName;
+
+            for (int i = 0; i < lstCustomerBill.Items.Count; i++)
+            {
+                tempName = lstCustomerBill.Items[i].ToString();
+                servNames.Add(tempName);
+            }
+
+            con.Open();
+            totalPrices = lblDisplayTotalAmountPay.Text;
+
+            string temp = txtEnterCustomerID.Text;
+            List<char> charToRemove = new List<char>() { 'U' };
+            int userID = Convert.ToInt32(temp.Filter(charToRemove));
+
+            SqlCommand cmd = new SqlCommand($"Select Count(*) From BookedServices Where servStatus = 'Waiting for Payment' and userID = '{userID}';", con);
+            int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
+            int curr = 1;
+            int index = 0;
+            string servName;
+            string servType;
+            double price;
+
+            if (count != 0)
+            {
+                count++;
+                while (curr != count)
+                {
+                    SqlCommand cmd1 = new SqlCommand($"Select Top({curr}) servName From BookedServices Where servStatus = 'In List' Order by servName ASC;", con);
+                    servName = cmd1.ExecuteScalar().ToString();
+                    SqlCommand cmd3 = new SqlCommand($"Select servType From BookedServices Where userID = {userID} AND servStatus = 'In List' AND servName = '{servName}';", con);
+                    servType = cmd3.ExecuteScalar().ToString();
+                    if (servType == "Urgent")
+                    {
+                        SqlCommand cmd4 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}';", con);
+                        price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
+                        prices.Add(price);
+
+                    }
+                    else
+                    {
+                        SqlCommand cmd4 = new SqlCommand($"Select normPrice From ServiceDetails Where servName = '{servName}';", con);
+                        price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
+                        prices.Add(price);
+                    }
+                    index++;
+                }
+            }
+            con.Close();
+            Receipt receipt = new Receipt(servNames, prices, totalPrices);
             receipt.Show();
         }
     }
