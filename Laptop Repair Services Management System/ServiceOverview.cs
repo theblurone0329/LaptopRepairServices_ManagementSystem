@@ -12,9 +12,11 @@ namespace Laptop_Repair_Services_Management_System
 {
     public partial class ServiceOverview : Form
     {
-        public ServiceOverview()
+        public static string name;
+        public ServiceOverview(string username)
         {
             InitializeComponent();
+            name = username;
         }
 
         private Form activeForm = null;
@@ -36,7 +38,7 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1();
+            ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(name);
             showForm(viewServ);
         }
     }

@@ -12,9 +12,11 @@ namespace Laptop_Repair_Services_Management_System
 {
     public partial class ChangeServicesCustomer2 : Form
     {
-        public ChangeServicesCustomer2()
+        public static string name;
+        public ChangeServicesCustomer2(string username)
         {
             InitializeComponent();
+            name = username;
         }
 
         private Form activeForm = null;
@@ -36,13 +38,13 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1();
+            ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(name);
             showForm(viewServ);
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1();
+            ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(name);
             showForm(viewServ);
         }
     }

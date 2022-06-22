@@ -59,9 +59,10 @@ namespace Laptop_Repair_Services_Management_System
             showForm(bookingPage);
         }
 
+
         private void btnChangeServiceCust_Click(object sender, EventArgs e)
         {
-            ChangeServiceCustomer1 changeService = new ChangeServiceCustomer1();
+            ChangeServiceCustomer1 changeService = new ChangeServiceCustomer1(username);
             showForm(changeService);
         }
 
