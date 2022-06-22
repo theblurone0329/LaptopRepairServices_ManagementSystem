@@ -125,6 +125,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnView8.Size = new System.Drawing.Size(41, 36);
             this.btnView8.TabIndex = 9;
             this.btnView8.UseVisualStyleBackColor = false;
+            this.btnView8.Click += new System.EventHandler(this.btnView8_Click_1);
             // 
             // label9
             // 
@@ -185,6 +186,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnView7.Size = new System.Drawing.Size(41, 36);
             this.btnView7.TabIndex = 8;
             this.btnView7.UseVisualStyleBackColor = false;
+            this.btnView7.Click += new System.EventHandler(this.btnView7_Click_1);
             // 
             // label11
             // 
@@ -245,6 +247,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnView6.Size = new System.Drawing.Size(41, 36);
             this.btnView6.TabIndex = 7;
             this.btnView6.UseVisualStyleBackColor = false;
+            this.btnView6.Click += new System.EventHandler(this.btnView6_Click_1);
             // 
             // label7
             // 
@@ -305,6 +308,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnView5.Size = new System.Drawing.Size(41, 36);
             this.btnView5.TabIndex = 6;
             this.btnView5.UseVisualStyleBackColor = false;
+            this.btnView5.Click += new System.EventHandler(this.btnView5_Click_1);
             // 
             // label6
             // 

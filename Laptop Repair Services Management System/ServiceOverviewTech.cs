@@ -16,7 +16,7 @@ namespace Laptop_Repair_Services_Management_System
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
         string userIDHere;
-        public ServiceOverviewTech(string servNameArgs, string userID)
+        public ServiceOverviewTech(string servNameArgs, string userID, int servProg)
         {
             InitializeComponent();
             lblTitleServName.Text = servNameArgs;

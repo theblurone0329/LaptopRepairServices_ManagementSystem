@@ -122,6 +122,11 @@ namespace Laptop_Repair_Services_Management_System
         private void btnConfirmPayment_Click(object sender, EventArgs e)
         {
             con.Open();
+
+            DateTime date = DateTime.Today.Date;
+            string today = date.ToString("dd/MMMM/yyyy");
+            today.Replace("/", " ");
+
             int count = lstCustomerBill.Items.Count;
             int stop = 0;
             int index = 0;
@@ -150,7 +155,7 @@ namespace Laptop_Repair_Services_Management_System
                         price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
                     }
 
-                        SqlCommand cmd = new SqlCommand($"Insert into CompletedServices values ('{servName}', '{servType}', '{price}', 'Completed', '{radCash.Text}');", con);
+                        SqlCommand cmd = new SqlCommand($"Insert into CompletedServices values ('{servName}', '{servType}', '{price}', 'Completed', '{radCash.Text}', '{today}');", con);
                         cmd.ExecuteScalar();
                         SqlCommand cmd3 = new SqlCommand($"Delete From BookedServices Where servStatus = 'In List' AND servName = '{servName}' AND userID = '{userID}';", con);
                         cmd3.ExecuteScalar();
@@ -169,7 +174,7 @@ namespace Laptop_Repair_Services_Management_System
                         price = Convert.ToDouble(cmd2.ExecuteScalar().ToString());
                     }
 
-                    SqlCommand cmd = new SqlCommand($"Insert into CompletedServices values ('{servName}', '{servType}', '{price}', 'Completed', '{radOnlineBanking.Text}');", con);
+                    SqlCommand cmd = new SqlCommand($"Insert into CompletedServices values ('{servName}', '{servType}', '{price}', 'Completed', '{radOnlineBanking.Text}', '{today}');", con);
                     cmd.ExecuteScalar();
                     SqlCommand cmd3 = new SqlCommand($"Delete From BookedServices Where servStatus = 'In List' AND servName = '{servName}' AND userID = '{userID}';", con);
                     cmd3.ExecuteScalar();
