@@ -19,6 +19,7 @@ namespace Laptop_Repair_Services_Management_System
         public ServiceOverviewTech(string servNameArgs, string userID, int servProg)
         {
             InitializeComponent();
+            btnComplete.Enabled = false;
             lblTitleServName.Text = servNameArgs;
             userIDHere = userID;
             int temp = servProg * 20;
@@ -77,36 +78,47 @@ namespace Laptop_Repair_Services_Management_System
             if (count == 5)
             {
                 progressBar1.Value = 100;
-                lblStatus.Text = "100%";
+                lblStatus.Text = "100% Complete";
+                btnComplete.Enabled = true;
             } else if (count == 4) 
             {
                 progressBar1.Value = 80;
-                lblStatus.Text = "80%";
+                lblStatus.Text = "80% Completed";
+                btnComplete.Enabled = false;
             } else if (count == 3)
             {
                 progressBar1.Value = 60;
-                lblStatus.Text = "60%";
+                lblStatus.Text = "60% Completed";
+                btnComplete.Enabled = false;
             } else if (count == 2)
             {
                 progressBar1.Value = 40;
-                lblStatus.Text = "40%";
+                lblStatus.Text = "40% Completed";
+                btnComplete.Enabled = false;
             } else if (count == 1)
             {
                 progressBar1.Value = 20;
-                lblStatus.Text = "20%";
+                lblStatus.Text = "20% Completed";
+                btnComplete.Enabled = false;
             } else if (count == 0)
             {
                 progressBar1.Value = 0;
-                lblStatus.Text = "0%";
+                lblStatus.Text = "0% Completed";
+                btnComplete.Enabled = false;
             }
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand($"Update BookedServices Set servProgress = '{progressBar1.Value / 20}' Where servName = '{lblTitleServName.Text} AND userID = {userIDHere}';", con);
+            cmd.ExecuteScalar();
+            con.Close();
         }
 
         private void btnComplete_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Waiting for Payment' Where servName = '{lblTitleServName.Text} And userID = '{userIDHere}';", con);
+            SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Waiting for Payment' Where servName = '{lblTitleServName.Text}' And userID = '{userIDHere}';", con);
             cmd.ExecuteScalar();
-            SqlCommand cmd1 = new SqlCommand($"Update BookedServices Set comment = '{txtComment.Text}' Where servName = '{lblTitleServName.Text} And userID = '{userIDHere}';", con);
+            SqlCommand cmd1 = new SqlCommand($"Update BookedServices Set comment = '{txtComment.Text}' Where servName = '{lblTitleServName.Text}' And userID = '{userIDHere}';", con);
             cmd1.ExecuteScalar();
             MessageBox.Show("Service Update Submitted...");
             con.Close();
