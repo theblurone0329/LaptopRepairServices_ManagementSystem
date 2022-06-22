@@ -381,6 +381,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\siren %281%29.png" />
+    <None Include="Resources\siren.png" />
     <None Include="Resources\laptopia white bg.png" />
     <None Include="Resources\network-signal.png" />
     <None Include="Resources\keyboard.png" />

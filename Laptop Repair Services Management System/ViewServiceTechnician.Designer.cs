@@ -34,29 +34,33 @@ namespace Laptop_Repair_Services_Management_System
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlServ4 = new System.Windows.Forms.Panel();
             this.gbServ4 = new System.Windows.Forms.GroupBox();
-            this.btnView8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.progressBar7 = new System.Windows.Forms.ProgressBar();
             this.label10 = new System.Windows.Forms.Label();
             this.pnlServ3 = new System.Windows.Forms.Panel();
             this.gbServ3 = new System.Windows.Forms.GroupBox();
-            this.btnView7 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.progressBar8 = new System.Windows.Forms.ProgressBar();
             this.label12 = new System.Windows.Forms.Label();
             this.pnlServ2 = new System.Windows.Forms.FlowLayoutPanel();
             this.gbServ2 = new System.Windows.Forms.GroupBox();
-            this.btnView6 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.progressBar6 = new System.Windows.Forms.ProgressBar();
             this.label8 = new System.Windows.Forms.Label();
             this.pnlServ1 = new System.Windows.Forms.Panel();
             this.gbServ1 = new System.Windows.Forms.GroupBox();
-            this.btnView5 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.progressBar5 = new System.Windows.Forms.ProgressBar();
             this.label5 = new System.Windows.Forms.Label();
             this.lblNone = new System.Windows.Forms.Label();
+            this.pbUrgent4 = new System.Windows.Forms.PictureBox();
+            this.btnView8 = new System.Windows.Forms.Button();
+            this.pbUrgent3 = new System.Windows.Forms.PictureBox();
+            this.btnView7 = new System.Windows.Forms.Button();
+            this.pbUrgent2 = new System.Windows.Forms.PictureBox();
+            this.btnView6 = new System.Windows.Forms.Button();
+            this.pbUrgent1 = new System.Windows.Forms.PictureBox();
+            this.btnView5 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.pnlServ4.SuspendLayout();
             this.gbServ4.SuspendLayout();
@@ -66,6 +70,10 @@ namespace Laptop_Repair_Services_Management_System
             this.gbServ2.SuspendLayout();
             this.pnlServ1.SuspendLayout();
             this.gbServ1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUrgent4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUrgent3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUrgent2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUrgent1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -103,6 +111,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             // gbServ4
             // 
+            this.gbServ4.Controls.Add(this.pbUrgent4);
             this.gbServ4.Controls.Add(this.btnView8);
             this.gbServ4.Controls.Add(this.label9);
             this.gbServ4.Controls.Add(this.progressBar7);
@@ -114,18 +123,6 @@ namespace Laptop_Repair_Services_Management_System
             this.gbServ4.TabIndex = 5;
             this.gbServ4.TabStop = false;
             this.gbServ4.Text = "Service Name: ";
-            // 
-            // btnView8
-            // 
-            this.btnView8.BackColor = System.Drawing.Color.Transparent;
-            this.btnView8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView8.Image = ((System.Drawing.Image)(resources.GetObject("btnView8.Image")));
-            this.btnView8.Location = new System.Drawing.Point(198, 35);
-            this.btnView8.Name = "btnView8";
-            this.btnView8.Size = new System.Drawing.Size(41, 36);
-            this.btnView8.TabIndex = 9;
-            this.btnView8.UseVisualStyleBackColor = false;
-            this.btnView8.Click += new System.EventHandler(this.btnView8_Click_1);
             // 
             // label9
             // 
@@ -164,6 +161,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             // gbServ3
             // 
+            this.gbServ3.Controls.Add(this.pbUrgent3);
             this.gbServ3.Controls.Add(this.btnView7);
             this.gbServ3.Controls.Add(this.label11);
             this.gbServ3.Controls.Add(this.progressBar8);
@@ -175,18 +173,6 @@ namespace Laptop_Repair_Services_Management_System
             this.gbServ3.TabIndex = 4;
             this.gbServ3.TabStop = false;
             this.gbServ3.Text = "Service Name: ";
-            // 
-            // btnView7
-            // 
-            this.btnView7.BackColor = System.Drawing.Color.Transparent;
-            this.btnView7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView7.Image = ((System.Drawing.Image)(resources.GetObject("btnView7.Image")));
-            this.btnView7.Location = new System.Drawing.Point(198, 32);
-            this.btnView7.Name = "btnView7";
-            this.btnView7.Size = new System.Drawing.Size(41, 36);
-            this.btnView7.TabIndex = 8;
-            this.btnView7.UseVisualStyleBackColor = false;
-            this.btnView7.Click += new System.EventHandler(this.btnView7_Click_1);
             // 
             // label11
             // 
@@ -225,6 +211,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             // gbServ2
             // 
+            this.gbServ2.Controls.Add(this.pbUrgent2);
             this.gbServ2.Controls.Add(this.btnView6);
             this.gbServ2.Controls.Add(this.label7);
             this.gbServ2.Controls.Add(this.progressBar6);
@@ -236,18 +223,6 @@ namespace Laptop_Repair_Services_Management_System
             this.gbServ2.TabIndex = 3;
             this.gbServ2.TabStop = false;
             this.gbServ2.Text = "Service Name: ";
-            // 
-            // btnView6
-            // 
-            this.btnView6.BackColor = System.Drawing.Color.Transparent;
-            this.btnView6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView6.Image = ((System.Drawing.Image)(resources.GetObject("btnView6.Image")));
-            this.btnView6.Location = new System.Drawing.Point(198, 35);
-            this.btnView6.Name = "btnView6";
-            this.btnView6.Size = new System.Drawing.Size(41, 36);
-            this.btnView6.TabIndex = 7;
-            this.btnView6.UseVisualStyleBackColor = false;
-            this.btnView6.Click += new System.EventHandler(this.btnView6_Click_1);
             // 
             // label7
             // 
@@ -286,6 +261,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             // gbServ1
             // 
+            this.gbServ1.Controls.Add(this.pbUrgent1);
             this.gbServ1.Controls.Add(this.btnView5);
             this.gbServ1.Controls.Add(this.label6);
             this.gbServ1.Controls.Add(this.progressBar5);
@@ -297,18 +273,6 @@ namespace Laptop_Repair_Services_Management_System
             this.gbServ1.TabIndex = 1;
             this.gbServ1.TabStop = false;
             this.gbServ1.Text = "Service Name: ";
-            // 
-            // btnView5
-            // 
-            this.btnView5.BackColor = System.Drawing.Color.Transparent;
-            this.btnView5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView5.Image = ((System.Drawing.Image)(resources.GetObject("btnView5.Image")));
-            this.btnView5.Location = new System.Drawing.Point(198, 32);
-            this.btnView5.Name = "btnView5";
-            this.btnView5.Size = new System.Drawing.Size(41, 36);
-            this.btnView5.TabIndex = 6;
-            this.btnView5.UseVisualStyleBackColor = false;
-            this.btnView5.Click += new System.EventHandler(this.btnView5_Click_1);
             // 
             // label6
             // 
@@ -347,6 +311,90 @@ namespace Laptop_Repair_Services_Management_System
             this.lblNone.TabIndex = 10;
             this.lblNone.Text = "You do not have any services to work on!";
             // 
+            // pbUrgent4
+            // 
+            this.pbUrgent4.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.siren;
+            this.pbUrgent4.Location = new System.Drawing.Point(126, 24);
+            this.pbUrgent4.Name = "pbUrgent4";
+            this.pbUrgent4.Size = new System.Drawing.Size(43, 41);
+            this.pbUrgent4.TabIndex = 17;
+            this.pbUrgent4.TabStop = false;
+            // 
+            // btnView8
+            // 
+            this.btnView8.BackColor = System.Drawing.Color.Transparent;
+            this.btnView8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnView8.Image = ((System.Drawing.Image)(resources.GetObject("btnView8.Image")));
+            this.btnView8.Location = new System.Drawing.Point(198, 35);
+            this.btnView8.Name = "btnView8";
+            this.btnView8.Size = new System.Drawing.Size(41, 36);
+            this.btnView8.TabIndex = 9;
+            this.btnView8.UseVisualStyleBackColor = false;
+            this.btnView8.Click += new System.EventHandler(this.btnView8_Click_1);
+            // 
+            // pbUrgent3
+            // 
+            this.pbUrgent3.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.siren;
+            this.pbUrgent3.Location = new System.Drawing.Point(126, 23);
+            this.pbUrgent3.Name = "pbUrgent3";
+            this.pbUrgent3.Size = new System.Drawing.Size(45, 42);
+            this.pbUrgent3.TabIndex = 18;
+            this.pbUrgent3.TabStop = false;
+            // 
+            // btnView7
+            // 
+            this.btnView7.BackColor = System.Drawing.Color.Transparent;
+            this.btnView7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnView7.Image = ((System.Drawing.Image)(resources.GetObject("btnView7.Image")));
+            this.btnView7.Location = new System.Drawing.Point(198, 32);
+            this.btnView7.Name = "btnView7";
+            this.btnView7.Size = new System.Drawing.Size(41, 36);
+            this.btnView7.TabIndex = 8;
+            this.btnView7.UseVisualStyleBackColor = false;
+            this.btnView7.Click += new System.EventHandler(this.btnView7_Click_1);
+            // 
+            // pbUrgent2
+            // 
+            this.pbUrgent2.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.siren;
+            this.pbUrgent2.Location = new System.Drawing.Point(126, 24);
+            this.pbUrgent2.Name = "pbUrgent2";
+            this.pbUrgent2.Size = new System.Drawing.Size(43, 41);
+            this.pbUrgent2.TabIndex = 16;
+            this.pbUrgent2.TabStop = false;
+            // 
+            // btnView6
+            // 
+            this.btnView6.BackColor = System.Drawing.Color.Transparent;
+            this.btnView6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnView6.Image = ((System.Drawing.Image)(resources.GetObject("btnView6.Image")));
+            this.btnView6.Location = new System.Drawing.Point(198, 35);
+            this.btnView6.Name = "btnView6";
+            this.btnView6.Size = new System.Drawing.Size(41, 36);
+            this.btnView6.TabIndex = 7;
+            this.btnView6.UseVisualStyleBackColor = false;
+            this.btnView6.Click += new System.EventHandler(this.btnView6_Click_1);
+            // 
+            // pbUrgent1
+            // 
+            this.pbUrgent1.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.siren;
+            this.pbUrgent1.Location = new System.Drawing.Point(126, 24);
+            this.pbUrgent1.Name = "pbUrgent1";
+            this.pbUrgent1.Size = new System.Drawing.Size(45, 41);
+            this.pbUrgent1.TabIndex = 15;
+            this.pbUrgent1.TabStop = false;
+            // 
+            // btnView5
+            // 
+            this.btnView5.BackColor = System.Drawing.Color.Transparent;
+            this.btnView5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnView5.Image = ((System.Drawing.Image)(resources.GetObject("btnView5.Image")));
+            this.btnView5.Location = new System.Drawing.Point(198, 32);
+            this.btnView5.Name = "btnView5";
+            this.btnView5.Size = new System.Drawing.Size(41, 36);
+            this.btnView5.TabIndex = 6;
+            this.btnView5.UseVisualStyleBackColor = false;
+            this.btnView5.Click += new System.EventHandler(this.btnView5_Click_1);
+            // 
             // ViewServiceTechnician
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +417,10 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlServ1.ResumeLayout(false);
             this.gbServ1.ResumeLayout(false);
             this.gbServ1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUrgent4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUrgent3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUrgent2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUrgent1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,5 +454,9 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.ProgressBar progressBar5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblNone;
+        private System.Windows.Forms.PictureBox pbUrgent4;
+        private System.Windows.Forms.PictureBox pbUrgent3;
+        private System.Windows.Forms.PictureBox pbUrgent2;
+        private System.Windows.Forms.PictureBox pbUrgent1;
     }
 }

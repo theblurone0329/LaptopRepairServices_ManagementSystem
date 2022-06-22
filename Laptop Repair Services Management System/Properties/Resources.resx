@@ -121,6 +121,12 @@
   <data name="backup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="laptopia white bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laptopia white bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="siren" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\siren.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="toBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -129,9 +135,6 @@
   </data>
   <data name="Removemalware" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Removemalware.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="viewtotalincome" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\viewtotalincome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="two-arrows" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\two-arrows.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,10 +199,13 @@
   <data name="traoubleshoot" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\traoubleshoot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="viewtotalincome" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viewtotalincome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="laptopscreenbroke" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\laptopscreenbroke.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="laptopia white bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\laptopia white bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="siren (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\siren (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
