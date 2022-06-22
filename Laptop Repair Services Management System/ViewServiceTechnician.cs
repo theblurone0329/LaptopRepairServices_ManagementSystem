@@ -45,16 +45,16 @@ namespace Laptop_Repair_Services_Management_System
                 progressBar5.Value = servProg * 20;
                 gbServ1.Text = servName1;
 
-                SqlCommand cmd2 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Service Approved' and servName != (Select Top(1) servName From BookedServices);", con);
+                SqlCommand cmd2 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Service Approved' and servName != '{servName1}';", con);
                 string servName2 = cmd2.ExecuteScalar().ToString();
-                SqlCommand cmd6 = new SqlCommand($"Select Top(1) servProgress From BookedServices Where servStatus = 'Service Approved' AND servName = '{servName2}' and servName != (Select Top(1) servName From BookedServices);", con);
+                SqlCommand cmd6 = new SqlCommand($"Select Top(1) servProgress From BookedServices Where servStatus = 'Service Approved' AND servName = '{servName2}' and servName != '{servName1}';", con);
                 int servProg2 = Convert.ToInt32(cmd6.ExecuteScalar().ToString());
                 progressBar6.Value = servProg2 * 20;
                 gbServ2.Text = servName2;
 
-                SqlCommand cmd3 = new SqlCommand($"Select Top(2) Max(servName) From BookedServices Where servStatus = 'Service Approved' and servName != (Select Top(1) servName From BookedServices);", con);
+                SqlCommand cmd3 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Service Approved' and servName != '{servName1}'and servName != '{servName2}';", con);
                 string servName3 = cmd3.ExecuteScalar().ToString();
-                SqlCommand cmd7 = new SqlCommand($"Select Top(2) Max(servProgress) From BookedServices Where servStatus = 'Service Approved' AND servName = '{servName3}' and servName != (Select Top(1) servName From BookedServices);", con);
+                SqlCommand cmd7 = new SqlCommand($"Select Top(1) servProgress From BookedServices Where servStatus = 'Service Approved' AND servName = '{servName3}' and servName != '{servName1}'and servName != '{servName2}';", con);
                 int servProg3 = Convert.ToInt32(cmd7.ExecuteScalar().ToString());
                 progressBar7.Value = servProg3 * 20;
                 gbServ3.Text = servName3;
@@ -81,23 +81,23 @@ namespace Laptop_Repair_Services_Management_System
                 progressBar5.Value = servProg * 20;
                 gbServ1.Text = servName1;
 
-                SqlCommand cmd2 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Service Approved' and servName != (Select Top(1) servName From BookedServices);", con);
+                SqlCommand cmd2 = new SqlCommand($"Select Top(2) Max(servName) From BookedServices Where servStatus = 'Service Approved' and servName != '{servName1}';", con);
                 string servName2 = cmd2.ExecuteScalar().ToString();
-                SqlCommand cmd6 = new SqlCommand($"Select Top(1) servProgress From BookedServices Where servStatus = 'Service Approved' AND servName = '{servName2}' and servName != (Select Top(1) servName From BookedServices);", con);
+                SqlCommand cmd6 = new SqlCommand($"Select Top(2) Max(servProgress) From BookedServices Where servStatus = 'Service Approved' and servName = '{servName2}' and servName != '{servName1}';", con);
                 int servProg2 = Convert.ToInt32(cmd6.ExecuteScalar().ToString());
                 progressBar6.Value = servProg2 * 20;
                 gbServ2.Text = servName2;
 
-                SqlCommand cmd3 = new SqlCommand($"Select Top(2) Max(servName) From BookedServices Where servStatus = 'Service Approved' and servName != (Select Top(1) servName From BookedServices);", con);
+                SqlCommand cmd3 = new SqlCommand($"Select Top(3) Min(servName) From BookedServices Where servStatus = 'Service Approved' and servName != '{servName1}' and servName != '{servName2}';", con);
                 string servName3 = cmd3.ExecuteScalar().ToString();
-                SqlCommand cmd7 = new SqlCommand($"Select Top(2) Max(servProgress) From BookedServices Where servStatus = 'Service Approved' AND servName = '{servName3}' and servName != (Select Top(1) servName From BookedServices);", con);
+                SqlCommand cmd7 = new SqlCommand($"Select Top(3) Min(servProgress) From BookedServices Where servStatus = 'Service Approved' and servName != '{servName1}' and servName != '{servName2}' and servName = '{servName3}';", con);
                 int servProg3 = Convert.ToInt32(cmd7.ExecuteScalar().ToString());
-                progressBar7.Value = servProg3 * 20;
+                progressBar8.Value = servProg3 * 20;
                 gbServ3.Text = servName3;
 
-                SqlCommand cmd4 = new SqlCommand($"Select Top(4) Min(servName) From BookedServices Where servStatus = 'Service Approved';", con);
+                SqlCommand cmd4 = new SqlCommand($"Select Top(4) Min(servName) From BookedServices Where servStatus = 'Service Approved' and servName != '{servName1}' and servName != '{servName2}' and servName != '{servName3}';", con);
                 string servName4 = cmd4.ExecuteScalar().ToString();
-                SqlCommand cmd8 = new SqlCommand($"Select Top(4) Min(servProgress) From BookedServices Where servStatus = 'Service Approved' AND servName = '{servName4}';", con);
+                SqlCommand cmd8 = new SqlCommand($"Select Top(4) Min(servProgress) From BookedServices Where servStatus = 'Service Approved' AND servName = '{servName4}' and servName != '{servName1}' and servName != '{servName2}' and servName != '{servName3}';", con);
                 int servProg4 = Convert.ToInt32(cmd8.ExecuteScalar().ToString());
                 progressBar8.Value = servProg4 * 20;
                 gbServ4.Text = servName4;
@@ -116,9 +116,9 @@ namespace Laptop_Repair_Services_Management_System
                 progressBar5.Value = servProg * 20;
                 gbServ1.Text = servName1;
 
-                SqlCommand cmd2 = new SqlCommand($"Select Top(2) Min(servName) From BookedServices Where servStatus = 'Service Approved' and servName != (Select Top(1) servName From BookedServices);", con);
+                SqlCommand cmd2 = new SqlCommand($"Select Top(2) Min(servName) From BookedServices Where servStatus = 'Service Approved' and servName != '{servName1}';", con);
                 string servName2 = cmd2.ExecuteScalar().ToString();
-                SqlCommand cmd6 = new SqlCommand($"Select Top(2) Max(servProgress) From BookedServices Where servStatus = 'Service Approved' and servName = '{servName2}' and servName != (Select Top(1) servName From BookedServices);", con);
+                SqlCommand cmd6 = new SqlCommand($"Select Top(2) Max(servProgress) From BookedServices Where servStatus = 'Service Approved' and servName = '{servName2}' and servName != '{servName1}';", con);
                 int servProg2 = Convert.ToInt32(cmd6.ExecuteScalar().ToString());
                 progressBar6.Value = servProg2 * 20;
                 gbServ2.Text = servName2;
