@@ -21,7 +21,30 @@ namespace Laptop_Repair_Services_Management_System
             InitializeComponent();
             lblTitleServName.Text = servNameArgs;
             userIDHere = userID;
-            progressBar1.Value = 0;
+            int temp = servProg * 20;
+            string prog = temp.ToString();
+            lblStatus.Text = prog + "% Complete";
+            progressBar1.Value = temp;
+
+            if (servProg == 1)
+            {
+                checkedListBox1.SetItemChecked(0, true);
+            } else if (servProg == 2)
+            {
+                checkedListBox1.SetItemChecked(0, true);
+                checkedListBox1.SetItemChecked(1, true);
+            } else if (servProg == 3)
+            {
+                checkedListBox1.SetItemChecked(0, true);
+                checkedListBox1.SetItemChecked(1, true);
+                checkedListBox1.SetItemChecked(2, true);
+            } else if (servProg == 4)
+            {
+                checkedListBox1.SetItemChecked(0, true);
+                checkedListBox1.SetItemChecked(1, true);
+                checkedListBox1.SetItemChecked(2, true);
+                checkedListBox1.SetItemChecked(3, true);
+            }
         }
 
         private Form activeForm = null;
