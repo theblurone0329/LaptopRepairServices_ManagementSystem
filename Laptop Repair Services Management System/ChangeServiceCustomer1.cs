@@ -38,7 +38,7 @@ namespace Laptop_Repair_Services_Management_System
                 progressBar1.Value = servProg * 20;
                 groupBox1.Text = servName;
 
-                SqlCommand cmd3 = new SqlCommand($"Select Top(1) servName From BookedServices Where userID = '{userID}' and servName != '{servName}' and servType = 'Urgent';", con);
+                SqlCommand cmd3 = new SqlCommand($"Select Top(1) servName From BookedServices Where userID = '{userID}' and servName != '{servName}';", con);
                 string servName2 = cmd3.ExecuteScalar().ToString();
                 SqlCommand cmd4 = new SqlCommand($"Select Top(1) servProgress From BookedServices Where userID = '{userID}' and servName != '{servName}';", con);
                 int servProg2 = Convert.ToInt32(cmd4.ExecuteScalar().ToString());
@@ -73,7 +73,7 @@ namespace Laptop_Repair_Services_Management_System
                 progressBar1.Value = servProg * 20;
                 groupBox1.Text = servName;
 
-                SqlCommand cmd3 = new SqlCommand($"Select Top(1) servName From BookedServices Where userID = '{userID}' and servName != '{servName}' and servType = 'Urgent';", con);
+                SqlCommand cmd3 = new SqlCommand($"Select Top(1) servName From BookedServices Where userID = '{userID}' and servName != '{servName}';", con);
                 string servName2 = cmd3.ExecuteScalar().ToString();
                 SqlCommand cmd4 = new SqlCommand($"Select Top(1) servProgress From BookedServices Where userID = '{userID}' and servName != '{servName}';", con);
                 int servProg2 = Convert.ToInt32(cmd4.ExecuteScalar().ToString());
@@ -108,7 +108,7 @@ namespace Laptop_Repair_Services_Management_System
                 progressBar1.Value = servProg * 20;
                 groupBox1.Text = servName;
 
-                SqlCommand cmd3 = new SqlCommand($"Select Top(1) servName From BookedServices Where userID = '{userID}' and servName != '{servName}' and servType = 'Urgent';", con);
+                SqlCommand cmd3 = new SqlCommand($"Select Top(1) servName From BookedServices Where userID = '{userID}' and servName != '{servName}';", con);
                 string servName2 = cmd3.ExecuteScalar().ToString();
                 SqlCommand cmd4 = new SqlCommand($"Select Top(1) servProgress From BookedServices Where userID = '{userID}' and servName != '{servName}';", con);
                 int servProg2 = Convert.ToInt32(cmd4.ExecuteScalar().ToString());
@@ -136,7 +136,7 @@ namespace Laptop_Repair_Services_Management_System
                 progressBar1.Value = servProg * 20;
                 groupBox1.Text = servName;
 
-                SqlCommand cmd3 = new SqlCommand($"Select Top(1) servName From BookedServices Where userID = '{userID}' and servName != '{servName}' and servType = 'Urgent';", con);
+                SqlCommand cmd3 = new SqlCommand($"Select Top(1) servName From BookedServices Where userID = '{userID}' and servName != '{servName}';", con);
                 string servName2 = cmd3.ExecuteScalar().ToString();
                 SqlCommand cmd4 = new SqlCommand($"Select Top(1) servProgress From BookedServices Where userID = '{userID}' and servName != '{servName}';", con);
                 int servProg2 = Convert.ToInt32(cmd4.ExecuteScalar().ToString());

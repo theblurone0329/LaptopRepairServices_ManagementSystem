@@ -25,6 +25,7 @@ namespace Laptop_Repair_Services_Management_System
             SqlCommand cmd = new SqlCommand($"Select servType From BookedServices Where userID = '{userID}' AND servName = '{servName}'", con);
             string servType = cmd.ExecuteScalar().ToString();
             lblCurrServType.Text = servType;
+
             con.Close();
         }
 
@@ -53,8 +54,45 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnConfirm_Click_1(object sender, EventArgs e)
         {
+            con.Open();
+            SqlCommand cmd = new SqlCommand($"Delete From BookedServices Where userID = '{UID}' AND servName = '{lblCurrServName.Text}' AND servType = '{lblCurrServType.Text}';", con);
+            cmd.ExecuteScalar();
+
+            DateTime date = DateTime.Today.Date;
+            string today = date.ToString("dd/MMMM/yyyy");
+            today.Replace("/", " ");
+
+            
+            if (radBtnNormal.Checked == true)
+            {
+                SqlCommand cmd1 = new SqlCommand($"Insert into BookedServices values('{ComboBoxServiceType.Text}', '{UID}', NULL, '{today}', 'Request Received', '{radBtnNormal.Text}', '0');", con);
+                cmd1.ExecuteScalar();
+            } else if (radBtnUrgent.Checked == true)
+            {
+                SqlCommand cmd1 = new SqlCommand($"Insert into BookedServices values('{ComboBoxServiceType.Text}', '{UID}', NULL, '{today}', 'Request Received', '{radBtnUrgent.Text}', '0');", con);
+                cmd1.ExecuteScalar();
+            }
+            else if (radBtnNormal.Checked == false || radBtnUrgent.Checked == false)
+            {
+                MessageBox.Show("Please choose a service type");
+            }
+            con.Close();
+            MessageBox.Show("Service Change Successfully");
             ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(UID);
             showForm(viewServ);
+        }
+
+        private void ComboBoxServiceType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{ComboBoxServiceType.Text}';", con);
+            string urgPrice = cmd2.ExecuteScalar().ToString();
+            SqlCommand cmd3 = new SqlCommand($"Select normPrice From ServiceDetails Where servName = '{ComboBoxServiceType.Text}';", con);
+            string normPrice = cmd3.ExecuteScalar().ToString();
+
+            lblUrgPrice.Text = "RM " + urgPrice;
+            lblNormPrice.Text = "RM " + normPrice;
+            con.Close();
         }
     }
 }

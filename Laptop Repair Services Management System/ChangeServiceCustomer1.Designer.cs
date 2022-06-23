@@ -115,7 +115,7 @@ namespace Laptop_Repair_Services_Management_System
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(11, 238);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
@@ -213,7 +213,7 @@ namespace Laptop_Repair_Services_Management_System
             this.groupBox4.Controls.Add(this.progressBar4);
             this.groupBox4.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox4.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.Black;
             this.groupBox4.Location = new System.Drawing.Point(322, 238);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -310,7 +310,7 @@ namespace Laptop_Repair_Services_Management_System
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(11, 91);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -406,7 +406,7 @@ namespace Laptop_Repair_Services_Management_System
             this.groupBox2.Controls.Add(this.progressBar2);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(322, 91);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
