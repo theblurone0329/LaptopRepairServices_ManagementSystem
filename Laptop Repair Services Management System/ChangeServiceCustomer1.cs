@@ -212,25 +212,29 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnChange1_Click_1(object sender, EventArgs e)
         {
-            ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID);
+            string servName = groupBox1.Text;
+            ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID, servName);
             showForm(changeServ);
         }
 
         private void btnChange2_Click_1(object sender, EventArgs e)
         {
-            ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID);
+            string servName = groupBox2.Text;
+            ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID, servName);
             showForm(changeServ);
         }
 
         private void btnChange3_Click_1(object sender, EventArgs e)
         {
-            ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID);
+            string servName = groupBox3.Text;
+            ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID, servName);
             showForm(changeServ);
         }
 
         private void btnChange4_Click_1(object sender, EventArgs e)
         {
-            ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID);
+            string servName = groupBox4.Text;
+            ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID, servName);
             showForm(changeServ);
         }
     }

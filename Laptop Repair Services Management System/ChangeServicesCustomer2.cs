@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,11 +14,18 @@ namespace Laptop_Repair_Services_Management_System
 {
     public partial class ChangeServicesCustomer2 : Form
     {
-        public static string name;
-        public ChangeServicesCustomer2(string username)
+        public static string UID;
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
+        public ChangeServicesCustomer2(string userID, string servName)
         {
             InitializeComponent();
-            name = username;
+            con.Open();
+            UID = userID;
+            lblCurrServName.Text = servName;
+            SqlCommand cmd = new SqlCommand($"Select servType From BookedServices Where userID = '{userID}' AND servName = '{servName}'", con);
+            string servType = cmd.ExecuteScalar().ToString();
+            lblCurrServType.Text = servType;
+            con.Close();
         }
 
         private Form activeForm = null;
@@ -36,15 +45,15 @@ namespace Laptop_Repair_Services_Management_System
             childForm.Show();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnCancel_Click_1(object sender, EventArgs e)
         {
-            ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(name);
+            ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(UID);
             showForm(viewServ);
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void btnConfirm_Click_1(object sender, EventArgs e)
         {
-            ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(name);
+            ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(UID);
             showForm(viewServ);
         }
     }
