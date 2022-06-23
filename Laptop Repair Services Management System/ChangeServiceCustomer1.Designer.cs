@@ -31,7 +31,6 @@ namespace Laptop_Repair_Services_Management_System
         {
             this.label1 = new System.Windows.Forms.Label();
             this.pnlAttachForm = new System.Windows.Forms.Panel();
-            this.lblNone = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnView3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,6 +59,7 @@ namespace Laptop_Repair_Services_Management_System
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.lblNone = new System.Windows.Forms.Label();
             this.pnlAttachForm.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnView3)).BeginInit();
@@ -105,18 +105,6 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttachForm.Size = new System.Drawing.Size(631, 432);
             this.pnlAttachForm.TabIndex = 1;
             // 
-            // lblNone
-            // 
-            this.lblNone.AutoSize = true;
-            this.lblNone.BackColor = System.Drawing.Color.Transparent;
-            this.lblNone.Font = new System.Drawing.Font("Tw Cen MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNone.ForeColor = System.Drawing.Color.Black;
-            this.lblNone.Location = new System.Drawing.Point(100, 191);
-            this.lblNone.Name = "lblNone";
-            this.lblNone.Size = new System.Drawing.Size(438, 31);
-            this.lblNone.TabIndex = 23;
-            this.lblNone.Text = "You do not have any services booked!";
-            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
@@ -152,6 +140,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnView3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnView3.TabIndex = 14;
             this.btnView3.TabStop = false;
+            this.btnView3.Click += new System.EventHandler(this.btnView3_Click_1);
             // 
             // label2
             // 
@@ -178,6 +167,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnChange3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnChange3.TabIndex = 12;
             this.btnChange3.TabStop = false;
+            this.btnChange3.Click += new System.EventHandler(this.btnChange3_Click_1);
             // 
             // label7
             // 
@@ -248,6 +238,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnView4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnView4.TabIndex = 15;
             this.btnView4.TabStop = false;
+            this.btnView4.Click += new System.EventHandler(this.btnView4_Click_1);
             // 
             // label9
             // 
@@ -274,6 +265,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnChange4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnChange4.TabIndex = 12;
             this.btnChange4.TabStop = false;
+            this.btnChange4.Click += new System.EventHandler(this.btnChange4_Click_1);
             // 
             // label10
             // 
@@ -343,6 +335,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnView1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnView1.TabIndex = 13;
             this.btnView1.TabStop = false;
+            this.btnView1.Click += new System.EventHandler(this.btnView1_Click_1);
             // 
             // label4
             // 
@@ -368,6 +361,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnChange1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnChange1.TabIndex = 12;
             this.btnChange1.TabStop = false;
+            this.btnChange1.Click += new System.EventHandler(this.btnChange1_Click_1);
             // 
             // label5
             // 
@@ -437,6 +431,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnView2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnView2.TabIndex = 14;
             this.btnView2.TabStop = false;
+            this.btnView2.Click += new System.EventHandler(this.btnView2_Click_1);
             // 
             // label3
             // 
@@ -463,6 +458,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnChange2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnChange2.TabIndex = 12;
             this.btnChange2.TabStop = false;
+            this.btnChange2.Click += new System.EventHandler(this.btnChange2_Click_1);
             // 
             // label13
             // 
@@ -497,6 +493,18 @@ namespace Laptop_Repair_Services_Management_System
             this.progressBar2.Size = new System.Drawing.Size(116, 16);
             this.progressBar2.TabIndex = 0;
             this.progressBar2.Value = 30;
+            // 
+            // lblNone
+            // 
+            this.lblNone.AutoSize = true;
+            this.lblNone.BackColor = System.Drawing.Color.Transparent;
+            this.lblNone.Font = new System.Drawing.Font("Tw Cen MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNone.ForeColor = System.Drawing.Color.Black;
+            this.lblNone.Location = new System.Drawing.Point(100, 191);
+            this.lblNone.Name = "lblNone";
+            this.lblNone.Size = new System.Drawing.Size(438, 31);
+            this.lblNone.TabIndex = 23;
+            this.lblNone.Text = "You do not have any services booked!";
             // 
             // ChangeServiceCustomer1
             // 

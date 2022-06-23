@@ -35,10 +35,10 @@ namespace Laptop_Repair_Services_Management_System
             this.btnBack = new System.Windows.Forms.Label();
             this.lblProgressPercent = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblComments = new System.Windows.Forms.Label();
             this.lblservProg = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblTitleServName = new System.Windows.Forms.Label();
+            this.txtComments = new System.Windows.Forms.RichTextBox();
             this.pnlAttachForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -103,7 +103,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblComments);
+            this.groupBox1.Controls.Add(this.txtComments);
             this.groupBox1.Font = new System.Drawing.Font("Tw Cen MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(52, 213);
             this.groupBox1.Name = "groupBox1";
@@ -111,16 +111,6 @@ namespace Laptop_Repair_Services_Management_System
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report from Technician: ";
-            // 
-            // lblComments
-            // 
-            this.lblComments.AutoSize = true;
-            this.lblComments.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComments.Location = new System.Drawing.Point(29, 36);
-            this.lblComments.Name = "lblComments";
-            this.lblComments.Size = new System.Drawing.Size(221, 22);
-            this.lblComments.TabIndex = 0;
-            this.lblComments.Text = "Technician Comments here";
             // 
             // lblservProg
             // 
@@ -151,6 +141,15 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleServName.TabIndex = 20;
             this.lblTitleServName.Text = "SERVICE NAME";
             // 
+            // txtComments
+            // 
+            this.txtComments.Location = new System.Drawing.Point(22, 29);
+            this.txtComments.Name = "txtComments";
+            this.txtComments.ReadOnly = true;
+            this.txtComments.Size = new System.Drawing.Size(487, 172);
+            this.txtComments.TabIndex = 0;
+            this.txtComments.Text = "";
+            // 
             // ServiceOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,7 +161,6 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttachForm.ResumeLayout(false);
             this.pnlAttachForm.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -175,9 +173,9 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.Label btnBack;
         private System.Windows.Forms.Label lblProgressPercent;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblComments;
         private System.Windows.Forms.Label lblservProg;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lblTitleServName;
+        private System.Windows.Forms.RichTextBox txtComments;
     }
 }

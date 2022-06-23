@@ -16,7 +16,7 @@ namespace Laptop_Repair_Services_Management_System
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
         public static string UID;
-        public ChangeServiceCustomer1(string username)
+        public ChangeServiceCustomer1(string userID)
         {
             InitializeComponent();
             con.Open();
@@ -26,8 +26,6 @@ namespace Laptop_Repair_Services_Management_System
             groupBox4.Hide();
             lblNone.Hide();
 
-            SqlCommand cmdUID = new SqlCommand($"Select userID From AccountDetails Where username = '{username}'", con);
-            string userID = cmdUID.ExecuteScalar().ToString();
             SqlCommand cmd = new SqlCommand($"Select Count(*) From BookedServices Where userID = '{userID}';", con);
             int count = Convert.ToInt32(cmd.ExecuteScalar());
             
@@ -184,49 +182,53 @@ namespace Laptop_Repair_Services_Management_System
             childForm.Show();
         }
 
-        private void btnView1_Click(object sender, EventArgs e)
+        private void btnView1_Click_1(object sender, EventArgs e)
         {
-            ServiceOverview viewService = new ServiceOverview(UID);
+            string servName = groupBox1.Text;
+            ServiceOverviewNew viewService = new ServiceOverviewNew(UID, servName);
             showForm(viewService);
         }
 
-        private void btnView2_Click(object sender, EventArgs e)
+        private void btnView2_Click_1(object sender, EventArgs e)
         {
-            ServiceOverview viewService = new ServiceOverview(UID);
+            string servName = groupBox2.Text;
+            ServiceOverviewNew viewService = new ServiceOverviewNew(UID, servName);
             showForm(viewService);
         }
 
-        private void btnView3_Click(object sender, EventArgs e)
+        private void btnView3_Click_1(object sender, EventArgs e)
         {
-            ServiceOverview viewService = new ServiceOverview(UID);
+            string servName = groupBox3.Text;
+            ServiceOverviewNew viewService = new ServiceOverviewNew(UID, servName);
             showForm(viewService);
         }
 
-        private void btnView4_Click(object sender, EventArgs e)
+        private void btnView4_Click_1(object sender, EventArgs e)
         {
-            ServiceOverview viewService = new ServiceOverview(UID);
+            string servName = groupBox4.Text;
+            ServiceOverviewNew viewService = new ServiceOverviewNew(UID, servName);
             showForm(viewService);
         }
 
-        private void btnChange1_Click(object sender, EventArgs e)
+        private void btnChange1_Click_1(object sender, EventArgs e)
         {
             ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID);
             showForm(changeServ);
         }
 
-        private void btnChange2_Click(object sender, EventArgs e)
+        private void btnChange2_Click_1(object sender, EventArgs e)
         {
             ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID);
             showForm(changeServ);
         }
 
-        private void btnChange3_Click(object sender, EventArgs e)
+        private void btnChange3_Click_1(object sender, EventArgs e)
         {
             ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID);
             showForm(changeServ);
         }
 
-        private void btnChange4_Click(object sender, EventArgs e)
+        private void btnChange4_Click_1(object sender, EventArgs e)
         {
             ChangeServicesCustomer2 changeServ = new ChangeServicesCustomer2(UID);
             showForm(changeServ);

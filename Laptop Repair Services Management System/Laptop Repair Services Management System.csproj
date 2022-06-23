@@ -175,6 +175,12 @@
     <Compile Include="ServiceOverview.Designer.cs">
       <DependentUpon>ServiceOverview.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServiceOverviewNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceOverviewNew.Designer.cs">
+      <DependentUpon>ServiceOverviewNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="ServiceOverviewTech.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ServiceOverview.resx">
       <DependentUpon>ServiceOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceOverviewNew.resx">
+      <DependentUpon>ServiceOverviewNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ServiceOverviewTech.resx">
       <DependentUpon>ServiceOverviewTech.cs</DependentUpon>
