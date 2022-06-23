@@ -215,6 +215,7 @@ namespace Laptop_Repair_Services_Management_System
             this.ComboBoxServiceType.Name = "ComboBoxServiceType";
             this.ComboBoxServiceType.Size = new System.Drawing.Size(263, 25);
             this.ComboBoxServiceType.TabIndex = 58;
+            this.ComboBoxServiceType.SelectedIndexChanged += new System.EventHandler(this.ComboBoxServiceType_SelectedIndexChanged);
             // 
             // radBtnUrgent
             // 
