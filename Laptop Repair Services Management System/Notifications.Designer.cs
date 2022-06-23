@@ -29,6 +29,7 @@ namespace Laptop_Repair_Services_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Notifications));
             this.lblTitleNotiPg = new System.Windows.Forms.Label();
             this.lblView1 = new System.Windows.Forms.Label();
             this.lblNotiName1 = new System.Windows.Forms.Label();
@@ -38,23 +39,23 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttachNoti1 = new System.Windows.Forms.Panel();
             this.lblNoNoti = new System.Windows.Forms.Label();
             this.pnlAttachAllNoti = new System.Windows.Forms.Panel();
-            this.pnlAttachForm = new System.Windows.Forms.Panel();
             this.pnlAttachNoti2 = new System.Windows.Forms.Panel();
             this.gbNoti2 = new System.Windows.Forms.GroupBox();
             this.btnView2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblNotiName2 = new System.Windows.Forms.Label();
             this.pbNoti2 = new System.Windows.Forms.PictureBox();
+            this.pnlAttachForm = new System.Windows.Forms.Panel();
             this.gbNoti1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNoti1)).BeginInit();
             this.pnlAttachNoti1.SuspendLayout();
             this.pnlAttachAllNoti.SuspendLayout();
-            this.pnlAttachForm.SuspendLayout();
             this.pnlAttachNoti2.SuspendLayout();
             this.gbNoti2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNoti2)).BeginInit();
+            this.pnlAttachForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitleNotiPg
@@ -154,19 +155,6 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttachAllNoti.Size = new System.Drawing.Size(607, 336);
             this.pnlAttachAllNoti.TabIndex = 14;
             // 
-            // pnlAttachForm
-            // 
-            this.pnlAttachForm.AutoScroll = true;
-            this.pnlAttachForm.BackColor = System.Drawing.Color.White;
-            this.pnlAttachForm.Controls.Add(this.pnlAttachAllNoti);
-            this.pnlAttachForm.Controls.Add(this.lblNoNoti);
-            this.pnlAttachForm.Controls.Add(this.lblTitleNotiPg);
-            this.pnlAttachForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlAttachForm.Location = new System.Drawing.Point(0, 0);
-            this.pnlAttachForm.Name = "pnlAttachForm";
-            this.pnlAttachForm.Size = new System.Drawing.Size(658, 448);
-            this.pnlAttachForm.TabIndex = 1;
-            // 
             // pnlAttachNoti2
             // 
             this.pnlAttachNoti2.Controls.Add(this.gbNoti2);
@@ -232,12 +220,26 @@ namespace Laptop_Repair_Services_Management_System
             this.pbNoti2.TabIndex = 0;
             this.pbNoti2.TabStop = false;
             // 
+            // pnlAttachForm
+            // 
+            this.pnlAttachForm.AutoScroll = true;
+            this.pnlAttachForm.BackColor = System.Drawing.Color.White;
+            this.pnlAttachForm.Controls.Add(this.pnlAttachAllNoti);
+            this.pnlAttachForm.Controls.Add(this.lblNoNoti);
+            this.pnlAttachForm.Controls.Add(this.lblTitleNotiPg);
+            this.pnlAttachForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAttachForm.Location = new System.Drawing.Point(0, 0);
+            this.pnlAttachForm.Name = "pnlAttachForm";
+            this.pnlAttachForm.Size = new System.Drawing.Size(658, 448);
+            this.pnlAttachForm.TabIndex = 1;
+            // 
             // Notifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 448);
             this.Controls.Add(this.pnlAttachForm);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Notifications";
             this.Text = "Notifications";
             this.gbNoti1.ResumeLayout(false);
@@ -246,13 +248,13 @@ namespace Laptop_Repair_Services_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.pbNoti1)).EndInit();
             this.pnlAttachNoti1.ResumeLayout(false);
             this.pnlAttachAllNoti.ResumeLayout(false);
-            this.pnlAttachForm.ResumeLayout(false);
-            this.pnlAttachForm.PerformLayout();
             this.pnlAttachNoti2.ResumeLayout(false);
             this.gbNoti2.ResumeLayout(false);
             this.gbNoti2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNoti2)).EndInit();
+            this.pnlAttachForm.ResumeLayout(false);
+            this.pnlAttachForm.PerformLayout();
             this.ResumeLayout(false);
 
         }
