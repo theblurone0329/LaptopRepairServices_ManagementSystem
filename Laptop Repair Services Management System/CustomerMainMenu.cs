@@ -70,6 +70,7 @@ namespace Laptop_Repair_Services_Management_System
             string userID = cmd.ExecuteScalar().ToString();
             ChangeServiceCustomer1 changeService = new ChangeServiceCustomer1(userID);
             showForm(changeService);
+            con.Close();
         }
 
         private void btnToLogOut_Click(object sender, EventArgs e)
