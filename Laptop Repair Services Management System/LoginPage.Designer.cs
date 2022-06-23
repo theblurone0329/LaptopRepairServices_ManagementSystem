@@ -29,6 +29,7 @@ namespace Laptop_Repair_Services_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnForgotPassword = new System.Windows.Forms.Button();
             this.txtEnterPasswordLogin = new System.Windows.Forms.TextBox();
@@ -68,6 +69,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             // txtEnterPasswordLogin
             // 
+            this.txtEnterPasswordLogin.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtEnterPasswordLogin.Location = new System.Drawing.Point(124, 261);
             this.txtEnterPasswordLogin.Name = "txtEnterPasswordLogin";
             this.txtEnterPasswordLogin.Size = new System.Drawing.Size(185, 20);
@@ -75,6 +77,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             // txtEnterUserIDLogin
             // 
+            this.txtEnterUserIDLogin.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtEnterUserIDLogin.Location = new System.Drawing.Point(124, 220);
             this.txtEnterUserIDLogin.Name = "txtEnterUserIDLogin";
             this.txtEnterUserIDLogin.Size = new System.Drawing.Size(185, 20);
@@ -114,6 +117,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(386, 473);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnForgotPassword);
@@ -122,8 +126,9 @@ namespace Laptop_Repair_Services_Management_System
             this.Controls.Add(this.lblTitlePassword);
             this.Controls.Add(this.lblTitleUserID);
             this.Controls.Add(this.picLoginCompanyLogo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginPage";
-            this.Text = "Form1";
+            this.Text = "Welcome to Laptopia!";
             ((System.ComponentModel.ISupportInitialize)(this.picLoginCompanyLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
