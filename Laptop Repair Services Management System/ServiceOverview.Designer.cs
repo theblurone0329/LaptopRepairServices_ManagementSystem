@@ -35,10 +35,10 @@ namespace Laptop_Repair_Services_Management_System
             this.btnBack = new System.Windows.Forms.Label();
             this.lblProgressPercent = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtComments = new System.Windows.Forms.RichTextBox();
             this.lblservProg = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lblTitleServName = new System.Windows.Forms.Label();
-            this.txtComments = new System.Windows.Forms.RichTextBox();
             this.pnlAttachForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +112,15 @@ namespace Laptop_Repair_Services_Management_System
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Report from Technician: ";
             // 
+            // txtComments
+            // 
+            this.txtComments.Location = new System.Drawing.Point(22, 29);
+            this.txtComments.Name = "txtComments";
+            this.txtComments.ReadOnly = true;
+            this.txtComments.Size = new System.Drawing.Size(487, 172);
+            this.txtComments.TabIndex = 0;
+            this.txtComments.Text = "";
+            // 
             // lblservProg
             // 
             this.lblservProg.AutoSize = true;
@@ -141,21 +150,12 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleServName.TabIndex = 20;
             this.lblTitleServName.Text = "SERVICE NAME";
             // 
-            // txtComments
-            // 
-            this.txtComments.Location = new System.Drawing.Point(22, 29);
-            this.txtComments.Name = "txtComments";
-            this.txtComments.ReadOnly = true;
-            this.txtComments.Size = new System.Drawing.Size(487, 172);
-            this.txtComments.TabIndex = 0;
-            this.txtComments.Text = "";
-            // 
             // ServiceOverview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(631, 432);
             this.Controls.Add(this.pnlAttachForm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ServiceOverview";
             this.Text = "ServiceOverview";
             this.pnlAttachForm.ResumeLayout(false);
