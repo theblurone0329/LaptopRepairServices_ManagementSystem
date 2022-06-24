@@ -29,7 +29,7 @@ namespace Laptop_Repair_Services_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlAttach3 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAccept = new System.Windows.Forms.Button();
             this.checkedLstAcceptCustomerRequest = new System.Windows.Forms.CheckedListBox();
@@ -40,26 +40,28 @@ namespace Laptop_Repair_Services_Management_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.lstConfirmedServices = new System.Windows.Forms.ListBox();
             this.lblTitleConfirmedServices = new System.Windows.Forms.Label();
-            this.pnlAttach3.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlAttach3
+            // btnCancel
             // 
-            this.pnlAttach3.AutoScroll = true;
-            this.pnlAttach3.Controls.Add(this.label1);
-            this.pnlAttach3.Controls.Add(this.btnAccept);
-            this.pnlAttach3.Controls.Add(this.checkedLstAcceptCustomerRequest);
-            this.pnlAttach3.Controls.Add(this.lblTitleAcceptCustomer);
-            this.pnlAttach3.Controls.Add(this.lblTitleBookingEnquiries);
-            this.pnlAttach3.Controls.Add(this.btnGoFindCustomer);
-            this.pnlAttach3.Controls.Add(this.txtFindCustomer);
-            this.pnlAttach3.Controls.Add(this.panel1);
-            this.pnlAttach3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlAttach3.Location = new System.Drawing.Point(0, 0);
-            this.pnlAttach3.Name = "pnlAttach3";
-            this.pnlAttach3.Size = new System.Drawing.Size(631, 432);
-            this.pnlAttach3.TabIndex = 1;
+            this.btnCancel.AutoScroll = true;
+            this.btnCancel.Controls.Add(this.button1);
+            this.btnCancel.Controls.Add(this.label1);
+            this.btnCancel.Controls.Add(this.btnAccept);
+            this.btnCancel.Controls.Add(this.checkedLstAcceptCustomerRequest);
+            this.btnCancel.Controls.Add(this.lblTitleAcceptCustomer);
+            this.btnCancel.Controls.Add(this.lblTitleBookingEnquiries);
+            this.btnCancel.Controls.Add(this.btnGoFindCustomer);
+            this.btnCancel.Controls.Add(this.txtFindCustomer);
+            this.btnCancel.Controls.Add(this.panel1);
+            this.btnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCancel.Location = new System.Drawing.Point(0, 0);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(631, 432);
+            this.btnCancel.TabIndex = 1;
             // 
             // label1
             // 
@@ -171,16 +173,29 @@ namespace Laptop_Repair_Services_Management_System
             this.lblTitleConfirmedServices.TabIndex = 0;
             this.lblTitleConfirmedServices.Text = "CONFIRMED SERVICES";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(147, 397);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 23);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "CANCEL";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // BookingEnquiries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 432);
-            this.Controls.Add(this.pnlAttach3);
+            this.Controls.Add(this.btnCancel);
             this.Name = "BookingEnquiries";
             this.Text = "BookingEnquiries";
-            this.pnlAttach3.ResumeLayout(false);
-            this.pnlAttach3.PerformLayout();
+            this.btnCancel.ResumeLayout(false);
+            this.btnCancel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -189,7 +204,7 @@ namespace Laptop_Repair_Services_Management_System
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlAttach3;
+        private System.Windows.Forms.Panel btnCancel;
         private System.Windows.Forms.CheckedListBox checkedLstAcceptCustomerRequest;
         private System.Windows.Forms.Label lblTitleAcceptCustomer;
         private System.Windows.Forms.Label lblTitleBookingEnquiries;
@@ -200,5 +215,6 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.Label lblTitleConfirmedServices;
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

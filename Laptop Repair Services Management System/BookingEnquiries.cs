@@ -74,5 +74,27 @@ namespace Laptop_Repair_Services_Management_System
             }
             con.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string temp = txtFindCustomer.Text;
+            List<char> charToRemove = new List<char>() { 'U' };
+            int userID = Convert.ToInt32(temp.Filter(charToRemove));
+
+            int count = checkedLstAcceptCustomerRequest.Items.Count;
+            int index = 0;
+
+            while (count != index)
+            {
+                string servName = checkedLstAcceptCustomerRequest.Items[0].ToString();
+                SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Request Received' Where userID = '{userID}' AND servName = '{servName}' AND servStatus = 'In List';", con);
+                cmd.ExecuteScalar();
+                checkedLstAcceptCustomerRequest.Items.RemoveAt(0);
+                index++;
+            }
+            txtFindCustomer.Text = "";
+            con.Close();
+        }
     }
 }

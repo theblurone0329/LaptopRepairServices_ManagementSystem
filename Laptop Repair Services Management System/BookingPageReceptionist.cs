@@ -117,6 +117,23 @@ namespace Laptop_Repair_Services_Management_System
             cmd1.ExecuteScalar();
             SqlCommand cmd2 = new SqlCommand($"Insert into Notifications values('Service Booked', 'You booked {servName}, confirmation will arrive within 3 days', '{userID}');", con);
             cmd2.ExecuteScalar();
+
+            SqlCommand cmd4 = new SqlCommand($"Select Count(*) From AccountDetails Where accountType = 'receptionist';", con);
+            int count = Convert.ToInt32(cmd4.ExecuteScalar().ToString());
+            List<string> userIDList = new List<string>();
+            while (count != 0)
+            {
+                SqlCommand cmd5 = new SqlCommand($"Select userID From AccountDetails Where accountType = 'receptionist';", con);
+                string uid = cmd5.ExecuteScalar().ToString();
+                SqlCommand cmd3 = new SqlCommand($"Insert into Notifications values('Accept Services', 'There are services to be accepted...', '{uid}');", con);
+                cmd3.ExecuteScalar();
+                SqlCommand cmd6 = new SqlCommand($"Update AccountDetails Set accountType = 'temp' Where accountType = 'receptionist' and userID = '{uid}';", con);
+                cmd6.ExecuteScalar();
+                userIDList.Add(uid);
+                count--;
+            }
+            SqlCommand cmd7 = new SqlCommand($"Update AccountDetails Set accountType = 'receptionist' Where accountType = 'temp';", con);
+            cmd7.ExecuteScalar();
             MessageBox.Show("Service Booked Successfully");
             con.Close();
         }
