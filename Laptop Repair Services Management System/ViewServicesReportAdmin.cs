@@ -64,7 +64,8 @@ namespace Laptop_Repair_Services_Management_System
             int month = cmbBoxMonth.SelectedIndex + 1;
             SqlCommand cmd = new SqlCommand($"Select Sum(servPrice) From CompletedServices Where Month(completionDate) = '{month}';", con);
             string totalIncome = cmd.ExecuteScalar().ToString();
-            gbIncome.Text = $"Total Income - {ComboBoxMonth.SelectedText}";
+            int index = ComboBoxMonth.SelectedIndex;
+            gbIncome.Text = "Total Income (Month)";
             lblIncome.Text = "RM " + totalIncome;
             con.Close();
         }

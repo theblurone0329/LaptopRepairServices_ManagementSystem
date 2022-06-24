@@ -64,12 +64,6 @@ namespace Laptop_Repair_Services_Management_System
             showForm(viewRprt);
         }
 
-        private void btnViewIncome_Click(object sender, EventArgs e)
-        {
-            ViewIncome viewFin = new ViewIncome();
-            showForm(viewFin);
-        }
-
         private void btnToLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();

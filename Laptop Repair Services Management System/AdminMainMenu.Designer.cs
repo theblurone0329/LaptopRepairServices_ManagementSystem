@@ -34,7 +34,6 @@ namespace Laptop_Repair_Services_Management_System
             this.lblDisplayTime = new System.Windows.Forms.Label();
             this.btnToLogOut = new System.Windows.Forms.Button();
             this.btnRegisterNewAcc = new System.Windows.Forms.Button();
-            this.btnViewIncome = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnCallTechnician = new System.Windows.Forms.Button();
             this.btnViewServiceReport = new System.Windows.Forms.Button();
@@ -43,7 +42,6 @@ namespace Laptop_Repair_Services_Management_System
             this.panelSideBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnNotificationAlert = new System.Windows.Forms.Button();
-            this.picIconOption2 = new System.Windows.Forms.PictureBox();
             this.picIconOption1 = new System.Windows.Forms.PictureBox();
             this.picViewMyProfile = new System.Windows.Forms.PictureBox();
             this.pnlAttach5 = new System.Windows.Forms.Panel();
@@ -52,7 +50,6 @@ namespace Laptop_Repair_Services_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.picLogoMain)).BeginInit();
             this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picIconOption2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconOption1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picViewMyProfile)).BeginInit();
             this.pnlAttach5.SuspendLayout();
@@ -125,21 +122,6 @@ namespace Laptop_Repair_Services_Management_System
             this.btnRegisterNewAcc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegisterNewAcc.UseVisualStyleBackColor = false;
             this.btnRegisterNewAcc.Click += new System.EventHandler(this.btnRegisterNewAcc_Click);
-            // 
-            // btnViewIncome
-            // 
-            this.btnViewIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(79)))), ((int)(((byte)(243)))));
-            this.btnViewIncome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnViewIncome.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewIncome.ForeColor = System.Drawing.Color.White;
-            this.btnViewIncome.Location = new System.Drawing.Point(38, 274);
-            this.btnViewIncome.Name = "btnViewIncome";
-            this.btnViewIncome.Size = new System.Drawing.Size(175, 47);
-            this.btnViewIncome.TabIndex = 8;
-            this.btnViewIncome.Text = "View Total Income";
-            this.btnViewIncome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewIncome.UseVisualStyleBackColor = false;
-            this.btnViewIncome.Click += new System.EventHandler(this.btnViewIncome_Click);
             // 
             // btnLogOut
             // 
@@ -214,9 +196,7 @@ namespace Laptop_Repair_Services_Management_System
             this.panelSideBar.Controls.Add(this.btnToLogOut);
             this.panelSideBar.Controls.Add(this.btnRegisterNewAcc);
             this.panelSideBar.Controls.Add(this.btnNotificationAlert);
-            this.panelSideBar.Controls.Add(this.picIconOption2);
             this.panelSideBar.Controls.Add(this.picIconOption1);
-            this.panelSideBar.Controls.Add(this.btnViewIncome);
             this.panelSideBar.Controls.Add(this.btnLogOut);
             this.panelSideBar.Controls.Add(this.btnCallTechnician);
             this.panelSideBar.Controls.Add(this.btnViewServiceReport);
@@ -250,16 +230,6 @@ namespace Laptop_Repair_Services_Management_System
             this.btnNotificationAlert.TabIndex = 1;
             this.btnNotificationAlert.UseVisualStyleBackColor = false;
             this.btnNotificationAlert.Click += new System.EventHandler(this.btnNotificationAlert_Click);
-            // 
-            // picIconOption2
-            // 
-            this.picIconOption2.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.viewtotalincome;
-            this.picIconOption2.Location = new System.Drawing.Point(6, 292);
-            this.picIconOption2.Name = "picIconOption2";
-            this.picIconOption2.Size = new System.Drawing.Size(26, 29);
-            this.picIconOption2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picIconOption2.TabIndex = 11;
-            this.picIconOption2.TabStop = false;
             // 
             // picIconOption1
             // 
@@ -307,7 +277,6 @@ namespace Laptop_Repair_Services_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.picLogoMain)).EndInit();
             this.panelSideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picIconOption2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIconOption1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picViewMyProfile)).EndInit();
             this.pnlAttach5.ResumeLayout(false);
@@ -324,10 +293,8 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.Button btnToLogOut;
         private System.Windows.Forms.Button btnRegisterNewAcc;
         private System.Windows.Forms.Button btnNotificationAlert;
-        private System.Windows.Forms.PictureBox picIconOption2;
         private System.Windows.Forms.PictureBox picLogoMain;
         private System.Windows.Forms.PictureBox picIconOption1;
-        private System.Windows.Forms.Button btnViewIncome;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnCallTechnician;
         private System.Windows.Forms.Button btnViewServiceReport;

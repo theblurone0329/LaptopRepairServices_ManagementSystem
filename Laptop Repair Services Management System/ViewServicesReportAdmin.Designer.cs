@@ -129,17 +129,17 @@ namespace Laptop_Repair_Services_Management_System
             this.radButtonUncompleted = new System.Windows.Forms.RadioButton();
             this.radButtonCompleted = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.serviceReportGridView = new System.Windows.Forms.DataGridView();
             this.gbIncome = new System.Windows.Forms.GroupBox();
             this.lblIncome = new System.Windows.Forms.Label();
+            this.serviceReportGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBoxSort.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.pnlAttachForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.serviceReportGridView)).BeginInit();
             this.gbIncome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceReportGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label27
@@ -337,7 +337,7 @@ namespace Laptop_Repair_Services_Management_System
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel1.Controls.Add(this.progressBar6, 5, 6);
             this.tableLayoutPanel1.Controls.Add(this.LblBookId6, 4, 6);
             this.tableLayoutPanel1.Controls.Add(this.LblDate6, 3, 6);
@@ -758,7 +758,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(513, 9);
+            this.label6.Location = new System.Drawing.Point(514, 9);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 15);
@@ -1013,7 +1013,7 @@ namespace Laptop_Repair_Services_Management_System
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
             this.tableLayoutPanel2.Controls.Add(this.progressBar7, 5, 6);
             this.tableLayoutPanel2.Controls.Add(this.label7, 4, 6);
             this.tableLayoutPanel2.Controls.Add(this.label8, 3, 6);
@@ -1411,24 +1411,16 @@ namespace Laptop_Repair_Services_Management_System
             this.panel1.Size = new System.Drawing.Size(631, 432);
             this.panel1.TabIndex = 2;
             // 
-            // serviceReportGridView
-            // 
-            this.serviceReportGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.serviceReportGridView.Location = new System.Drawing.Point(2, 110);
-            this.serviceReportGridView.Name = "serviceReportGridView";
-            this.serviceReportGridView.Size = new System.Drawing.Size(626, 319);
-            this.serviceReportGridView.TabIndex = 22;
-            // 
             // gbIncome
             // 
             this.gbIncome.Controls.Add(this.lblIncome);
             this.gbIncome.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbIncome.Location = new System.Drawing.Point(402, 9);
             this.gbIncome.Name = "gbIncome";
-            this.gbIncome.Size = new System.Drawing.Size(211, 96);
+            this.gbIncome.Size = new System.Drawing.Size(211, 86);
             this.gbIncome.TabIndex = 23;
             this.gbIncome.TabStop = false;
-            this.gbIncome.Text = "TotalIncome";
+            this.gbIncome.Text = "Total Income - ";
             // 
             // lblIncome
             // 
@@ -1438,6 +1430,14 @@ namespace Laptop_Repair_Services_Management_System
             this.lblIncome.Size = new System.Drawing.Size(46, 22);
             this.lblIncome.TabIndex = 1;
             this.lblIncome.Text = "RM 0";
+            // 
+            // serviceReportGridView
+            // 
+            this.serviceReportGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.serviceReportGridView.Location = new System.Drawing.Point(2, 110);
+            this.serviceReportGridView.Name = "serviceReportGridView";
+            this.serviceReportGridView.Size = new System.Drawing.Size(626, 319);
+            this.serviceReportGridView.TabIndex = 22;
             // 
             // ViewServicesReportAdmin
             // 
@@ -1458,9 +1458,9 @@ namespace Laptop_Repair_Services_Management_System
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.serviceReportGridView)).EndInit();
             this.gbIncome.ResumeLayout(false);
             this.gbIncome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.serviceReportGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
