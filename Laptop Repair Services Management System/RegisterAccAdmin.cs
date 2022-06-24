@@ -30,13 +30,23 @@ namespace Laptop_Repair_Services_Management_System
             }
             else
             {
-                string role = cbAccType.Text.ToLower();
-                SqlCommand cmd = new SqlCommand($"Insert into AccountDetails values('{txtUsername.Text}', '{txtPassword.Text}', '{txtEmail.Text}', '{role}')", con);
-                cmd.ExecuteScalar();
-                MessageBox.Show("Account Registered!");
-                txtEmail.Clear();
-                txtPassword.Clear();
-                txtUsername.Clear();
+                SqlCommand cmd1 = new SqlCommand($"Select Count(*) From AccountDetails Where username = '{txtUsername.Text}';", con);
+                int count = Convert.ToInt32(cmd1.ExecuteScalar().ToString());
+
+                if (count != 0)
+                {
+                    MessageBox.Show("This username has already been taken. Please try another!");
+                    txtUsername.Text = "";
+                } else
+                {
+                    string role = cbAccType.Text.ToLower();
+                    SqlCommand cmd = new SqlCommand($"Insert into AccountDetails values('{txtUsername.Text}', '{txtPassword.Text}', '{txtEmail.Text}', '{role}')", con);
+                    cmd.ExecuteScalar();
+                    MessageBox.Show("Account Registered!");
+                    txtEmail.Clear();
+                    txtPassword.Clear();
+                    txtUsername.Clear();
+                }
             }
             con.Close();
         }

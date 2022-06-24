@@ -65,11 +65,11 @@ namespace Laptop_Repair_Services_Management_System
             
             if (radBtnNormal.Checked == true)
             {
-                SqlCommand cmd1 = new SqlCommand($"Insert into BookedServices values('{ComboBoxServiceType.Text}', '{UID}', NULL, '{today}', 'Request Received', '{radBtnNormal.Text}', '0');", con);
+                SqlCommand cmd1 = new SqlCommand($"Insert into ChangeServices values('{lblCurrServName.Text}', '{UID}', '0', '{ComboBoxServiceType.Text}', '{radBtnNormal.Text}');", con);
                 cmd1.ExecuteScalar();
             } else if (radBtnUrgent.Checked == true)
             {
-                SqlCommand cmd1 = new SqlCommand($"Insert into BookedServices values('{ComboBoxServiceType.Text}', '{UID}', NULL, '{today}', 'Request Received', '{radBtnUrgent.Text}', '0');", con);
+                SqlCommand cmd1 = new SqlCommand($"Insert into ChangeServices values('{lblCurrServName.Text}', '{UID}', '0', '{ComboBoxServiceType.Text}', '{radBtnUrgent.Text}');", con);
                 cmd1.ExecuteScalar();
             }
             else if (radBtnNormal.Checked == false || radBtnUrgent.Checked == false)

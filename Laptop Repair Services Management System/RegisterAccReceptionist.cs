@@ -29,12 +29,22 @@ namespace Laptop_Repair_Services_Management_System
             }
             else
             {
-                SqlCommand cmd = new SqlCommand($"Insert into AccountDetails values('{txtUsernameCus.Text}', '{txtPasswordCus.Text}', '{txtEmailCus.Text}', 'customer')", con);
-                cmd.ExecuteScalar();
-                MessageBox.Show("User Registered!");
-                txtEmailCus.Clear();
-                txtPasswordCus.Clear();
-                txtUsernameCus.Clear();
+                SqlCommand cmd1 = new SqlCommand($"Select Count(*) From AccountDetails Where username = '{txtUsernameCus.Text}';", con);
+                int count = Convert.ToInt32(cmd1.ExecuteScalar().ToString());
+
+                if (count != 0)
+                {
+                    MessageBox.Show("This username has already been taken. Please try another!");
+                    txtUsernameCus.Text = "";
+                } else
+                {
+                    SqlCommand cmd = new SqlCommand($"Insert into AccountDetails values('{txtUsernameCus.Text}', '{txtPasswordCus.Text}', '{txtEmailCus.Text}', 'customer')", con);
+                    cmd.ExecuteScalar();
+                    MessageBox.Show("User Registered!");
+                    txtEmailCus.Clear();
+                    txtPasswordCus.Clear();
+                    txtUsernameCus.Clear();
+                }
             }
             con.Close();
         }

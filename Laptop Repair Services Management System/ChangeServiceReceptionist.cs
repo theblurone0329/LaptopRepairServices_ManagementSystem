@@ -108,8 +108,13 @@ namespace Laptop_Repair_Services_Management_System
             string servNameAfter = cmd2.ExecuteScalar().ToString();
             SqlCommand cmd = new SqlCommand($"Delete Top(1) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter};", con);
             cmd.ExecuteScalar();
+            SqlCommand cmd3 = new SqlCommand($"Select Top(1) userID From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = '{servNameAfter}';", con);
+            string userID = cmd3.ExecuteScalar().ToString();
+            SqlCommand cmd4 = new SqlCommand($"Insert into Notifications values('Service Change Declined', 'Your service for {servNameAfter} has been declined....Contact us for more details', '{userID}'", con);
+            cmd4.ExecuteScalar();
             con.Close();
             pnlServ1.Hide();
+            MessageBox.Show("Service Change Declined");
         }
 
         private void btnDecline2_Click_1(object sender, EventArgs e)
@@ -121,8 +126,13 @@ namespace Laptop_Repair_Services_Management_System
             string servNameAfter = cmd2.ExecuteScalar().ToString();
             SqlCommand cmd = new SqlCommand($"Delete Top(2) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter};", con);
             cmd.ExecuteScalar();
+            SqlCommand cmd3 = new SqlCommand($"Select Top(2) Max(userID) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter};", con);
+            string userID = cmd3.ExecuteScalar().ToString();
+            SqlCommand cmd4 = new SqlCommand($"Insert into Notifications values('Service Change Declined', 'Your service for {servNameAfter} has been declined....Contact us for more details', '{userID}'", con);
+            cmd4.ExecuteScalar();
             con.Close();
             pnlServ2.Hide();
+            MessageBox.Show("Service Change Declined");
         }
 
         private void btnAccept1_Click_1(object sender, EventArgs e)
@@ -131,21 +141,23 @@ namespace Laptop_Repair_Services_Management_System
             DateTime date = DateTime.Today.Date;
             string today = date.ToString("dd/MMMM/yyyy");
             today.Replace("/", " ");
-            con.Open();
             SqlCommand cmd1 = new SqlCommand($"Select Top(1) servNameBefore From ChangeServices;", con);
             string servName = cmd1.ExecuteScalar().ToString();
-            SqlCommand cmd2 = new SqlCommand($"Select Top(1) servNameAfter From ChangeServices;", con);
+            SqlCommand cmd2 = new SqlCommand($"Select Top(1) servNameAfter From ChangeServices Where servNameBefore = '{servName}';", con);
             string servNameAfter = cmd2.ExecuteScalar().ToString();
-            SqlCommand cmd = new SqlCommand($"Delete Top(1) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter};", con);
-            cmd.ExecuteScalar();
-            SqlCommand cmd3 = new SqlCommand($"Select Top(1) userID From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter};", con);
+            SqlCommand cmd3 = new SqlCommand($"Select Top(1) userID From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = '{servNameAfter}';", con);
             string userID = cmd3.ExecuteScalar().ToString();
-            SqlCommand cmd5 = new SqlCommand($"Select Top(1) servType From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter} AND userID = '{userID}';", con);
+            SqlCommand cmd5 = new SqlCommand($"Select Top(1) servType From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = '{servNameAfter}' AND userID = '{userID}';", con);
             string servType = cmd5.ExecuteScalar().ToString();
+            SqlCommand cmd = new SqlCommand($"Delete Top(1) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = '{servNameAfter}';", con);
+            cmd.ExecuteScalar();
             SqlCommand cmd4 = new SqlCommand($"Insert into BookedServices values('{servNameAfter}', '{userID}', NULL, '{today}', 'Service Approved', '{servType}', 0);", con);
             cmd4.ExecuteScalar();
+            SqlCommand cmd6 = new SqlCommand($"Insert into Notifications values('Service Change Accepted', 'Your service for {servNameAfter} has been accepted!', '{userID}'", con);
+            cmd6.ExecuteScalar();
             con.Close();
             pnlServ1.Hide();
+            MessageBox.Show("Service Change Accepted!");
         }
 
         private void btnAccept2_Click_1(object sender, EventArgs e)
@@ -161,14 +173,17 @@ namespace Laptop_Repair_Services_Management_System
             string servNameAfter = cmd2.ExecuteScalar().ToString();
             SqlCommand cmd3 = new SqlCommand($"Select Top(2) Max(userID) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter};", con);
             string userID = cmd3.ExecuteScalar().ToString();
-            SqlCommand cmd = new SqlCommand($"Delete From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter} AND userID = '{userID}';", con);
-            cmd.ExecuteScalar();
             SqlCommand cmd5 = new SqlCommand($"Select Top(2) Max(servType) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter} AND userID = '{userID}';", con);
             string servType = cmd5.ExecuteScalar().ToString();
+            SqlCommand cmd = new SqlCommand($"Delete From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter} AND userID = '{userID}';", con);
+            cmd.ExecuteScalar();
             SqlCommand cmd4 = new SqlCommand($"Insert into BookedServices values('{servNameAfter}', '{userID}', NULL, '{today}', 'Service Approved', '{servType}', 0);", con);
             cmd4.ExecuteScalar();
+            SqlCommand cmd6 = new SqlCommand($"Insert into Notifications values('Service Change Accepted', 'Your service for {servNameAfter} has been accepted!', '{userID}'", con);
+            cmd6.ExecuteScalar();
             con.Close();
             pnlServ2.Hide();
+            MessageBox.Show("Service Change Accepted!");
         }
     }
 }

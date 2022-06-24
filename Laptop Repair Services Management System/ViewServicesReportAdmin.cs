@@ -27,7 +27,7 @@ namespace Laptop_Repair_Services_Management_System
             {
                 int month = cmbBoxMonth.SelectedIndex + 1;
 
-                if (radButtonCompleted.Checked)
+                if (radButtonCompleted.Checked == true)
                 {
                     con.Open();
                     SqlCommand cmd = new SqlCommand($"Select * from CompletedServices where Month(completionDate) = {month};", con);
@@ -38,7 +38,7 @@ namespace Laptop_Repair_Services_Management_System
                     }
                     con.Close();
                 }
-                else if (radBtnUncompleted.Checked)
+                else if (radButtonUncompleted.Checked == true)
                 {
                     con.Open();
                     SqlCommand cmd = new SqlCommand($"Select * from BookedServices where Month(date) = {month};", con);
@@ -48,7 +48,7 @@ namespace Laptop_Repair_Services_Management_System
                         ServiceData.Load(reader);
                     }
                     con.Close();
-                } else
+                } else if (radButtonCompleted.Checked == false && radButtonUncompleted.Checked == false)
                 {
                     MessageBox.Show("Please select an option to view data");
                 }
@@ -60,6 +60,13 @@ namespace Laptop_Repair_Services_Management_System
         private void button2_Click(object sender, EventArgs e)
         {
             serviceReportGridView.DataSource = GetServiceList();
+            con.Open();
+            int month = cmbBoxMonth.SelectedIndex + 1;
+            SqlCommand cmd = new SqlCommand($"Select Sum(servPrice) From CompletedServices Where Month(completionDate) = '{month}';", con);
+            string totalIncome = cmd.ExecuteScalar().ToString();
+            gbIncome.Text = $"Total Income - {ComboBoxMonth.SelectedText}";
+            lblIncome.Text = "RM " + totalIncome;
+            con.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -67,6 +74,7 @@ namespace Laptop_Repair_Services_Management_System
             cmbBoxMonth.SelectedIndex = -1;
             radButtonCompleted.Checked = false;
             radButtonUncompleted.Checked = false;
+            lblIncome.Text = "RM 0";
         }
     }
 }
