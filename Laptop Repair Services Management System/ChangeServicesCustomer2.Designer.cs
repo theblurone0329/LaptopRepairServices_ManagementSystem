@@ -29,6 +29,7 @@ namespace Laptop_Repair_Services_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeServicesCustomer2));
             this.pnlAttachForm = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lblCurrServType = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             // pnlAttachForm
             // 
+            this.pnlAttachForm.BackColor = System.Drawing.Color.White;
             this.pnlAttachForm.Controls.Add(this.label6);
             this.pnlAttachForm.Controls.Add(this.lblCurrServType);
             this.pnlAttachForm.Controls.Add(this.lblCurrServName);
@@ -275,6 +277,7 @@ namespace Laptop_Repair_Services_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 422);
             this.Controls.Add(this.pnlAttachForm);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChangeServicesCustomer2";
             this.Text = "ChangeServicesCustomer2";
             this.pnlAttachForm.ResumeLayout(false);
