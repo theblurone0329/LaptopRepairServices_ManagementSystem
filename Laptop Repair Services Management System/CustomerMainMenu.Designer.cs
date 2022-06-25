@@ -29,6 +29,7 @@ namespace Laptop_Repair_Services_Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerMainMenu));
             this.lblDisplayUsernameA = new System.Windows.Forms.Label();
             this.panelUpperNavBar = new System.Windows.Forms.Panel();
             this.lblDisplayTime = new System.Windows.Forms.Label();
@@ -117,7 +118,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnChangeServiceCust.Name = "btnChangeServiceCust";
             this.btnChangeServiceCust.Size = new System.Drawing.Size(175, 47);
             this.btnChangeServiceCust.TabIndex = 8;
-            this.btnChangeServiceCust.Text = "View Booked Services";
+            this.btnChangeServiceCust.Text = "Change Requests";
             this.btnChangeServiceCust.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChangeServiceCust.UseVisualStyleBackColor = false;
             this.btnChangeServiceCust.Click += new System.EventHandler(this.btnChangeServiceCust_Click);
@@ -267,6 +268,7 @@ namespace Laptop_Repair_Services_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 511);
             this.Controls.Add(this.pnlAttach5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerMainMenu";
             this.Text = "CustomerMainMenu";
             this.panelUpperNavBar.ResumeLayout(false);
