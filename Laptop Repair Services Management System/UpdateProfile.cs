@@ -42,12 +42,6 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            ViewDetails view = new ViewDetails(username);
-            showForm(view);
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
             con.Open();
             if (txtBoxUsername.Text == "" && txtBoxEmail.Text == "" && txtBoxNewPassw.Text == "" && txtBoxNewPassw.Text == "")
             {
@@ -56,7 +50,8 @@ namespace Laptop_Repair_Services_Management_System
                 ViewDetails view5 = new ViewDetails(username);
                 showForm(view5);
             }
-            else if (txtBoxUsername.Text == "" && txtBoxEmail.Text != "" && txtBoxNewPassw.Text != "" && txtBoxNewPassw.Text != "" && txtBoxConfirmPassw.Text != "")
+            else if (txtBoxUsername.Text == "" && txtBoxEmail.Text != "" && txtBoxNewPassw.Text != ""
+                && txtBoxNewPassw.Text != "" && txtBoxConfirmPassw.Text != "")
             {
                 if (txtBoxConfirmPassw.Text != txtBoxNewPassw.Text)
                 {
@@ -160,6 +155,12 @@ namespace Laptop_Repair_Services_Management_System
                 ViewDetails view3 = new ViewDetails(username);
                 showForm(view3);
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ViewDetails view3 = new ViewDetails(username);
+            showForm(view3);
         }
     }
 }
