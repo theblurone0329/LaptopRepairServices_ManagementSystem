@@ -65,7 +65,6 @@ namespace Laptop_Repair_Services_Management_System
             SqlCommand cmd = new SqlCommand($"Select Sum(servPrice) From CompletedServices Where Month(completionDate) = '{month}';", con);
             string totalIncome = cmd.ExecuteScalar().ToString();
             int index = ComboBoxMonth.SelectedIndex;
-            gbIncome.Text = "Total Income (Month)";
             lblIncome.Text = "RM " + totalIncome;
             con.Close();
         }

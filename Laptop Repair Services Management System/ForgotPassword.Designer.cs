@@ -30,7 +30,9 @@ namespace Laptop_Repair_Services_Management_System
         private void InitializeComponent()
         {
             this.pnlAttachForm = new System.Windows.Forms.Panel();
+            this.picBoxNone = new System.Windows.Forms.PictureBox();
             this.btnVerify = new System.Windows.Forms.Button();
+            this.picBoxTickEmail = new System.Windows.Forms.PictureBox();
             this.txtBoxConfirmPassw = new System.Windows.Forms.TextBox();
             this.txtBoxNewPassw = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,9 +41,8 @@ namespace Laptop_Repair_Services_Management_System
             this.label4 = new System.Windows.Forms.Label();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.picBoxNone = new System.Windows.Forms.PictureBox();
-            this.picBoxTickEmail = new System.Windows.Forms.PictureBox();
             this.picBoxKey = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.Label();
             this.pnlAttachForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxTickEmail)).BeginInit();
@@ -52,6 +53,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             this.pnlAttachForm.AutoScroll = true;
             this.pnlAttachForm.BackColor = System.Drawing.Color.White;
+            this.pnlAttachForm.Controls.Add(this.btnBack);
             this.pnlAttachForm.Controls.Add(this.picBoxNone);
             this.pnlAttachForm.Controls.Add(this.btnVerify);
             this.pnlAttachForm.Controls.Add(this.picBoxTickEmail);
@@ -72,6 +74,19 @@ namespace Laptop_Repair_Services_Management_System
             this.pnlAttachForm.Size = new System.Drawing.Size(568, 366);
             this.pnlAttachForm.TabIndex = 1;
             // 
+            // picBoxNone
+            // 
+            this.picBoxNone.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxNone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picBoxNone.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.MicrosoftTeams_image__1_;
+            this.picBoxNone.Location = new System.Drawing.Point(384, 162);
+            this.picBoxNone.Margin = new System.Windows.Forms.Padding(2);
+            this.picBoxNone.Name = "picBoxNone";
+            this.picBoxNone.Size = new System.Drawing.Size(23, 24);
+            this.picBoxNone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxNone.TabIndex = 40;
+            this.picBoxNone.TabStop = false;
+            // 
             // btnVerify
             // 
             this.btnVerify.AutoSize = true;
@@ -87,6 +102,19 @@ namespace Laptop_Repair_Services_Management_System
             this.btnVerify.Text = "VERIFY";
             this.btnVerify.UseVisualStyleBackColor = false;
             this.btnVerify.Click += new System.EventHandler(this.btnVerify_Click);
+            // 
+            // picBoxTickEmail
+            // 
+            this.picBoxTickEmail.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxTickEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picBoxTickEmail.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.check;
+            this.picBoxTickEmail.Location = new System.Drawing.Point(384, 163);
+            this.picBoxTickEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.picBoxTickEmail.Name = "picBoxTickEmail";
+            this.picBoxTickEmail.Size = new System.Drawing.Size(23, 24);
+            this.picBoxTickEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxTickEmail.TabIndex = 38;
+            this.picBoxTickEmail.TabStop = false;
             // 
             // txtBoxConfirmPassw
             // 
@@ -185,32 +213,6 @@ namespace Laptop_Repair_Services_Management_System
             this.label1.TabIndex = 9;
             this.label1.Text = "Email address";
             // 
-            // picBoxNone
-            // 
-            this.picBoxNone.BackColor = System.Drawing.Color.Transparent;
-            this.picBoxNone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picBoxNone.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.MicrosoftTeams_image__1_;
-            this.picBoxNone.Location = new System.Drawing.Point(384, 162);
-            this.picBoxNone.Margin = new System.Windows.Forms.Padding(2);
-            this.picBoxNone.Name = "picBoxNone";
-            this.picBoxNone.Size = new System.Drawing.Size(23, 24);
-            this.picBoxNone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxNone.TabIndex = 40;
-            this.picBoxNone.TabStop = false;
-            // 
-            // picBoxTickEmail
-            // 
-            this.picBoxTickEmail.BackColor = System.Drawing.Color.Transparent;
-            this.picBoxTickEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picBoxTickEmail.Image = global::Laptop_Repair_Services_Management_System.Properties.Resources.check;
-            this.picBoxTickEmail.Location = new System.Drawing.Point(384, 163);
-            this.picBoxTickEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.picBoxTickEmail.Name = "picBoxTickEmail";
-            this.picBoxTickEmail.Size = new System.Drawing.Size(23, 24);
-            this.picBoxTickEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxTickEmail.TabIndex = 38;
-            this.picBoxTickEmail.TabStop = false;
-            // 
             // picBoxKey
             // 
             this.picBoxKey.BackColor = System.Drawing.Color.Transparent;
@@ -224,6 +226,17 @@ namespace Laptop_Repair_Services_Management_System
             this.picBoxKey.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxKey.TabIndex = 7;
             this.picBoxKey.TabStop = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.AutoSize = true;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(12, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(73, 24);
+            this.btnBack.TabIndex = 41;
+            this.btnBack.Text = "< Back";
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // ForgotPassword
             // 
@@ -257,5 +270,6 @@ namespace Laptop_Repair_Services_Management_System
         private System.Windows.Forms.TextBox txtBoxEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picBoxKey;
+        private System.Windows.Forms.Label btnBack;
     }
 }

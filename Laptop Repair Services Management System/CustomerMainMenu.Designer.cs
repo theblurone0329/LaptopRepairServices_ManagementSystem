@@ -118,7 +118,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnChangeServiceCust.Name = "btnChangeServiceCust";
             this.btnChangeServiceCust.Size = new System.Drawing.Size(175, 47);
             this.btnChangeServiceCust.TabIndex = 8;
-            this.btnChangeServiceCust.Text = "Change Requests";
+            this.btnChangeServiceCust.Text = "View Booked Services";
             this.btnChangeServiceCust.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChangeServiceCust.UseVisualStyleBackColor = false;
             this.btnChangeServiceCust.Click += new System.EventHandler(this.btnChangeServiceCust_Click);

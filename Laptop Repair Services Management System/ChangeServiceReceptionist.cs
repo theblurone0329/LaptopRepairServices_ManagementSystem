@@ -106,11 +106,11 @@ namespace Laptop_Repair_Services_Management_System
             string servName = cmd1.ExecuteScalar().ToString();
             SqlCommand cmd2 = new SqlCommand($"Select Top(1) servNameAfter From ChangeServices;", con);
             string servNameAfter = cmd2.ExecuteScalar().ToString();
-            SqlCommand cmd = new SqlCommand($"Delete Top(1) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter};", con);
-            cmd.ExecuteScalar();
             SqlCommand cmd3 = new SqlCommand($"Select Top(1) userID From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = '{servNameAfter}';", con);
             string userID = cmd3.ExecuteScalar().ToString();
-            SqlCommand cmd4 = new SqlCommand($"Insert into Notifications values('Service Change Declined', 'Your service for {servNameAfter} has been declined....Contact us for more details', '{userID}'", con);
+            SqlCommand cmd = new SqlCommand($"Delete Top(1) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = '{servNameAfter}';", con);
+            cmd.ExecuteScalar();
+            SqlCommand cmd4 = new SqlCommand($"Insert into Notifications values('Service Change Declined', 'Your service for {servNameAfter} has been declined....Contact us for more details', '{userID}');", con);
             cmd4.ExecuteScalar();
             con.Close();
             pnlServ1.Hide();
@@ -124,10 +124,10 @@ namespace Laptop_Repair_Services_Management_System
             string servName = cmd1.ExecuteScalar().ToString();
             SqlCommand cmd2 = new SqlCommand($"Select Top(2) Max(servNameAfter) From ChangeServices;", con);
             string servNameAfter = cmd2.ExecuteScalar().ToString();
-            SqlCommand cmd = new SqlCommand($"Delete Top(2) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter};", con);
-            cmd.ExecuteScalar();
             SqlCommand cmd3 = new SqlCommand($"Select Top(2) Max(userID) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter};", con);
             string userID = cmd3.ExecuteScalar().ToString();
+            SqlCommand cmd = new SqlCommand($"Delete Top(2) From ChangeServices Where servNameBefore = '{servName}' AND servNameAfter = {servNameAfter};", con);
+            cmd.ExecuteScalar();
             SqlCommand cmd4 = new SqlCommand($"Insert into Notifications values('Service Change Declined', 'Your service for {servNameAfter} has been declined....Contact us for more details', '{userID}'", con);
             cmd4.ExecuteScalar();
             con.Close();
@@ -153,7 +153,7 @@ namespace Laptop_Repair_Services_Management_System
             cmd.ExecuteScalar();
             SqlCommand cmd4 = new SqlCommand($"Insert into BookedServices values('{servNameAfter}', '{userID}', NULL, '{today}', 'Service Approved', '{servType}', 0);", con);
             cmd4.ExecuteScalar();
-            SqlCommand cmd6 = new SqlCommand($"Insert into Notifications values('Service Change Accepted', 'Your service for {servNameAfter} has been accepted!', '{userID}'", con);
+            SqlCommand cmd6 = new SqlCommand($"Insert into Notifications values('Service Change Accepted', 'Your service for {servNameAfter} has been accepted!', '{userID}');", con);
             cmd6.ExecuteScalar();
             con.Close();
             pnlServ1.Hide();

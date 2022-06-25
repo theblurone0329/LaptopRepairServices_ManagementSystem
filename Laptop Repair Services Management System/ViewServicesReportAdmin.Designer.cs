@@ -234,7 +234,7 @@ namespace Laptop_Repair_Services_Management_System
             // 
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(527, 9);
+            this.label35.Location = new System.Drawing.Point(528, 9);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(36, 15);
@@ -337,7 +337,7 @@ namespace Laptop_Repair_Services_Management_System
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel1.Controls.Add(this.progressBar6, 5, 6);
             this.tableLayoutPanel1.Controls.Add(this.LblBookId6, 4, 6);
             this.tableLayoutPanel1.Controls.Add(this.LblDate6, 3, 6);
@@ -1013,7 +1013,7 @@ namespace Laptop_Repair_Services_Management_System
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
             this.tableLayoutPanel2.Controls.Add(this.progressBar7, 5, 6);
             this.tableLayoutPanel2.Controls.Add(this.label7, 4, 6);
             this.tableLayoutPanel2.Controls.Add(this.label8, 3, 6);
@@ -1420,7 +1420,7 @@ namespace Laptop_Repair_Services_Management_System
             this.gbIncome.Size = new System.Drawing.Size(211, 86);
             this.gbIncome.TabIndex = 23;
             this.gbIncome.TabStop = false;
-            this.gbIncome.Text = "Total Income - ";
+            this.gbIncome.Text = "Total Income (Month)";
             // 
             // lblIncome
             // 

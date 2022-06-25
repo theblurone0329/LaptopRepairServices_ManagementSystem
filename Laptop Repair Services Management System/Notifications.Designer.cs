@@ -192,6 +192,7 @@ namespace Laptop_Repair_Services_Management_System
             this.btnView2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnView2.TabIndex = 21;
             this.btnView2.TabStop = false;
+            this.btnView2.Click += new System.EventHandler(this.btnView2_Click_1);
             // 
             // label3
             // 

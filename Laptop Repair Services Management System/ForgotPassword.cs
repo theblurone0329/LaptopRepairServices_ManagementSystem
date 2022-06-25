@@ -45,6 +45,9 @@ namespace Laptop_Repair_Services_Management_System
             {
                 picBoxNone.Show();
                 picBoxNone.BringToFront();
+                btnReset.Enabled = false;
+                txtBoxConfirmPassw.Enabled = false;
+                txtBoxNewPassw.Enabled = false;
             }
             con.Close();
         }
@@ -86,6 +89,14 @@ namespace Laptop_Repair_Services_Management_System
                 }
             }
             con.Close();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginPage login = new LoginPage(name);
+            login.Closed += (s, args) => this.Close();
+            login.Show();
         }
     }
 }

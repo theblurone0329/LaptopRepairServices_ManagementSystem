@@ -117,7 +117,7 @@ namespace Laptop_Repair_Services_Management_System
             showForm(viewNoti);
         }
 
-        private void btnView2_Click(object sender, EventArgs e)
+        private void btnView2_Click_1(object sender, EventArgs e)
         {
             DisplayNotification viewNoti = new DisplayNotification(username, notiNameBring2);
             showForm(viewNoti);

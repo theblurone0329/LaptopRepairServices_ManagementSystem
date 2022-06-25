@@ -120,6 +120,8 @@ namespace Laptop_Repair_Services_Management_System
             cmd.ExecuteScalar();
             SqlCommand cmd1 = new SqlCommand($"Update BookedServices Set comment = '{txtComment.Text}' Where servName = '{lblTitleServName.Text}' And userID = '{userIDHere}';", con);
             cmd1.ExecuteScalar();
+            SqlCommand cmd2 = new SqlCommand($"Insert into Notifications values('Service Completed', 'Your service for {lblTitleServName.Text} has been completed and is waiting for payment! Please contact our receptionist for payment and retrieval!', '{userIDHere}');", con);
+            cmd2.ExecuteScalar();
             MessageBox.Show("Service Update Submitted...");
             con.Close();
         }

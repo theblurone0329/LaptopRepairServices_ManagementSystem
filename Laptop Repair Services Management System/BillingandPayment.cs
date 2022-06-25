@@ -188,6 +188,7 @@ namespace Laptop_Repair_Services_Management_System
             }
             radCash.Checked = false;
             radOnlineBanking.Checked = false;
+            lstCustomerBill.Items.Clear();
             MessageBox.Show("All Services Paid!");
             con.Close();
         }
@@ -195,6 +196,7 @@ namespace Laptop_Repair_Services_Management_System
         private void btnReceipt_Click(object sender, EventArgs e)
         {
             btnConfirmPayment.Enabled = true;
+            btnCancelPayment.Enabled = false;
             List<string> servNames = new List<string>();
             List<string> prices = new List<string>();
             string totalPrices;
@@ -216,7 +218,7 @@ namespace Laptop_Repair_Services_Management_System
             SqlCommand cmd = new SqlCommand($"Select Count(*) From BookedServices Where servStatus = 'In List' and userID = '{userID}';", con);
             int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
             int index = 0;
-            int curr = 1;
+            int curr = 0;
             int ohYeah = 1;
             string servName;
             string servType;
@@ -229,7 +231,6 @@ namespace Laptop_Repair_Services_Management_System
                     if (curr == 1)
                     {
                         servName = lstCustomerBill.Items[index].ToString();
-                        MessageBox.Show(servName);
 
                         SqlCommand cmd3 = new SqlCommand($"Select servType From BookedServices Where userID = {userID} AND servStatus = 'In List' AND servName = '{servName}';", con);
                         servType = cmd3.ExecuteScalar().ToString();
@@ -239,19 +240,16 @@ namespace Laptop_Repair_Services_Management_System
                             SqlCommand cmd4 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}';", con);
                             price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
                             prices.Add(price.ToString());
-                            MessageBox.Show(price.ToString());
                         }
                         else
                         {
                             SqlCommand cmd4 = new SqlCommand($"Select normPrice From ServiceDetails Where servName = '{servName}';", con);
                             price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
                             prices.Add(price.ToString());
-                            MessageBox.Show(price.ToString());
                         }
                     } else if (curr != 1)
                     {
                         servName = lstCustomerBill.Items[index].ToString();
-                        MessageBox.Show(servName);
 
                         SqlCommand cmd3 = new SqlCommand($"Select servType From BookedServices Where userID = {userID} AND servStatus = 'In List' AND servName = '{servName}';", con);
                         servType = cmd3.ExecuteScalar().ToString();
@@ -261,14 +259,12 @@ namespace Laptop_Repair_Services_Management_System
                             SqlCommand cmd4 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}';", con);
                             price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
                             prices.Add(price.ToString());
-                            MessageBox.Show(price.ToString());
                         }
                         else
                         {
                             SqlCommand cmd4 = new SqlCommand($"Select normPrice From ServiceDetails Where servName = '{servName}';", con);
                             price = Convert.ToDouble(cmd4.ExecuteScalar().ToString());
                             prices.Add(price.ToString());
-                            MessageBox.Show(price.ToString());
                         }
                     }
                     index++;

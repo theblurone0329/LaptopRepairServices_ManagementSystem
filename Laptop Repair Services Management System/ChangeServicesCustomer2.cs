@@ -77,7 +77,7 @@ namespace Laptop_Repair_Services_Management_System
                 MessageBox.Show("Please choose a service type");
             }
             con.Close();
-            MessageBox.Show("Service Change Successfully");
+            MessageBox.Show("Service Change Request Sent Successfully");
             ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(UID);
             showForm(viewServ);
         }

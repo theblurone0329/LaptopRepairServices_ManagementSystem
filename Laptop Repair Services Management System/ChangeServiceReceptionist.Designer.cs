@@ -135,24 +135,24 @@ namespace Laptop_Repair_Services_Management_System
             // lblNewService2
             // 
             this.lblNewService2.AutoSize = true;
-            this.lblNewService2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewService2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewService2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNewService2.Location = new System.Drawing.Point(329, 0);
             this.lblNewService2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNewService2.Name = "lblNewService2";
-            this.lblNewService2.Size = new System.Drawing.Size(104, 22);
+            this.lblNewService2.Size = new System.Drawing.Size(82, 18);
             this.lblNewService2.TabIndex = 22;
             this.lblNewService2.Text = "New service";
             // 
             // lblCurrentService2
             // 
             this.lblCurrentService2.AutoSize = true;
-            this.lblCurrentService2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentService2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentService2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCurrentService2.Location = new System.Drawing.Point(4, 0);
             this.lblCurrentService2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCurrentService2.Name = "lblCurrentService2";
-            this.lblCurrentService2.Size = new System.Drawing.Size(127, 22);
+            this.lblCurrentService2.Size = new System.Drawing.Size(104, 18);
             this.lblCurrentService2.TabIndex = 20;
             this.lblCurrentService2.Text = "Current service";
             // 
@@ -246,7 +246,7 @@ namespace Laptop_Repair_Services_Management_System
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(14, 2);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -273,24 +273,24 @@ namespace Laptop_Repair_Services_Management_System
             // lblNewService1
             // 
             this.lblNewService1.AutoSize = true;
-            this.lblNewService1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewService1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewService1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblNewService1.Location = new System.Drawing.Point(334, 0);
             this.lblNewService1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNewService1.Name = "lblNewService1";
-            this.lblNewService1.Size = new System.Drawing.Size(104, 22);
+            this.lblNewService1.Size = new System.Drawing.Size(82, 18);
             this.lblNewService1.TabIndex = 18;
             this.lblNewService1.Text = "New service";
             // 
             // lblCurrentService1
             // 
             this.lblCurrentService1.AutoSize = true;
-            this.lblCurrentService1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentService1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentService1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCurrentService1.Location = new System.Drawing.Point(4, 0);
             this.lblCurrentService1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCurrentService1.Name = "lblCurrentService1";
-            this.lblCurrentService1.Size = new System.Drawing.Size(127, 22);
+            this.lblCurrentService1.Size = new System.Drawing.Size(104, 18);
             this.lblCurrentService1.TabIndex = 16;
             this.lblCurrentService1.Text = "Current service";
             // 

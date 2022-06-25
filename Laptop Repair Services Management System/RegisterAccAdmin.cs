@@ -46,6 +46,7 @@ namespace Laptop_Repair_Services_Management_System
                     txtEmail.Clear();
                     txtPassword.Clear();
                     txtUsername.Clear();
+                    cbAccType.SelectedIndex = -1;
                 }
             }
             con.Close();
