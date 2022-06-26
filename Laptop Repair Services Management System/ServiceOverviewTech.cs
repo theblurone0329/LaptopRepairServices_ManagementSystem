@@ -18,6 +18,7 @@ namespace Laptop_Repair_Services_Management_System
         string userIDHere;
         public ServiceOverviewTech(string servNameArgs, string userID, int servProg)
         {
+            // set the value for label and progress bar
             InitializeComponent();
             btnComplete.Enabled = false;
             lblTitleServName.Text = servNameArgs;
@@ -27,6 +28,7 @@ namespace Laptop_Repair_Services_Management_System
             lblStatus.Text = prog + "% Complete";
             progressBar1.Value = temp;
 
+            //check the checklist box according to service progress
             if (servProg == 1)
             {
                 checkedListBox1.SetItemChecked(0, true);
@@ -51,6 +53,7 @@ namespace Laptop_Repair_Services_Management_System
         private Form activeForm = null;
         private void showForm(Form childForm)
         {
+            //close and open childform
             if (activeForm != null)
             {
                 activeForm.Close();
@@ -67,12 +70,14 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            //open view service technician page
             ViewServiceTechnician view = new ViewServiceTechnician();
             showForm(view);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //get the count of checked item
             int count = checkedListBox1.CheckedItems.Count;
 
             if (count == 5)
@@ -106,7 +111,7 @@ namespace Laptop_Repair_Services_Management_System
                 lblStatus.Text = "0% Completed";
                 btnComplete.Enabled = false;
             }
-
+            // update the service progress by searching for its servicename and user id
             con.Open();
             SqlCommand cmd = new SqlCommand($"Update BookedServices Set servProgress = {count} Where servName = '{lblTitleServName.Text}' AND userID = '{userIDHere}';", con);
             cmd.ExecuteScalar();
@@ -115,6 +120,7 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnComplete_Click(object sender, EventArgs e)
         {
+            //update database and generate completion status
             con.Open();
             SqlCommand cmd = new SqlCommand($"Update BookedServices Set servStatus = 'Waiting for Payment' Where servName = '{lblTitleServName.Text}' And userID = '{userIDHere}';", con);
             cmd.ExecuteScalar();

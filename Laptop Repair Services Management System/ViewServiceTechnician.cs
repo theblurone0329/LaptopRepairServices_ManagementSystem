@@ -42,6 +42,7 @@ namespace Laptop_Repair_Services_Management_System
             SqlCommand cmd11 = new SqlCommand($"Select count(*) From BookedServices Where servStatus = 'Service Approved' and servType = 'Urgent';", con);
             int urgCount = Convert.ToInt32(cmd11.ExecuteScalar().ToString());
 
+            //get the count for urgent type service in database, in collect the value based on the condition
             
             if (urgCount > 4 && count == 1)
             {
@@ -821,6 +822,7 @@ namespace Laptop_Repair_Services_Management_System
             con.Close();
         }
 
+        //to display childform
         private Form activeForm = null;
         private void showForm(Form childForm)
         {
@@ -838,6 +840,7 @@ namespace Laptop_Repair_Services_Management_System
             childForm.Show();
         }
 
+        //display the data based on the button clicked to redirect to desired page
         private void btnView5_Click_1(object sender, EventArgs e)
         {
             con.Open();

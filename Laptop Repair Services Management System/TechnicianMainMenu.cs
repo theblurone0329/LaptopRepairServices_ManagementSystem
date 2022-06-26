@@ -17,12 +17,14 @@ namespace Laptop_Repair_Services_Management_System
         string notiNameBack = "";
         public TechnicianMainMenu(string n)
         {
+            //to display welcome message and show date and time
             InitializeComponent();
             lblDisplayUsernameA.Text = "Hello, " + n;
             lblDisplayTime.Text = DateTime.Now.ToString();
             username = n;
         }
 
+        //to display childform
         private Form activeForm = null;
         private void showForm(Form childForm)
         {
@@ -40,6 +42,7 @@ namespace Laptop_Repair_Services_Management_System
             childForm.Show();
         }
 
+        //display the chosen page (button clicked)
         private void picViewMyProfile_Click(object sender, EventArgs e)
         {
             ViewDetails view = new ViewDetails(username);
@@ -57,7 +60,7 @@ namespace Laptop_Repair_Services_Management_System
             ViewServiceTechnician viewServTech = new ViewServiceTechnician();
             showForm(viewServTech);
         }
-
+        //logging out
         private void btnToLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
