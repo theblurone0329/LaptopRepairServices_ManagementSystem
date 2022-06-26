@@ -18,7 +18,6 @@ namespace Laptop_Repair_Services_Management_System
         string username;
         string notiNameBring1;
         string notiNameBring2;
-        string notiNameBring3;
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
         public Notifications(string n, string notiNameBack)
         {
