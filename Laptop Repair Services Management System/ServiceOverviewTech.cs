@@ -108,7 +108,7 @@ namespace Laptop_Repair_Services_Management_System
             }
 
             con.Open();
-            SqlCommand cmd = new SqlCommand($"Update BookedServices Set servProgress = '{progressBar1.Value / 20}' Where servName = '{lblTitleServName.Text} AND userID = {userIDHere}';", con);
+            SqlCommand cmd = new SqlCommand($"Update BookedServices Set servProgress = {count} Where servName = '{lblTitleServName.Text}' AND userID = '{userIDHere}';", con);
             cmd.ExecuteScalar();
             con.Close();
         }
