@@ -20,12 +20,13 @@ namespace Laptop_Repair_Services_Management_System
             InitializeComponent();
         }
 
+        // Method to get a new customer's detail and validate if the customer is existed in the system or not
         private void btnRegisterCus_Click(object sender, EventArgs e)
         {
             con.Open();
             if (txtUsernameCus.Text == "" || txtPasswordCus.Text == "" || txtEmailCus.Text == "")
             {
-                MessageBox.Show("All Details must be filled in to register a new customer!");
+                MessageBox.Show("All Details must be filled in to register a new customer!"); // if it's blank, show this error message
             }
             else
             {

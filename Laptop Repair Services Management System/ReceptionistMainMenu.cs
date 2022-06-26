@@ -16,13 +16,15 @@ namespace Laptop_Repair_Services_Management_System
         string username;
         string notiNameBack = "";
         public ReceptionistMainMenu(string n)
-        {
+        {   
+            //to display welcome message, and current date and time
             InitializeComponent();
             lblDisplayUsernameA.Text = "Hello, " + n;
             lblDisplayTime.Text = DateTime.Now.ToString();
             username = n;
         }
 
+        //to display form in panels
         private Form activeForm = null;
         private void showForm(Form childForm)
         {
@@ -40,6 +42,7 @@ namespace Laptop_Repair_Services_Management_System
             childForm.Show();
         }
 
+        //methods to direct user to desired page
         private void picViewMyProfile_Click(object sender, EventArgs e)
         {
             ViewDetails view = new ViewDetails(username);
@@ -84,6 +87,7 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnToLogOut_Click(object sender, EventArgs e)
         {
+            //to log user out of their account
             this.Hide();
             LoginPage view = new LoginPage(username);
             view.Closed += (s, args) => this.Close();
