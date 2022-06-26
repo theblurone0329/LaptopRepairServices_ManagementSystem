@@ -167,10 +167,10 @@ namespace Laptop_Repair_Services_Management_System
             // lblTitleServName
             // 
             this.lblTitleServName.AutoSize = true;
-            this.lblTitleServName.Font = new System.Drawing.Font("Tw Cen MT", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleServName.Font = new System.Drawing.Font("Tw Cen MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleServName.Location = new System.Drawing.Point(46, 51);
             this.lblTitleServName.Name = "lblTitleServName";
-            this.lblTitleServName.Size = new System.Drawing.Size(221, 37);
+            this.lblTitleServName.Size = new System.Drawing.Size(188, 31);
             this.lblTitleServName.TabIndex = 17;
             this.lblTitleServName.Text = "SERVICE NAME";
             // 
