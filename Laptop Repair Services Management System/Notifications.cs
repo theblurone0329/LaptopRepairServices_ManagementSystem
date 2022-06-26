@@ -21,6 +21,8 @@ namespace Laptop_Repair_Services_Management_System
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
         public Notifications(string n, string notiNameBack)
         {
+            //display notifications details onto group box 
+            //delete notifcation that has been viewed
             InitializeComponent();
             pnlAttachNoti1.Hide();
             pnlAttachNoti2.Hide();
@@ -91,6 +93,7 @@ namespace Laptop_Repair_Services_Management_System
             username = n;
         }
 
+        //to display form onto panels
         private Form activeForm = null;
         private void showForm(Form childForm)
         {
@@ -112,12 +115,14 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnView1_Click(object sender, EventArgs e)
         {
+            //direct user to page to display selected notifcation
             DisplayNotification viewNoti = new DisplayNotification(username, notiNameBring1);
             showForm(viewNoti);
         }
 
         private void btnView2_Click_1(object sender, EventArgs e)
         {
+            //direct user to page to display selected notifcation
             DisplayNotification viewNoti = new DisplayNotification(username, notiNameBring2);
             showForm(viewNoti);
         }

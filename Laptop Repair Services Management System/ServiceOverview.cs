@@ -18,6 +18,7 @@ namespace Laptop_Repair_Services_Management_System
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
         public ServiceOverview(string userID, string servName)
         {
+            //to display service name, progress, and comments on the form
             InitializeComponent();
             UID = userID;
             con.Open();
@@ -29,6 +30,7 @@ namespace Laptop_Repair_Services_Management_System
             SqlCommand cmd1 = new SqlCommand($"Select servType From BookedServices Where servName = '{servName}' AND userID = '{userID}';", con);
             string servType = cmd1.ExecuteScalar().ToString();
 
+            //to check if selected service type is urgent or normal
             if (servType == "Urgent")
             {
                 SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{servName}';", con);
@@ -48,6 +50,7 @@ namespace Laptop_Repair_Services_Management_System
             con.Close();
         }
 
+        //method to display form on panel
         private Form activeForm = null;
         private void showForm(Form childForm)
         {
@@ -67,6 +70,7 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            //to redirect user back to view service page
             ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(UID);
             showForm(viewServ);
         }

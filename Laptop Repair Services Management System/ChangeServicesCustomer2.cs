@@ -18,6 +18,7 @@ namespace Laptop_Repair_Services_Management_System
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
         public ChangeServicesCustomer2(string userID, string servName)
         {
+            //to display current service that wants to be changed
             InitializeComponent();
             con.Open();
             UID = userID;
@@ -29,6 +30,7 @@ namespace Laptop_Repair_Services_Management_System
             con.Close();
         }
 
+        //method to display form in panel
         private Form activeForm = null;
         private void showForm(Form childForm)
         {
@@ -46,12 +48,14 @@ namespace Laptop_Repair_Services_Management_System
             childForm.Show();
         }
 
+        //to direct user back to view services
         private void btnCancel_Click_1(object sender, EventArgs e)
         {
             ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(UID);
             showForm(viewServ);
         }
 
+        //to update the services in the database table
         private void btnConfirm_Click_1(object sender, EventArgs e)
         {
             con.Open();
@@ -62,7 +66,7 @@ namespace Laptop_Repair_Services_Management_System
             string today = date.ToString("dd/MMMM/yyyy");
             today.Replace("/", " ");
 
-            
+            //to check and see which service type has been selected
             if (radBtnNormal.Checked == true)
             {
                 SqlCommand cmd1 = new SqlCommand($"Insert into ChangeServices values('{lblCurrServName.Text}', '{UID}', '0', '{ComboBoxServiceType.Text}', '{radBtnNormal.Text}');", con);
@@ -84,6 +88,7 @@ namespace Laptop_Repair_Services_Management_System
 
         private void ComboBoxServiceType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //To display price for each service when option in combo box has changed
             con.Open();
             SqlCommand cmd2 = new SqlCommand($"Select urgPrice From ServiceDetails Where servName = '{ComboBoxServiceType.Text}';", con);
             string urgPrice = cmd2.ExecuteScalar().ToString();

@@ -20,6 +20,7 @@ namespace Laptop_Repair_Services_Management_System
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
         public DisplayNotification(string n, string notiName)
         {
+            //To display notification name and description onto UI 
             InitializeComponent();
             btnView.Hide();
             con.Open();
@@ -40,6 +41,7 @@ namespace Laptop_Repair_Services_Management_System
             }
         }
 
+        //method to display form to panel
         private Form activeForm = null;
         private void showForm(Form childForm)
         {
@@ -61,6 +63,7 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            //to direct user back to notification page 
             Notifications noti = new Notifications(username, notiNameBack);
             showForm(noti);
         }

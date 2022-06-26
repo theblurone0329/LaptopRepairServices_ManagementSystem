@@ -25,6 +25,7 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnBook_Click(object sender, EventArgs e)
         {
+            //to validate which radio button has been selected and assign value to attribute
             string servName = "";
             string servType = "";
             if (radNormalFeeRemoveVirus.Checked == true)
@@ -108,6 +109,7 @@ namespace Laptop_Repair_Services_Management_System
                 servType = "Urgent";
             }
 
+            //to get all required information and insert into booked services and notification tables in database
             DateTime date = DateTime.Today.Date;
             string today = date.ToString("dd/MMMM/yyyy");
             today.Replace("/", " ");

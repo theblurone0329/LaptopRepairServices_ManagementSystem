@@ -23,6 +23,7 @@ namespace Laptop_Repair_Services_Management_System
             username = n;
         }
 
+        //method to display form in panels
         private Form activeForm = null;
         private void showForm(Form childForm)
         {
@@ -43,6 +44,7 @@ namespace Laptop_Repair_Services_Management_System
         private void btnSave_Click(object sender, EventArgs e)
         {
             con.Open();
+            //to check if any textboxes are empty
             if (txtBoxUsername.Text == "" && txtBoxEmail.Text == "" && txtBoxNewPassw.Text == "" && txtBoxNewPassw.Text == "")
             {
                 MessageBox.Show("No Changes made! Returning...");
@@ -152,6 +154,7 @@ namespace Laptop_Repair_Services_Management_System
                 cmd2.ExecuteScalar();
                 MessageBox.Show("Email changed successfully!");
                 con.Close();
+                //to direct user back to view profile page
                 ViewDetails view3 = new ViewDetails(username);
                 showForm(view3);
             }
@@ -159,6 +162,7 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            //to direct user back to view profile page
             ViewDetails view3 = new ViewDetails(username);
             showForm(view3);
         }

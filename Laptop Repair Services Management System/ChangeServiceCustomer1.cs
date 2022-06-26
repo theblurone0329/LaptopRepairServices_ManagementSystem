@@ -26,9 +26,11 @@ namespace Laptop_Repair_Services_Management_System
             groupBox4.Hide();
             lblNone.Hide();
 
+            //get count of services that have been labeled as "Service Approved"
             SqlCommand cmd = new SqlCommand($"Select Count(*) From BookedServices Where userID = '{userID}' and servStatus = 'Service Approved';", con);
             int count = Convert.ToInt32(cmd.ExecuteScalar());
             
+            //to validate the amount of booked services and display them
             if (count > 4)
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName From BookedServices Where userID = '{userID}' and servStatus = 'Service Approved';", con);
@@ -165,6 +167,7 @@ namespace Laptop_Repair_Services_Management_System
             UID = userID;
         }
 
+        //method to display form in panel
         private Form activeForm = null;
         private void showForm(Form childForm)
         {
@@ -182,6 +185,7 @@ namespace Laptop_Repair_Services_Management_System
             childForm.Show();
         }
 
+        //methods to direct user to view their selected services
         private void btnView1_Click_1(object sender, EventArgs e)
         {
             string servName = groupBox1.Text;
@@ -210,6 +214,7 @@ namespace Laptop_Repair_Services_Management_System
             showForm(viewService);
         }
 
+        //methods to direct user to change their selected services
         private void btnChange1_Click_1(object sender, EventArgs e)
         {
             string servName = groupBox1.Text;

@@ -18,6 +18,7 @@ namespace Laptop_Repair_Services_Management_System
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ToString());
         public ForgotPassword(string n)
         {
+            //disable reset button and new password textboxes 
             InitializeComponent();
             picBoxTickEmail.Hide();
             picBoxNone.Hide();
@@ -30,11 +31,14 @@ namespace Laptop_Repair_Services_Management_System
         private void btnVerify_Click(object sender, EventArgs e)
         {
             con.Open();
+            //get the count of the email inputed by user
             SqlCommand cmd = new SqlCommand("Select count(*) From AccountDetails Where email='" + txtBoxEmail.Text + "';", con);
             int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
 
             if (count > 0)
             {
+                //if count more than one, then there is this account in database
+                //Then enable all textboxes and reset button
                 picBoxTickEmail.Show();
                 picBoxTickEmail.BringToFront();
                 btnReset.Enabled = true;
@@ -43,6 +47,7 @@ namespace Laptop_Repair_Services_Management_System
             }
             else
             {
+                //disable a buttons and textboxes if count is 0 
                 picBoxNone.Show();
                 picBoxNone.BringToFront();
                 btnReset.Enabled = false;
@@ -55,21 +60,25 @@ namespace Laptop_Repair_Services_Management_System
         private void btnReset_Click(object sender, EventArgs e)
         {
             con.Open();
+            // select the existing password in database based on the email inputed
             SqlCommand cmd = new SqlCommand("Select password From AccountDetails Where email='" + txtBoxEmail.Text + "';", con);
             string pw = cmd.ExecuteScalar().ToString();
 
+            //validation for password changing 
             if (pw == txtBoxNewPassw.Text)
             {
                 MessageBox.Show("New Password cannot be same as old password! Choose Another!");
             }
             else if (pw != txtBoxNewPassw.Text)
             {
+                //validation to make sure password change is not the same as old one
                 if (txtBoxNewPassw.Text != txtBoxConfirmPassw.Text)
                 {
                     MessageBox.Show("Please make sure you type the same new password for both!");
                 }
                 else if (txtBoxNewPassw.Text == txtBoxConfirmPassw.Text)
                 {
+                    //update the password into database
                     SqlCommand cmd3 = new SqlCommand($"Update AccountDetails Set password='{txtBoxNewPassw.Text}' Where email='{txtBoxEmail.Text}';", con);
                     cmd3.ExecuteScalar();
                     MessageBox.Show("Password Successfully Changed. Returning to login screen now...");
@@ -78,6 +87,7 @@ namespace Laptop_Repair_Services_Management_System
 
                     if (count > 0)
                     {
+                        //select username and return to login page 
                         SqlCommand cmd5 = new SqlCommand($"Select username From AccountDetails Where email='{txtBoxEmail.Text}';", con);
                         string username = cmd5.ExecuteScalar().ToString();
                         this.Hide();

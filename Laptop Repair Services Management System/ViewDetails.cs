@@ -19,6 +19,7 @@ namespace Laptop_Repair_Services_Management_System
         string username;
         public ViewDetails(string n)
         {
+            //to get data from database and display in correct label
             InitializeComponent();
             con.Open();
             SqlCommand cmd = new SqlCommand("Select email From AccountDetails Where username='" + n + "';", con);
@@ -37,10 +38,12 @@ namespace Laptop_Repair_Services_Management_System
 
         private void btnUpdateProf_Click(object sender, EventArgs e)
         {
+            //direct user to form that allows update profile
             UpdateProfile view = new UpdateProfile(username);
             showForm(view);
         }
 
+        //method to display form in panel
         private Form activeForm = null;
         private void showForm(Form childForm)
         {
