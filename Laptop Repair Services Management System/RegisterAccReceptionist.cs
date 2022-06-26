@@ -31,7 +31,7 @@ namespace Laptop_Repair_Services_Management_System
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Count(*) From AccountDetails Where username = '{txtUsernameCus.Text}';", con);
                 int count = Convert.ToInt32(cmd1.ExecuteScalar().ToString());
-                SqlCommand cmd2 = new SqlCommand($"Select Count(*) From AccountDetails Where email = '{txtEmail.Text}';", con);
+                SqlCommand cmd2 = new SqlCommand($"Select Count(*) From AccountDetails Where email = '{txtEmailCus.Text}';", con);
                 int emailCount = Convert.ToInt32(cmd2.ExecuteScalar().ToString());
 
                 if (emailCount != 0)
