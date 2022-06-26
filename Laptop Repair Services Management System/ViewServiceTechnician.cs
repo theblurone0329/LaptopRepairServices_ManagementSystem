@@ -277,7 +277,7 @@ namespace Laptop_Repair_Services_Management_System
                 pbUrgent3.Show();
                 pbUrgent4.Show();
             }
-            else if (urgCount == 3 && count > 4)
+            else if (urgCount == 3 && count > 1)
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Service Approved' and servType = 'Urgent';", con);
                 string servName1 = cmd1.ExecuteScalar().ToString();
@@ -316,7 +316,7 @@ namespace Laptop_Repair_Services_Management_System
                 pbUrgent3.Show();
 
             }
-            else if (urgCount == 2 && count > 4)
+            else if (urgCount == 2 && count >= 2)
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Service Approved' and servType = 'Urgent';", con);
                 string servName1 = cmd1.ExecuteScalar().ToString();
@@ -354,7 +354,7 @@ namespace Laptop_Repair_Services_Management_System
                 pbUrgent2.Show();
 
             }
-            else if (urgCount == 1 && count > 4)
+            else if (urgCount == 1 && count >= 3)
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Service Approved' and servType = 'Urgent';", con);
                 string servName1 = cmd1.ExecuteScalar().ToString();
@@ -391,7 +391,7 @@ namespace Laptop_Repair_Services_Management_System
                 pbUrgent1.Show();
 
             }
-            else if (urgCount == 1 && count == 4)
+            else if (urgCount == 1 && count >= 4)
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Service Approved' and servType = 'Urgent';", con);
                 string servName1 = cmd1.ExecuteScalar().ToString();
@@ -428,7 +428,7 @@ namespace Laptop_Repair_Services_Management_System
                 pbUrgent1.Show();
 
             }
-            else if (urgCount == 3 && count == 1)
+            else if (urgCount == 3 && count >= 1)
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Service Approved' and servType = 'Urgent';", con);
                 string servName1 = cmd1.ExecuteScalar().ToString();
@@ -467,7 +467,7 @@ namespace Laptop_Repair_Services_Management_System
                 pbUrgent3.Show();
 
             }
-            else if (urgCount == 2 && count == 2)
+            else if (urgCount == 2 && count >= 2)
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Service Approved' and servType = 'Urgent';", con);
                 string servName1 = cmd1.ExecuteScalar().ToString();
@@ -505,7 +505,7 @@ namespace Laptop_Repair_Services_Management_System
                 pbUrgent2.Show();
                 
             }
-            else if (urgCount == 1 && count == 3)
+            else if (urgCount == 1 && count >= 3)
             {
                 SqlCommand cmd1 = new SqlCommand($"Select Top(1) servName From BookedServices Where servStatus = 'Service Approved' and servType = 'Urgent';", con);
                 string servName1 = cmd1.ExecuteScalar().ToString();
