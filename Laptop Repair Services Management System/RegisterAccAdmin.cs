@@ -24,29 +24,43 @@ namespace Laptop_Repair_Services_Management_System
         {
             con.Open();
 
+            //to check if all textboxes are filled in
             if (txtUsername.Text == "" || txtPassword.Text == "" || txtEmail.Text == "")
             {
                 MessageBox.Show("All Details must be filled in!");
             }
             else
             {
+                //to get count of username and email of the entries from database 
                 SqlCommand cmd1 = new SqlCommand($"Select Count(*) From AccountDetails Where username = '{txtUsername.Text}';", con);
                 int count = Convert.ToInt32(cmd1.ExecuteScalar().ToString());
+                SqlCommand cmd2 = new SqlCommand($"Select Count(*) From AccountDetails Where email = '{txtEmail.Text}';", con);
+                int emailCount = Convert.ToInt32(cmd2.ExecuteScalar().ToString());
 
-                if (count != 0)
+                //check email count and if more than 0 then return error message
+                if(emailCount != 0)
                 {
-                    MessageBox.Show("This username has already been taken. Please try another!");
-                    txtUsername.Text = "";
+                    MessageBox.Show("This email already has a account. Please try another!");
                 } else
                 {
-                    string role = cbAccType.Text.ToLower();
-                    SqlCommand cmd = new SqlCommand($"Insert into AccountDetails values('{txtUsername.Text}', '{txtPassword.Text}', '{txtEmail.Text}', '{role}')", con);
-                    cmd.ExecuteScalar();
-                    MessageBox.Show("Account Registered!");
-                    txtEmail.Clear();
-                    txtPassword.Clear();
-                    txtUsername.Clear();
-                    cbAccType.SelectedIndex = -1;
+                    //check username count and if more than 0 then return error message
+                    if (count != 0)
+                    {
+                        MessageBox.Show("This username has already been taken. Please try another!");
+                        txtUsername.Text = "";
+                    }
+                    else
+                    {
+                        //insert details into account database and display account registered message
+                        string role = cbAccType.Text.ToLower();
+                        SqlCommand cmd = new SqlCommand($"Insert into AccountDetails values('{txtUsername.Text}', '{txtPassword.Text}', '{txtEmail.Text}', '{role}')", con);
+                        cmd.ExecuteScalar();
+                        MessageBox.Show("Account Registered!");
+                        txtEmail.Clear();
+                        txtPassword.Clear();
+                        txtUsername.Clear();
+                        cbAccType.SelectedIndex = -1;
+                    }
                 }
             }
             con.Close();

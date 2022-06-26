@@ -20,6 +20,7 @@ namespace Laptop_Repair_Services_Management_System
             InitializeComponent();
         }
 
+        //method to get data onto data grid view
         private DataTable GetServiceList()
         {
             con.Close();
@@ -57,6 +58,7 @@ namespace Laptop_Repair_Services_Management_System
             return ServiceData;         
         }
 
+        //method to attach data onto data grid view and display total monthly earnings 
         private void button2_Click(object sender, EventArgs e)
         {
             serviceReportGridView.DataSource = GetServiceList();
@@ -69,6 +71,7 @@ namespace Laptop_Repair_Services_Management_System
             con.Close();
         }
 
+        //to clear all data in textbox, radio button, and labels
         private void button1_Click(object sender, EventArgs e)
         {
             cmbBoxMonth.SelectedIndex = -1;
