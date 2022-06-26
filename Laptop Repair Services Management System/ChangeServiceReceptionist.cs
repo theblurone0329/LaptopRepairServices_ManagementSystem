@@ -25,6 +25,7 @@ namespace Laptop_Repair_Services_Management_System
             SqlCommand cmd1 = new SqlCommand($"Select count(*) From ChangeServices;", con);
             int count = Convert.ToInt32(cmd1.ExecuteScalar().ToString());
 
+            // to display the current service and its progression and the new service that had made from the customers.
             if (count > 2)
             {
                 SqlCommand cmd2 = new SqlCommand($"Select Top(1) servNameBefore From ChangeServices;", con);
@@ -99,6 +100,7 @@ namespace Laptop_Repair_Services_Management_System
             con.Close();
         }
 
+        //method to decline the service change request
         private void btnDecline1_Click_1(object sender, EventArgs e)
         {
             con.Open();
@@ -135,6 +137,7 @@ namespace Laptop_Repair_Services_Management_System
             MessageBox.Show("Service Change Declined");
         }
 
+        // method to accept the change requests, and update the changes into bookedservices
         private void btnAccept1_Click_1(object sender, EventArgs e)
         {
             con.Open();

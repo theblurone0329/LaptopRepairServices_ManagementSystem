@@ -21,6 +21,7 @@ namespace Laptop_Repair_Services_Management_System
             InitializeComponent();
         }
 
+        //to accept customer requests
         private void btnAccept_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -44,6 +45,7 @@ namespace Laptop_Repair_Services_Management_System
             con.Close();
         }
 
+        //to find customer by their userID, and update the customer when the request received/ still on the list 
         private void btnGoFindCustomer_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -68,13 +70,15 @@ namespace Laptop_Repair_Services_Management_System
                 }
             }
             else
-            {
+            {   
+                //if not display this message
                 MessageBox.Show("No services booked from this customer...");
                 txtFindCustomer.Text = "";
             }
             con.Close();
         }
-
+        
+        //when service accepted and display on the confirmed list
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();

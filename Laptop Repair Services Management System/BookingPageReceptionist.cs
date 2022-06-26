@@ -19,10 +19,12 @@ namespace Laptop_Repair_Services_Management_System
         string username;
         public BookingPageReceptionist(string n)
         {
+            //to get the username 
             InitializeComponent();
             username = n;
         }
 
+        //methods that to  accept the bookings
         private void btnBook_Click(object sender, EventArgs e)
         {
             string servName = "";
@@ -108,6 +110,7 @@ namespace Laptop_Repair_Services_Management_System
                 servType = "Urgent";
             }
 
+            //to display current date
             DateTime date = DateTime.Today.Date;
             string today = date.ToString("dd/MMMM/yyyy");
             today.Replace("/", " ");
