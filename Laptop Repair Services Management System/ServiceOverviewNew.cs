@@ -20,15 +20,16 @@ namespace Laptop_Repair_Services_Management_System
         {
             //to display service name, progress, and comments on the form
             InitializeComponent();
-            UID = userID;
             con.Open();
-            lblTitleServName.Text = servName;
             SqlCommand cmd = new SqlCommand($"Select servProgress From BookedServices Where servName = '{servName}' AND userID = '{userID}';", con);
             int servProg = Convert.ToInt32(cmd.ExecuteScalar().ToString());
             int progress = servProg * 20;
-            lblservProg.Text = progress.ToString() + "% Complete";
             SqlCommand cmd1 = new SqlCommand($"Select servType From BookedServices Where servName = '{servName}' AND userID = '{userID}';", con);
             string servType = cmd1.ExecuteScalar().ToString();
+
+            lblTitleServName.Text = servName;
+            lblProgressPercent.Text = progress.ToString() + "% Complete";
+            progressBar1.Value = progress;
 
             //to check if selected service type is urgent or normal
             if (servType == "Urgent")
@@ -49,6 +50,7 @@ namespace Laptop_Repair_Services_Management_System
             txtComments.Text = comments;
 
             con.Close();
+            UID = userID;
         }
 
         //method to display form on panel
@@ -69,7 +71,7 @@ namespace Laptop_Repair_Services_Management_System
             childForm.Show();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             //to redirect user back to view service page
             ChangeServiceCustomer1 viewServ = new ChangeServiceCustomer1(UID);

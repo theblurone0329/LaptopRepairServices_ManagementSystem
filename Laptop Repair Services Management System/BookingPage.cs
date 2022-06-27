@@ -124,7 +124,7 @@ namespace Laptop_Repair_Services_Management_System
                 MessageBox.Show("Selected service has already been booked and is still active!");
             } else if (countServ == 0)
             {
-                SqlCommand cmd1 = new SqlCommand($"Insert into BookedServices values('{servName}', '{userID}', 'NULL', '{today}', 'Request Received', '{servType}', 0);", con);
+                SqlCommand cmd1 = new SqlCommand($"Insert into BookedServices values('{servName}', '{userID}', NULL, '{today}', 'Request Received', '{servType}', 0);", con);
                 cmd1.ExecuteScalar();
                 SqlCommand cmd2 = new SqlCommand($"Insert into Notifications values('Service Booked', 'You booked {servName}, confirmation will arrive within 3 days', '{userID}');", con);
                 cmd2.ExecuteScalar();

@@ -169,12 +169,6 @@
     <Compile Include="RegisterAccReceptionist.Designer.cs">
       <DependentUpon>RegisterAccReceptionist.cs</DependentUpon>
     </Compile>
-    <Compile Include="ServiceOverview.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ServiceOverview.Designer.cs">
-      <DependentUpon>ServiceOverview.cs</DependentUpon>
-    </Compile>
     <Compile Include="ServiceOverviewNew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,9 +278,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterAccReceptionist.resx">
       <DependentUpon>RegisterAccReceptionist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ServiceOverview.resx">
-      <DependentUpon>ServiceOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ServiceOverviewNew.resx">
       <DependentUpon>ServiceOverviewNew.cs</DependentUpon>
