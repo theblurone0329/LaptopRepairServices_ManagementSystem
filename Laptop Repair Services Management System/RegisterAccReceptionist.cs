@@ -30,6 +30,7 @@ namespace Laptop_Repair_Services_Management_System
             }
             else
             {
+                //to check if the username and email existed in the database
                 SqlCommand cmd1 = new SqlCommand($"Select Count(*) From AccountDetails Where username = '{txtUsernameCus.Text}';", con);
                 int count = Convert.ToInt32(cmd1.ExecuteScalar().ToString());
                 SqlCommand cmd2 = new SqlCommand($"Select Count(*) From AccountDetails Where email = '{txtEmailCus.Text}';", con);
